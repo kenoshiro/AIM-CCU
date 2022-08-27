@@ -34,7 +34,6 @@ Pol_Cos_Oth,Policy Cost|Other
 Cnc_CO2,Concentration|CO2
 CNS,Consumption
 Car_Seq_CCS,Carbon Sequestration|CCS
-Emi_F_G,Emissions|F-Gases
 Fin_Ene_Ele,Final Energy|Electricity
 Fin_Ene_Gas,Final Energy|Gases
 Fin_Ene_Geo,Final Energy|Geothermal
@@ -238,9 +237,6 @@ Trd_Emi_All_Val,Trade|Emissions Allowances|Value
 Trd_Emi_All_Vol,Trade|Emissions Allowances|Volume
 Trd_Prm_Ene_Bio_Vol,Trade|Primary Energy|Biomass|Volume
 Trd_Sec_Ene_Solidsand_Liq_Bio_Vol,Trade|Secondary Energy|Solids and Liquids|Biomass|Volume
-Emi_GHG_Int_Tra_Sys,Emissions|GHG|International Trading System
-Emi_Kyo_Gas,Emissions|Kyoto Gases
-Emi_GHG_All_All,Emissions|GHG|Allowance Allocation
 Sec_Ene,Secondary Energy
 Foo_Ene_Sup,Food Energy Supply
 Foo_Ene_Sup_Liv,Food Energy Supply|Livestock
@@ -640,19 +636,6 @@ Res_Ave_Ext_Cos_Coa,Resource|Average Extraction Cost|Coal
 Res_Ave_Ext_Cos_Oil,Resource|Average Extraction Cost|Oil
 Res_Ave_Ext_Cos_Gas,Resource|Average Extraction Cost|Gas
 Res_Ave_Ext_Cos_Ura,Resource|Average Extraction Cost|Uranium
-Emi_CF4,Emissions|CF4
-Emi_C2F6,Emissions|C2F6
-Emi_C6F14,Emissions|C6F14
-Emissions_HFC,Emissions|HFC
-Emissions_HFC_HFC125,Emissions|HFC|HFC125
-Emissions_HFC_HFC134a,Emissions|HFC|HFC134a
-Emissions_HFC_HFC143a,Emissions|HFC|HFC143a
-Emissions_HFC_HFC227ea,Emissions|HFC|HFC227ea
-Emissions_HFC_HFC23,Emissions|HFC|HFC23
-Emissions_HFC_HFC245fa,Emissions|HFC|HFC245fa
-Emissions_HFC_HFC32,Emissions|HFC|HFC32
-Emissions_HFC_HFC43_10,Emissions|HFC|HFC43-10
-Emi_SF6,Emissions|SF6
 Fin_Ene_Ind_Ene_Int,Final Energy|Industry|Energy Intensive
 Fin_Ene_Res_and_Com_and_AFO,Final Energy|Residential and Commercial and AFOFI
 Fin_Ene_Res_and_Com_Liq_Oil,Final Energy|Residential and Commercial|Liquids|Oil
@@ -742,341 +725,6 @@ Car_Seq_CCS_Fos_Ene_Sup_Hyd,Carbon Sequestration|CCS|Fossil|Energy|Supply|Hydrog
 Car_Seq_CCS_Fos_Ene_Sup_Liq,Carbon Sequestration|CCS|Fossil|Energy|Supply|Liquids
 Car_Seq_CCS_Fos_Ene_Sup_Oth,Carbon Sequestration|CCS|Fossil|Energy|Supply|Other
 Car_Seq_Oth,Carbon Sequestration|Other
-Emi_BC,Emissions|BC
-Emi_BC_AFO,Emissions|BC|AFOLU
-Emi_BC_AFO_Agg___Agr_and_Bio_Bur,Emissions|BC|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_BC_AFO_Agr,Emissions|BC|AFOLU|Agriculture
-Emi_BC_AFO_Agr_Liv,Emissions|BC|AFOLU|Agriculture|Livestock
-Emi_BC_AFO_Agr_Liv_Ent_Fer,Emissions|BC|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_BC_AFO_Agr_Liv_Man_Man,Emissions|BC|AFOLU|Agriculture|Livestock|Manure Management
-Emi_BC_AFO_Agr_Man_Soi,Emissions|BC|AFOLU|Agriculture|Managed Soils
-Emi_BC_AFO_Agr_Oth,Emissions|BC|AFOLU|Agriculture|Other
-Emi_BC_AFO_Agr_Ric,Emissions|BC|AFOLU|Agriculture|Rice
-Emi_BC_AFO_Bio_Bur,Emissions|BC|AFOLU|Biomass Burning
-Emi_BC_AFO_Lan,Emissions|BC|AFOLU|Land
-Emi_BC_AFO_Lan_Cro,Emissions|BC|AFOLU|Land|Cropland
-Emi_BC_AFO_Lan_Frs,Emissions|BC|AFOLU|Land|Forest
-Emi_BC_AFO_Lan_Frs_Bur,Emissions|BC|AFOLU|Land|Forest Burning
-Emi_BC_AFO_Lan_Gra_Bur,Emissions|BC|AFOLU|Land|Grassland Burning
-Emi_BC_AFO_Lan_Gra_Pst,Emissions|BC|AFOLU|Land|Grassland Pastures
-Emi_BC_AFO_Lan_Oth_Lan,Emissions|BC|AFOLU|Land|Other Land
-Emi_BC_AFO_Lan_Set,Emissions|BC|AFOLU|Land|Settlements
-Emi_BC_AFO_Lan_Wet,Emissions|BC|AFOLU|Land|Wetlands
-Emi_BC_Ene,Emissions|BC|Energy
-Emi_BC_Ene_Com,Emissions|BC|Energy|Combustion
-Emi_BC_Ene_Dem,Emissions|BC|Energy|Demand
-Emi_BC_Ene_Dem_AFO,Emissions|BC|Energy|Demand|AFOFI
-Emi_BC_Ene_Dem_Com,Emissions|BC|Energy|Demand|Commercial
-Emi_BC_Ene_Dem_Ind,Emissions|BC|Energy|Demand|Industry
-Emi_BC_Ene_Dem_Ind_Che,Emissions|BC|Energy|Demand|Industry|Chemicals
-Emi_BC_Ene_Dem_Ind_Con,Emissions|BC|Energy|Demand|Industry|Construction
-Emi_BC_Ene_Dem_Ind_Foo_and_Tob,Emissions|BC|Energy|Demand|Industry|Food and Tobacco
-Emi_BC_Ene_Dem_Ind_Iro_and_Ste,Emissions|BC|Energy|Demand|Industry|Iron and Steel
-Emi_BC_Ene_Dem_Ind_Mac,Emissions|BC|Energy|Demand|Industry|Machinery
-Emi_BC_Ene_Dem_Ind_Min,Emissions|BC|Energy|Demand|Industry|Mining
-Emi_BC_Ene_Dem_Ind_Non_Met,Emissions|BC|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_BC_Ene_Dem_Ind_Non_Min,Emissions|BC|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_BC_Ene_Dem_Ind_Oth,Emissions|BC|Energy|Demand|Industry|Other
-Emi_BC_Ene_Dem_Ind_Pul_and_Pap,Emissions|BC|Energy|Demand|Industry|Pulp and Paper
-Emi_BC_Ene_Dem_Ind_Tex,Emissions|BC|Energy|Demand|Industry|Textile
-Emi_BC_Ene_Dem_Ind_Tra_Equ,Emissions|BC|Energy|Demand|Industry|Transport Equipment
-Emi_BC_Ene_Dem_Ind_Woo_Pro,Emissions|BC|Energy|Demand|Industry|Wood Products
-Emi_BC_Ene_Dem_Oth_Sec,Emissions|BC|Energy|Demand|Other Sector
-Emi_BC_Ene_Dem_Res,Emissions|BC|Energy|Demand|Residential
-Emi_BC_Ene_Dem_Agg___Res_and_Com,Emissions|BC|Energy|Demand|Aggregate - Residential and Commercial
-Emi_BC_Ene_Dem_Res_and_Com_and_AFO,Emissions|BC|Energy|Demand|Residential and Commercial and AFOFI
-Emi_BC_Ene_Dem_Tra,Emissions|BC|Energy|Demand|Transportation
-Emi_BC_Ene_Dem_Tra_Avi,Emissions|BC|Energy|Demand|Transportation|Aviation
-Emi_BC_Ene_Dem_Tra_Avi_Dom,Emissions|BC|Energy|Demand|Transportation|Aviation|Domestic
-Emi_BC_Ene_Dem_Tra_Avi_Int,Emissions|BC|Energy|Demand|Transportation|Aviation|International
-Emi_BC_Ene_Dem_Tra_Oth_Sec,Emissions|BC|Energy|Demand|Transportation|Other Sector
-Emi_BC_Ene_Dem_Tra_Rai,Emissions|BC|Energy|Demand|Transportation|Rail
-Emi_BC_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|BC|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_BC_Ene_Dem_Tra_Roa,Emissions|BC|Energy|Demand|Transportation|Road
-Emi_BC_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|BC|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_BC_Ene_Dem_Tra_Shi,Emissions|BC|Energy|Demand|Transportation|Shipping
-Emi_BC_Ene_Dem_Tra_Shi_Dom,Emissions|BC|Energy|Demand|Transportation|Shipping|Domestic
-Emi_BC_Ene_Dem_Tra_Shi_Int,Emissions|BC|Energy|Demand|Transportation|Shipping|International
-Emi_BC_Ene_Dem_Tra_Shi_Int_Loa,Emissions|BC|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_BC_Ene_Agg___Fug,Emissions|BC|Energy|Aggregate - Fugitive
-Emi_BC_Ene_Oth,Emissions|BC|Energy|Other
-Emi_BC_Ene_Sup,Emissions|BC|Energy|Supply
-Emi_BC_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|BC|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_BC_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|BC|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_BC_Ene_Sup_Agg___Com,Emissions|BC|Energy|Supply|Aggregate - Combustion
-Emi_BC_Ene_Sup_Ele,Emissions|BC|Energy|Supply|Electricity
-Emi_BC_Ene_Sup_Agg___Ele_and_Heat,Emissions|BC|Energy|Supply|Aggregate - Electricity and Heat
-Emi_BC_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|BC|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_BC_Ene_Sup_Agg___Fug,Emissions|BC|Energy|Supply|Aggregate - Fugitive
-Emi_BC_Ene_Sup_Gas,Emissions|BC|Energy|Supply|Gases
-Emi_BC_Ene_Sup_Gas_and_Liq_Fug,Emissions|BC|Energy|Supply|Gases and Liquids|Fugitive
-Emi_BC_Ene_Sup_Gas_Com,Emissions|BC|Energy|Supply|Gases|Combustion
-Emi_BC_Ene_Sup_Gas_Fug,Emissions|BC|Energy|Supply|Gases|Fugitive
-Emi_BC_Ene_Sup_Heat,Emissions|BC|Energy|Supply|Heat
-Emi_BC_Ene_Sup_Liq,Emissions|BC|Energy|Supply|Liquids
-Emi_BC_Ene_Sup_Liq_Com,Emissions|BC|Energy|Supply|Liquids|Combustion
-Emi_BC_Ene_Sup_Liq_Fug,Emissions|BC|Energy|Supply|Liquids|Fugitive
-Emi_BC_Ene_Sup_Oth_Com,Emissions|BC|Energy|Supply|Other|Combustion
-Emi_BC_Ene_Sup_Oth_Fug,Emissions|BC|Energy|Supply|Other|Fugitive
-Emi_BC_Ene_Sup_Solids,Emissions|BC|Energy|Supply|Solids
-Emi_BC_Ene_Sup_SolidsCom,Emissions|BC|Energy|Supply|Solids|Combustion
-Emi_BC_Ene_Sup_SolidsFug,Emissions|BC|Energy|Supply|Solids|Fugitive
-Emi_BC_Fos_Fue_Fir,Emissions|BC|Fossil Fuel Fires
-Emi_BC_Agg___FFI,Emissions|BC|Aggregate - Fossil Fuels and Industry
-Emi_BC_Ind_Pro,Emissions|BC|Industrial Processes
-Emi_BC_Ind_Pro_Che,Emissions|BC|Industrial Processes|Chemicals
-Emi_BC_Ind_Pro_Ele,Emissions|BC|Industrial Processes|Electronics
-Emi_BC_Ind_Pro_Iro_and_Ste,Emissions|BC|Industrial Processes|Iron and Steel
-Emi_BC_Ind_Pro_Met_and_Min,Emissions|BC|Industrial Processes|Metals and Minerals
-Emi_BC_Ind_Pro_Non_Met,Emissions|BC|Industrial Processes|Non-Ferrous Metals
-Emi_BC_Ind_Pro_Non_Met_Alu,Emissions|BC|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_BC_Ind_Pro_Non_Met_Oth,Emissions|BC|Industrial Processes|Non-Ferrous Metals|Other
-Emi_BC_Ind_Pro_Non_Min,Emissions|BC|Industrial Processes|Non-Metallic Minerals
-Emi_BC_Ind_Pro_Non_Min_Cem,Emissions|BC|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_BC_Ind_Pro_Non_Min_Lim,Emissions|BC|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_BC_Ind_Pro_Non_Min_Oth,Emissions|BC|Industrial Processes|Non-Metallic Minerals|Other
-Emi_BC_Ind_Pro_Oth_Sec,Emissions|BC|Industrial Processes|Other Sector
-Emi_BC_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|BC|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_BC_Nat_Oth,Emissions|BC|Natural|Other
-Emi_BC_Nat_Vol,Emissions|BC|Natural|Volcanoes
-Emi_BC_Oth,Emissions|BC|Other
-Emi_BC_Pro_Use,Emissions|BC|Product Use
-Emi_BC_Pro_Use_NonEneUse,Emissions|BC|Product Use|Non-Energy Use
-Emi_BC_Pro_Use_ODS_Sub,Emissions|BC|Product Use|ODS Substitutes
-Emi_BC_Pro_Use_Oth,Emissions|BC|Product Use|Other
-Emi_BC_Pro_Use_Sol,Emissions|BC|Product Use|Solvents
-Emi_BC_Pro_Use_Sol_Che_Pro,Emissions|BC|Product Use|Solvents|Chemical Products
-Emi_BC_Pro_Use_Sol_Deg,Emissions|BC|Product Use|Solvents|Degreasing
-Emi_BC_Pro_Use_Sol_Pai,Emissions|BC|Product Use|Solvents|Paint
-Emi_BC_Was,Emissions|BC|Waste
-Emi_BC_Was_Bio_Tre,Emissions|BC|Waste|Biological Treatment
-Emi_BC_Was_Inc,Emissions|BC|Waste|Incineration
-Emi_BC_Was_Oth,Emissions|BC|Waste|Other
-Emi_BC_Was_Sol_Was_Dis,Emissions|BC|Waste|Solid Waste Disposal
-Emi_BC_Was_Was_Tre,Emissions|BC|Waste|Wastewater Treatment
-Emi_CH4,Emissions|CH4
-Emi_CH4_AFO,Emissions|CH4|AFOLU
-Emi_CH4_AFO_Agg___Agr_and_Bio_Bur,Emissions|CH4|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_CH4_AFO_Agr,Emissions|CH4|AFOLU|Agriculture
-Emi_CH4_AFO_Agr_Liv,Emissions|CH4|AFOLU|Agriculture|Livestock
-Emi_CH4_AFO_Agr_Liv_Ent_Fer,Emissions|CH4|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_CH4_AFO_Agr_Liv_Man_Man,Emissions|CH4|AFOLU|Agriculture|Livestock|Manure Management
-Emi_CH4_AFO_Agr_Man_Soi,Emissions|CH4|AFOLU|Agriculture|Managed Soils
-Emi_CH4_AFO_Agr_Oth,Emissions|CH4|AFOLU|Agriculture|Other
-Emi_CH4_AFO_Agr_Ric,Emissions|CH4|AFOLU|Agriculture|Rice
-Emi_CH4_AFO_Bio_Bur,Emissions|CH4|AFOLU|Biomass Burning
-Emi_CH4_AFO_Lan,Emissions|CH4|AFOLU|Land
-Emi_CH4_AFO_Lan_Cro,Emissions|CH4|AFOLU|Land|Cropland
-Emi_CH4_AFO_Lan_Frs,Emissions|CH4|AFOLU|Land|Forest
-Emi_CH4_AFO_Lan_Frs_Bur,Emissions|CH4|AFOLU|Land|Forest Burning
-Emi_CH4_AFO_Lan_Gra_Bur,Emissions|CH4|AFOLU|Land|Grassland Burning
-Emi_CH4_AFO_Lan_Gra_Pst,Emissions|CH4|AFOLU|Land|Grassland Pastures
-Emi_CH4_AFO_Lan_Oth_Lan,Emissions|CH4|AFOLU|Land|Other Land
-Emi_CH4_AFO_Lan_Set,Emissions|CH4|AFOLU|Land|Settlements
-Emi_CH4_AFO_Lan_Wet,Emissions|CH4|AFOLU|Land|Wetlands
-Emi_CH4_Ene,Emissions|CH4|Energy
-Emi_CH4_Ene_Com,Emissions|CH4|Energy|Combustion
-Emi_CH4_Ene_Dem,Emissions|CH4|Energy|Demand
-Emi_CH4_Ene_Dem_AFO,Emissions|CH4|Energy|Demand|AFOFI
-Emi_CH4_Ene_Dem_Com,Emissions|CH4|Energy|Demand|Commercial
-Emi_CH4_Ene_Dem_Ind,Emissions|CH4|Energy|Demand|Industry
-Emi_CH4_Ene_Dem_Ind_Che,Emissions|CH4|Energy|Demand|Industry|Chemicals
-Emi_CH4_Ene_Dem_Ind_Con,Emissions|CH4|Energy|Demand|Industry|Construction
-Emi_CH4_Ene_Dem_Ind_Foo_and_Tob,Emissions|CH4|Energy|Demand|Industry|Food and Tobacco
-Emi_CH4_Ene_Dem_Ind_Iro_and_Ste,Emissions|CH4|Energy|Demand|Industry|Iron and Steel
-Emi_CH4_Ene_Dem_Ind_Mac,Emissions|CH4|Energy|Demand|Industry|Machinery
-Emi_CH4_Ene_Dem_Ind_Min,Emissions|CH4|Energy|Demand|Industry|Mining
-Emi_CH4_Ene_Dem_Ind_Non_Met,Emissions|CH4|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_CH4_Ene_Dem_Ind_Non_Min,Emissions|CH4|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_CH4_Ene_Dem_Ind_Oth,Emissions|CH4|Energy|Demand|Industry|Other
-Emi_CH4_Ene_Dem_Ind_Pul_and_Pap,Emissions|CH4|Energy|Demand|Industry|Pulp and Paper
-Emi_CH4_Ene_Dem_Ind_Tex,Emissions|CH4|Energy|Demand|Industry|Textile
-Emi_CH4_Ene_Dem_Ind_Tra_Equ,Emissions|CH4|Energy|Demand|Industry|Transport Equipment
-Emi_CH4_Ene_Dem_Ind_Woo_Pro,Emissions|CH4|Energy|Demand|Industry|Wood Products
-Emi_CH4_Ene_Dem_Oth_Sec,Emissions|CH4|Energy|Demand|Other Sector
-Emi_CH4_Ene_Dem_Res,Emissions|CH4|Energy|Demand|Residential
-Emi_CH4_Ene_Dem_Agg___Res_and_Com,Emissions|CH4|Energy|Demand|Aggregate - Residential and Commercial
-Emi_CH4_Ene_Dem_Res_and_Com_and_AFO,Emissions|CH4|Energy|Demand|Residential and Commercial and AFOFI
-Emi_CH4_Ene_Dem_Tra,Emissions|CH4|Energy|Demand|Transportation
-Emi_CH4_Ene_Dem_Tra_Avi,Emissions|CH4|Energy|Demand|Transportation|Aviation
-Emi_CH4_Ene_Dem_Tra_Avi_Dom,Emissions|CH4|Energy|Demand|Transportation|Aviation|Domestic
-Emi_CH4_Ene_Dem_Tra_Avi_Int,Emissions|CH4|Energy|Demand|Transportation|Aviation|International
-Emi_CH4_Ene_Dem_Tra_Oth_Sec,Emissions|CH4|Energy|Demand|Transportation|Other Sector
-Emi_CH4_Ene_Dem_Tra_Rai,Emissions|CH4|Energy|Demand|Transportation|Rail
-Emi_CH4_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|CH4|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_CH4_Ene_Dem_Tra_Roa,Emissions|CH4|Energy|Demand|Transportation|Road
-Emi_CH4_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|CH4|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_CH4_Ene_Dem_Tra_Shi,Emissions|CH4|Energy|Demand|Transportation|Shipping
-Emi_CH4_Ene_Dem_Tra_Shi_Dom,Emissions|CH4|Energy|Demand|Transportation|Shipping|Domestic
-Emi_CH4_Ene_Dem_Tra_Shi_Int,Emissions|CH4|Energy|Demand|Transportation|Shipping|International
-Emi_CH4_Ene_Dem_Tra_Shi_Int_Loa,Emissions|CH4|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_CH4_Ene_Agg___Fug,Emissions|CH4|Energy|Aggregate - Fugitive
-Emi_CH4_Ene_Oth,Emissions|CH4|Energy|Other
-Emi_CH4_Ene_Sup,Emissions|CH4|Energy|Supply
-Emi_CH4_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|CH4|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_CH4_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|CH4|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_CH4_Ene_Sup_Agg___Com,Emissions|CH4|Energy|Supply|Aggregate - Combustion
-Emi_CH4_Ene_Sup_Ele,Emissions|CH4|Energy|Supply|Electricity
-Emi_CH4_Ene_Sup_Agg___Ele_and_Heat,Emissions|CH4|Energy|Supply|Aggregate - Electricity and Heat
-Emi_CH4_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|CH4|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_CH4_Ene_Sup_Agg___Fug,Emissions|CH4|Energy|Supply|Aggregate - Fugitive
-Emi_CH4_Ene_Sup_Gas,Emissions|CH4|Energy|Supply|Gases
-Emi_CH4_Ene_Sup_Gas_and_Liq_Fug,Emissions|CH4|Energy|Supply|Gases and Liquids|Fugitive
-Emi_CH4_Ene_Sup_Gas_Com,Emissions|CH4|Energy|Supply|Gases|Combustion
-Emi_CH4_Ene_Sup_Gas_Fug,Emissions|CH4|Energy|Supply|Gases|Fugitive
-Emi_CH4_Ene_Sup_Heat,Emissions|CH4|Energy|Supply|Heat
-Emi_CH4_Ene_Sup_Liq,Emissions|CH4|Energy|Supply|Liquids
-Emi_CH4_Ene_Sup_Liq_Com,Emissions|CH4|Energy|Supply|Liquids|Combustion
-Emi_CH4_Ene_Sup_Liq_Fug,Emissions|CH4|Energy|Supply|Liquids|Fugitive
-Emi_CH4_Ene_Sup_Oth_Com,Emissions|CH4|Energy|Supply|Other|Combustion
-Emi_CH4_Ene_Sup_Oth_Fug,Emissions|CH4|Energy|Supply|Other|Fugitive
-Emi_CH4_Ene_Sup_Solids,Emissions|CH4|Energy|Supply|Solids
-Emi_CH4_Ene_Sup_SolidsCom,Emissions|CH4|Energy|Supply|Solids|Combustion
-Emi_CH4_Ene_Sup_SolidsFug,Emissions|CH4|Energy|Supply|Solids|Fugitive
-Emi_CH4_Fos_Fue_Fir,Emissions|CH4|Fossil Fuel Fires
-Emi_CH4_Agg___FFI,Emissions|CH4|Aggregate - Fossil Fuels and Industry
-Emi_CH4_Ind_Pro,Emissions|CH4|Industrial Processes
-Emi_CH4_Ind_Pro_Che,Emissions|CH4|Industrial Processes|Chemicals
-Emi_CH4_Ind_Pro_Ele,Emissions|CH4|Industrial Processes|Electronics
-Emi_CH4_Ind_Pro_Iro_and_Ste,Emissions|CH4|Industrial Processes|Iron and Steel
-Emi_CH4_Ind_Pro_Met_and_Min,Emissions|CH4|Industrial Processes|Metals and Minerals
-Emi_CH4_Ind_Pro_Non_Met_Alu,Emissions|CH4|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_CH4_Ind_Pro_Non_Met_Oth,Emissions|CH4|Industrial Processes|Non-Ferrous Metals|Other
-Emi_CH4_Ind_Pro_Non_Min,Emissions|CH4|Industrial Processes|Non-Metallic Minerals
-Emi_CH4_Ind_Pro_Non_Min_Cem,Emissions|CH4|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_CH4_Ind_Pro_Non_Min_Lim,Emissions|CH4|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_CH4_Ind_Pro_Non_Min_Oth,Emissions|CH4|Industrial Processes|Non-Metallic Minerals|Other
-Emi_CH4_Ind_Pro_Oth_Sec,Emissions|CH4|Industrial Processes|Other Sector
-Emi_CH4_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|CH4|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_CH4_Nat_Oth,Emissions|CH4|Natural|Other
-Emi_CH4_Nat_Vol,Emissions|CH4|Natural|Volcanoes
-Emi_CH4_Oth,Emissions|CH4|Other
-Emi_CH4_Pro_Use,Emissions|CH4|Product Use
-Emi_CH4_Pro_Use_NonEneUse,Emissions|CH4|Product Use|Non-Energy Use
-Emi_CH4_Pro_Use_ODS_Sub,Emissions|CH4|Product Use|ODS Substitutes
-Emi_CH4_Pro_Use_Oth,Emissions|CH4|Product Use|Other
-Emi_CH4_Pro_Use_Sol,Emissions|CH4|Product Use|Solvents
-Emi_CH4_Pro_Use_Sol_Che_Pro,Emissions|CH4|Product Use|Solvents|Chemical Products
-Emi_CH4_Pro_Use_Sol_Deg,Emissions|CH4|Product Use|Solvents|Degreasing
-Emi_CH4_Pro_Use_Sol_Pai,Emissions|CH4|Product Use|Solvents|Paint
-Emi_CH4_Was,Emissions|CH4|Waste
-Emi_CH4_Was_Bio_Tre,Emissions|CH4|Waste|Biological Treatment
-Emi_CH4_Was_Inc,Emissions|CH4|Waste|Incineration
-Emi_CH4_Was_Oth,Emissions|CH4|Waste|Other
-Emi_CH4_Was_Sol_Was_Dis,Emissions|CH4|Waste|Solid Waste Disposal
-Emi_CH4_Was_Was_Tre,Emissions|CH4|Waste|Wastewater Treatment
-Emi_CO,Emissions|CO
-Emi_CO_AFO,Emissions|CO|AFOLU
-Emi_CO_AFO_Agg___Agr_and_Bio_Bur,Emissions|CO|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_CO_AFO_Agr,Emissions|CO|AFOLU|Agriculture
-Emi_CO_AFO_Agr_Liv,Emissions|CO|AFOLU|Agriculture|Livestock
-Emi_CO_AFO_Agr_Liv_Ent_Fer,Emissions|CO|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_CO_AFO_Agr_Liv_Man_Man,Emissions|CO|AFOLU|Agriculture|Livestock|Manure Management
-Emi_CO_AFO_Agr_Man_Soi,Emissions|CO|AFOLU|Agriculture|Managed Soils
-Emi_CO_AFO_Agr_Oth,Emissions|CO|AFOLU|Agriculture|Other
-Emi_CO_AFO_Agr_Ric,Emissions|CO|AFOLU|Agriculture|Rice
-Emi_CO_AFO_Bio_Bur,Emissions|CO|AFOLU|Biomass Burning
-Emi_CO_AFO_Lan,Emissions|CO|AFOLU|Land
-Emi_CO_AFO_Lan_Cro,Emissions|CO|AFOLU|Land|Cropland
-Emi_CO_AFO_Lan_Frs,Emissions|CO|AFOLU|Land|Forest
-Emi_CO_AFO_Lan_Frs_Bur,Emissions|CO|AFOLU|Land|Forest Burning
-Emi_CO_AFO_Lan_Gra_Bur,Emissions|CO|AFOLU|Land|Grassland Burning
-Emi_CO_AFO_Lan_Gra_Pst,Emissions|CO|AFOLU|Land|Grassland Pastures
-Emi_CO_AFO_Lan_Oth_Lan,Emissions|CO|AFOLU|Land|Other Land
-Emi_CO_AFO_Lan_Set,Emissions|CO|AFOLU|Land|Settlements
-Emi_CO_AFO_Lan_Wet,Emissions|CO|AFOLU|Land|Wetlands
-Emi_CO_Ene,Emissions|CO|Energy
-Emi_CO_Ene_Com,Emissions|CO|Energy|Combustion
-Emi_CO_Ene_Dem,Emissions|CO|Energy|Demand
-Emi_CO_Ene_Dem_AFO,Emissions|CO|Energy|Demand|AFOFI
-Emi_CO_Ene_Dem_Com,Emissions|CO|Energy|Demand|Commercial
-Emi_CO_Ene_Dem_Ind,Emissions|CO|Energy|Demand|Industry
-Emi_CO_Ene_Dem_Ind_Che,Emissions|CO|Energy|Demand|Industry|Chemicals
-Emi_CO_Ene_Dem_Ind_Con,Emissions|CO|Energy|Demand|Industry|Construction
-Emi_CO_Ene_Dem_Ind_Foo_and_Tob,Emissions|CO|Energy|Demand|Industry|Food and Tobacco
-Emi_CO_Ene_Dem_Ind_Iro_and_Ste,Emissions|CO|Energy|Demand|Industry|Iron and Steel
-Emi_CO_Ene_Dem_Ind_Mac,Emissions|CO|Energy|Demand|Industry|Machinery
-Emi_CO_Ene_Dem_Ind_Min,Emissions|CO|Energy|Demand|Industry|Mining
-Emi_CO_Ene_Dem_Ind_Non_Met,Emissions|CO|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_CO_Ene_Dem_Ind_Non_Min,Emissions|CO|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_CO_Ene_Dem_Ind_Oth,Emissions|CO|Energy|Demand|Industry|Other
-Emi_CO_Ene_Dem_Ind_Pul_and_Pap,Emissions|CO|Energy|Demand|Industry|Pulp and Paper
-Emi_CO_Ene_Dem_Ind_Tex,Emissions|CO|Energy|Demand|Industry|Textile
-Emi_CO_Ene_Dem_Ind_Tra_Equ,Emissions|CO|Energy|Demand|Industry|Transport Equipment
-Emi_CO_Ene_Dem_Ind_Woo_Pro,Emissions|CO|Energy|Demand|Industry|Wood Products
-Emi_CO_Ene_Dem_Oth_Sec,Emissions|CO|Energy|Demand|Other Sector
-Emi_CO_Ene_Dem_Res,Emissions|CO|Energy|Demand|Residential
-Emi_CO_Ene_Dem_Agg___Res_and_Com,Emissions|CO|Energy|Demand|Aggregate - Residential and Commercial
-Emi_CO_Ene_Dem_Res_and_Com_and_AFO,Emissions|CO|Energy|Demand|Residential and Commercial and AFOFI
-Emi_CO_Ene_Dem_Tra,Emissions|CO|Energy|Demand|Transportation
-Emi_CO_Ene_Dem_Tra_Avi,Emissions|CO|Energy|Demand|Transportation|Aviation
-Emi_CO_Ene_Dem_Tra_Avi_Dom,Emissions|CO|Energy|Demand|Transportation|Aviation|Domestic
-Emi_CO_Ene_Dem_Tra_Avi_Int,Emissions|CO|Energy|Demand|Transportation|Aviation|International
-Emi_CO_Ene_Dem_Tra_Oth_Sec,Emissions|CO|Energy|Demand|Transportation|Other Sector
-Emi_CO_Ene_Dem_Tra_Rai,Emissions|CO|Energy|Demand|Transportation|Rail
-Emi_CO_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|CO|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_CO_Ene_Dem_Tra_Roa,Emissions|CO|Energy|Demand|Transportation|Road
-Emi_CO_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|CO|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_CO_Ene_Dem_Tra_Shi,Emissions|CO|Energy|Demand|Transportation|Shipping
-Emi_CO_Ene_Dem_Tra_Shi_Dom,Emissions|CO|Energy|Demand|Transportation|Shipping|Domestic
-Emi_CO_Ene_Dem_Tra_Shi_Int,Emissions|CO|Energy|Demand|Transportation|Shipping|International
-Emi_CO_Ene_Dem_Tra_Shi_Int_Loa,Emissions|CO|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_CO_Ene_Agg___Fug,Emissions|CO|Energy|Aggregate - Fugitive
-Emi_CO_Ene_Oth,Emissions|CO|Energy|Other
-Emi_CO_Ene_Sup,Emissions|CO|Energy|Supply
-Emi_CO_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|CO|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_CO_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|CO|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_CO_Ene_Sup_Agg___Com,Emissions|CO|Energy|Supply|Aggregate - Combustion
-Emi_CO_Ene_Sup_Ele,Emissions|CO|Energy|Supply|Electricity
-Emi_CO_Ene_Sup_Agg___Ele_and_Heat,Emissions|CO|Energy|Supply|Aggregate - Electricity and Heat
-Emi_CO_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|CO|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_CO_Ene_Sup_Agg___Fug,Emissions|CO|Energy|Supply|Aggregate - Fugitive
-Emi_CO_Ene_Sup_Gas,Emissions|CO|Energy|Supply|Gases
-Emi_CO_Ene_Sup_Gas_and_Liq_Fug,Emissions|CO|Energy|Supply|Gases and Liquids|Fugitive
-Emi_CO_Ene_Sup_Gas_Com,Emissions|CO|Energy|Supply|Gases|Combustion
-Emi_CO_Ene_Sup_Gas_Fug,Emissions|CO|Energy|Supply|Gases|Fugitive
-Emi_CO_Ene_Sup_Heat,Emissions|CO|Energy|Supply|Heat
-Emi_CO_Ene_Sup_Liq,Emissions|CO|Energy|Supply|Liquids
-Emi_CO_Ene_Sup_Liq_Com,Emissions|CO|Energy|Supply|Liquids|Combustion
-Emi_CO_Ene_Sup_Liq_Fug,Emissions|CO|Energy|Supply|Liquids|Fugitive
-Emi_CO_Ene_Sup_Oth_Com,Emissions|CO|Energy|Supply|Other|Combustion
-Emi_CO_Ene_Sup_Oth_Fug,Emissions|CO|Energy|Supply|Other|Fugitive
-Emi_CO_Ene_Sup_Solids,Emissions|CO|Energy|Supply|Solids
-Emi_CO_Ene_Sup_SolidsCom,Emissions|CO|Energy|Supply|Solids|Combustion
-Emi_CO_Ene_Sup_SolidsFug,Emissions|CO|Energy|Supply|Solids|Fugitive
-Emi_CO_Fos_Fue_Fir,Emissions|CO|Fossil Fuel Fires
-Emi_CO_Agg___FFI,Emissions|CO|Aggregate - Fossil Fuels and Industry
-Emi_CO_Ind_Pro,Emissions|CO|Industrial Processes
-Emi_CO_Ind_Pro_Che,Emissions|CO|Industrial Processes|Chemicals
-Emi_CO_Ind_Pro_Ele,Emissions|CO|Industrial Processes|Electronics
-Emi_CO_Ind_Pro_Iro_and_Ste,Emissions|CO|Industrial Processes|Iron and Steel
-Emi_CO_Ind_Pro_Met_and_Min,Emissions|CO|Industrial Processes|Metals and Minerals
-Emi_CO_Ind_Pro_Non_Met,Emissions|CO|Industrial Processes|Non-Ferrous Metals
-Emi_CO_Ind_Pro_Non_Met_Alu,Emissions|CO|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_CO_Ind_Pro_Non_Met_Oth,Emissions|CO|Industrial Processes|Non-Ferrous Metals|Other
-Emi_CO_Ind_Pro_Non_Min,Emissions|CO|Industrial Processes|Non-Metallic Minerals
-Emi_CO_Ind_Pro_Non_Min_Cem,Emissions|CO|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_CO_Ind_Pro_Non_Min_Lim,Emissions|CO|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_CO_Ind_Pro_Non_Min_Oth,Emissions|CO|Industrial Processes|Non-Metallic Minerals|Other
-Emi_CO_Ind_Pro_Oth_Sec,Emissions|CO|Industrial Processes|Other Sector
-Emi_CO_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|CO|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_CO_Nat_Oth,Emissions|CO|Natural|Other
-Emi_CO_Nat_Vol,Emissions|CO|Natural|Volcanoes
-Emi_CO_Oth,Emissions|CO|Other
-Emi_CO_Pro_Use,Emissions|CO|Product Use
-Emi_CO_Pro_Use_NonEneUse,Emissions|CO|Product Use|Non-Energy Use
-Emi_CO_Pro_Use_ODS_Sub,Emissions|CO|Product Use|ODS Substitutes
-Emi_CO_Pro_Use_Oth,Emissions|CO|Product Use|Other
-Emi_CO_Pro_Use_Sol,Emissions|CO|Product Use|Solvents
-Emi_CO_Pro_Use_Sol_Che_Pro,Emissions|CO|Product Use|Solvents|Chemical Products
-Emi_CO_Pro_Use_Sol_Deg,Emissions|CO|Product Use|Solvents|Degreasing
-Emi_CO_Pro_Use_Sol_Pai,Emissions|CO|Product Use|Solvents|Paint
-Emi_CO_Was,Emissions|CO|Waste
-Emi_CO_Was_Bio_Tre,Emissions|CO|Waste|Biological Treatment
-Emi_CO_Was_Inc,Emissions|CO|Waste|Incineration
-Emi_CO_Was_Oth,Emissions|CO|Waste|Other
-Emi_CO_Was_Sol_Was_Dis,Emissions|CO|Waste|Solid Waste Disposal
-Emi_CO_Was_Was_Tre,Emissions|CO|Waste|Wastewater Treatment
 Emi_CO2,Emissions|CO2
 Emi_CO2_AFO,Emissions|CO2|AFOLU
 Emi_CO2_AFO_Agg___Agr_and_Bio_Bur,Emissions|CO2|AFOLU|Aggregate - Agriculture and Biomass Burning
@@ -1187,677 +835,6 @@ Emi_CO2_Was_Inc,Emissions|CO2|Waste|Incineration
 Emi_CO2_Was_Oth,Emissions|CO2|Waste|Other
 Emi_CO2_Was_Sol_Was_Dis,Emissions|CO2|Waste|Solid Waste Disposal
 Emi_CO2_Was_Was_Tre,Emissions|CO2|Waste|Wastewater Treatment
-Emi_N2O,Emissions|N2O
-Emi_N2O_AFO,Emissions|N2O|AFOLU
-Emi_N2O_AFO_Agg___Agr_and_Bio_Bur,Emissions|N2O|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_N2O_AFO_Agr,Emissions|N2O|AFOLU|Agriculture
-Emi_N2O_AFO_Agr_Liv,Emissions|N2O|AFOLU|Agriculture|Livestock
-Emi_N2O_AFO_Agr_Liv_Ent_Fer,Emissions|N2O|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_N2O_AFO_Agr_Liv_Man_Man,Emissions|N2O|AFOLU|Agriculture|Livestock|Manure Management
-Emi_N2O_AFO_Agr_Man_Soi,Emissions|N2O|AFOLU|Agriculture|Managed Soils
-Emi_N2O_AFO_Agr_Oth,Emissions|N2O|AFOLU|Agriculture|Other
-Emi_N2O_AFO_Agr_Ric,Emissions|N2O|AFOLU|Agriculture|Rice
-Emi_N2O_AFO_Bio_Bur,Emissions|N2O|AFOLU|Biomass Burning
-Emi_N2O_AFO_Lan,Emissions|N2O|AFOLU|Land
-Emi_N2O_AFO_Lan_Cro,Emissions|N2O|AFOLU|Land|Cropland
-Emi_N2O_AFO_Lan_Frs,Emissions|N2O|AFOLU|Land|Forest
-Emi_N2O_AFO_Lan_Frs_Bur,Emissions|N2O|AFOLU|Land|Forest Burning
-Emi_N2O_AFO_Lan_Gra_Bur,Emissions|N2O|AFOLU|Land|Grassland Burning
-Emi_N2O_AFO_Lan_Gra_Pst,Emissions|N2O|AFOLU|Land|Grassland Pastures
-Emi_N2O_AFO_Lan_Oth_Lan,Emissions|N2O|AFOLU|Land|Other Land
-Emi_N2O_AFO_Lan_Set,Emissions|N2O|AFOLU|Land|Settlements
-Emi_N2O_AFO_Lan_Wet,Emissions|N2O|AFOLU|Land|Wetlands
-Emi_N2O_Ene,Emissions|N2O|Energy
-Emi_N2O_Ene_Com,Emissions|N2O|Energy|Combustion
-Emi_N2O_Ene_Dem,Emissions|N2O|Energy|Demand
-Emi_N2O_Ene_Dem_AFO,Emissions|N2O|Energy|Demand|AFOFI
-Emi_N2O_Ene_Dem_Com,Emissions|N2O|Energy|Demand|Commercial
-Emi_N2O_Ene_Dem_Ind,Emissions|N2O|Energy|Demand|Industry
-Emi_N2O_Ene_Dem_Ind_Che,Emissions|N2O|Energy|Demand|Industry|Chemicals
-Emi_N2O_Ene_Dem_Ind_Con,Emissions|N2O|Energy|Demand|Industry|Construction
-Emi_N2O_Ene_Dem_Ind_Foo_and_Tob,Emissions|N2O|Energy|Demand|Industry|Food and Tobacco
-Emi_N2O_Ene_Dem_Ind_Iro_and_Ste,Emissions|N2O|Energy|Demand|Industry|Iron and Steel
-Emi_N2O_Ene_Dem_Ind_Mac,Emissions|N2O|Energy|Demand|Industry|Machinery
-Emi_N2O_Ene_Dem_Ind_Min,Emissions|N2O|Energy|Demand|Industry|Mining
-Emi_N2O_Ene_Dem_Ind_Non_Met,Emissions|N2O|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_N2O_Ene_Dem_Ind_Non_Min,Emissions|N2O|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_N2O_Ene_Dem_Ind_Oth,Emissions|N2O|Energy|Demand|Industry|Other
-Emi_N2O_Ene_Dem_Ind_Pul_and_Pap,Emissions|N2O|Energy|Demand|Industry|Pulp and Paper
-Emi_N2O_Ene_Dem_Ind_Tex,Emissions|N2O|Energy|Demand|Industry|Textile
-Emi_N2O_Ene_Dem_Ind_Tra_Equ,Emissions|N2O|Energy|Demand|Industry|Transport Equipment
-Emi_N2O_Ene_Dem_Ind_Woo_Pro,Emissions|N2O|Energy|Demand|Industry|Wood Products
-Emi_N2O_Ene_Dem_Oth_Sec,Emissions|N2O|Energy|Demand|Other Sector
-Emi_N2O_Ene_Dem_Res,Emissions|N2O|Energy|Demand|Residential
-Emi_N2O_Ene_Dem_Agg___Res_and_Com,Emissions|N2O|Energy|Demand|Aggregate - Residential and Commercial
-Emi_N2O_Ene_Dem_Res_and_Com_and_AFO,Emissions|N2O|Energy|Demand|Residential and Commercial and AFOFI
-Emi_N2O_Ene_Dem_Tra,Emissions|N2O|Energy|Demand|Transportation
-Emi_N2O_Ene_Dem_Tra_Avi,Emissions|N2O|Energy|Demand|Transportation|Aviation
-Emi_N2O_Ene_Dem_Tra_Avi_Dom,Emissions|N2O|Energy|Demand|Transportation|Aviation|Domestic
-Emi_N2O_Ene_Dem_Tra_Avi_Int,Emissions|N2O|Energy|Demand|Transportation|Aviation|International
-Emi_N2O_Ene_Dem_Tra_Oth_Sec,Emissions|N2O|Energy|Demand|Transportation|Other Sector
-Emi_N2O_Ene_Dem_Tra_Rai,Emissions|N2O|Energy|Demand|Transportation|Rail
-Emi_N2O_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|N2O|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_N2O_Ene_Dem_Tra_Roa,Emissions|N2O|Energy|Demand|Transportation|Road
-Emi_N2O_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|N2O|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_N2O_Ene_Dem_Tra_Shi,Emissions|N2O|Energy|Demand|Transportation|Shipping
-Emi_N2O_Ene_Dem_Tra_Shi_Dom,Emissions|N2O|Energy|Demand|Transportation|Shipping|Domestic
-Emi_N2O_Ene_Dem_Tra_Shi_Int,Emissions|N2O|Energy|Demand|Transportation|Shipping|International
-Emi_N2O_Ene_Dem_Tra_Shi_Int_Loa,Emissions|N2O|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_N2O_Ene_Agg___Fug,Emissions|N2O|Energy|Aggregate - Fugitive
-Emi_N2O_Ene_Oth,Emissions|N2O|Energy|Other
-Emi_N2O_Ene_Sup,Emissions|N2O|Energy|Supply
-Emi_N2O_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|N2O|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_N2O_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|N2O|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_N2O_Ene_Sup_Agg___Com,Emissions|N2O|Energy|Supply|Aggregate - Combustion
-Emi_N2O_Ene_Sup_Ele,Emissions|N2O|Energy|Supply|Electricity
-Emi_N2O_Ene_Sup_Agg___Ele_and_Heat,Emissions|N2O|Energy|Supply|Aggregate - Electricity and Heat
-Emi_N2O_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|N2O|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_N2O_Ene_Sup_Agg___Fug,Emissions|N2O|Energy|Supply|Aggregate - Fugitive
-Emi_N2O_Ene_Sup_Gas,Emissions|N2O|Energy|Supply|Gases
-Emi_N2O_Ene_Sup_Gas_and_Liq_Fug,Emissions|N2O|Energy|Supply|Gases and Liquids|Fugitive
-Emi_N2O_Ene_Sup_Gas_Com,Emissions|N2O|Energy|Supply|Gases|Combustion
-Emi_N2O_Ene_Sup_Gas_Fug,Emissions|N2O|Energy|Supply|Gases|Fugitive
-Emi_N2O_Ene_Sup_Heat,Emissions|N2O|Energy|Supply|Heat
-Emi_N2O_Ene_Sup_Liq,Emissions|N2O|Energy|Supply|Liquids
-Emi_N2O_Ene_Sup_Liq_Com,Emissions|N2O|Energy|Supply|Liquids|Combustion
-Emi_N2O_Ene_Sup_Liq_Fug,Emissions|N2O|Energy|Supply|Liquids|Fugitive
-Emi_N2O_Ene_Sup_Oth_Com,Emissions|N2O|Energy|Supply|Other|Combustion
-Emi_N2O_Ene_Sup_Oth_Fug,Emissions|N2O|Energy|Supply|Other|Fugitive
-Emi_N2O_Ene_Sup_Solids,Emissions|N2O|Energy|Supply|Solids
-Emi_N2O_Ene_Sup_SolidsCom,Emissions|N2O|Energy|Supply|Solids|Combustion
-Emi_N2O_Ene_Sup_SolidsFug,Emissions|N2O|Energy|Supply|Solids|Fugitive
-Emi_N2O_Fos_Fue_Fir,Emissions|N2O|Fossil Fuel Fires
-Emi_N2O_Agg___FFI,Emissions|N2O|Aggregate - Fossil Fuels and Industry
-Emi_N2O_Ind_Pro,Emissions|N2O|Industrial Processes
-Emi_N2O_Ind_Pro_Che,Emissions|N2O|Industrial Processes|Chemicals
-Emi_N2O_Ind_Pro_Ele,Emissions|N2O|Industrial Processes|Electronics
-Emi_N2O_Ind_Pro_Iro_and_Ste,Emissions|N2O|Industrial Processes|Iron and Steel
-Emi_N2O_Ind_Pro_Met_and_Min,Emissions|N2O|Industrial Processes|Metals and Minerals
-Emi_N2O_Ind_Pro_Non_Met_Alu,Emissions|N2O|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_N2O_Ind_Pro_Non_Met_Oth,Emissions|N2O|Industrial Processes|Non-Ferrous Metals|Other
-Emi_N2O_Ind_Pro_Non_Min,Emissions|N2O|Industrial Processes|Non-Metallic Minerals
-Emi_N2O_Ind_Pro_Non_Min_Cem,Emissions|N2O|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_N2O_Ind_Pro_Non_Min_Lim,Emissions|N2O|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_N2O_Ind_Pro_Non_Min_Oth,Emissions|N2O|Industrial Processes|Non-Metallic Minerals|Other
-Emi_N2O_Ind_Pro_Oth_Sec,Emissions|N2O|Industrial Processes|Other Sector
-Emi_N2O_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|N2O|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_N2O_Nat_Oth,Emissions|N2O|Natural|Other
-Emi_N2O_Nat_Vol,Emissions|N2O|Natural|Volcanoes
-Emi_N2O_Oth,Emissions|N2O|Other
-Emi_N2O_Pro_Use,Emissions|N2O|Product Use
-Emi_N2O_Pro_Use_NonEneUse,Emissions|N2O|Product Use|Non-Energy Use
-Emi_N2O_Pro_Use_ODS_Sub,Emissions|N2O|Product Use|ODS Substitutes
-Emi_N2O_Pro_Use_Oth,Emissions|N2O|Product Use|Other
-Emi_N2O_Pro_Use_Sol,Emissions|N2O|Product Use|Solvents
-Emi_N2O_Pro_Use_Sol_Che_Pro,Emissions|N2O|Product Use|Solvents|Chemical Products
-Emi_N2O_Pro_Use_Sol_Deg,Emissions|N2O|Product Use|Solvents|Degreasing
-Emi_N2O_Pro_Use_Sol_Pai,Emissions|N2O|Product Use|Solvents|Paint
-Emi_N2O_Was,Emissions|N2O|Waste
-Emi_N2O_Was_Bio_Tre,Emissions|N2O|Waste|Biological Treatment
-Emi_N2O_Was_Inc,Emissions|N2O|Waste|Incineration
-Emi_N2O_Was_Oth,Emissions|N2O|Waste|Other
-Emi_N2O_Was_Sol_Was_Dis,Emissions|N2O|Waste|Solid Waste Disposal
-Emi_N2O_Was_Was_Tre,Emissions|N2O|Waste|Wastewater Treatment
-Emi_NH3,Emissions|NH3
-Emi_NH3_AFO,Emissions|NH3|AFOLU
-Emi_NH3_AFO_Agg___Agr_and_Bio_Bur,Emissions|NH3|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_NH3_AFO_Agr,Emissions|NH3|AFOLU|Agriculture
-Emi_NH3_AFO_Agr_Liv,Emissions|NH3|AFOLU|Agriculture|Livestock
-Emi_NH3_AFO_Agr_Liv_Ent_Fer,Emissions|NH3|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_NH3_AFO_Agr_Liv_Man_Man,Emissions|NH3|AFOLU|Agriculture|Livestock|Manure Management
-Emi_NH3_AFO_Agr_Man_Soi,Emissions|NH3|AFOLU|Agriculture|Managed Soils
-Emi_NH3_AFO_Agr_Oth,Emissions|NH3|AFOLU|Agriculture|Other
-Emi_NH3_AFO_Agr_Ric,Emissions|NH3|AFOLU|Agriculture|Rice
-Emi_NH3_AFO_Bio_Bur,Emissions|NH3|AFOLU|Biomass Burning
-Emi_NH3_AFO_Lan,Emissions|NH3|AFOLU|Land
-Emi_NH3_AFO_Lan_Cro,Emissions|NH3|AFOLU|Land|Cropland
-Emi_NH3_AFO_Lan_Frs,Emissions|NH3|AFOLU|Land|Forest
-Emi_NH3_AFO_Lan_Frs_Bur,Emissions|NH3|AFOLU|Land|Forest Burning
-Emi_NH3_AFO_Lan_Gra_Bur,Emissions|NH3|AFOLU|Land|Grassland Burning
-Emi_NH3_AFO_Lan_Gra_Pst,Emissions|NH3|AFOLU|Land|Grassland Pastures
-Emi_NH3_AFO_Lan_Oth_Lan,Emissions|NH3|AFOLU|Land|Other Land
-Emi_NH3_AFO_Lan_Set,Emissions|NH3|AFOLU|Land|Settlements
-Emi_NH3_AFO_Lan_Wet,Emissions|NH3|AFOLU|Land|Wetlands
-Emi_NH3_Ene,Emissions|NH3|Energy
-Emi_NH3_Ene_Com,Emissions|NH3|Energy|Combustion
-Emi_NH3_Ene_Dem,Emissions|NH3|Energy|Demand
-Emi_NH3_Ene_Dem_AFO,Emissions|NH3|Energy|Demand|AFOFI
-Emi_NH3_Ene_Dem_Com,Emissions|NH3|Energy|Demand|Commercial
-Emi_NH3_Ene_Dem_Ind,Emissions|NH3|Energy|Demand|Industry
-Emi_NH3_Ene_Dem_Ind_Che,Emissions|NH3|Energy|Demand|Industry|Chemicals
-Emi_NH3_Ene_Dem_Ind_Con,Emissions|NH3|Energy|Demand|Industry|Construction
-Emi_NH3_Ene_Dem_Ind_Foo_and_Tob,Emissions|NH3|Energy|Demand|Industry|Food and Tobacco
-Emi_NH3_Ene_Dem_Ind_Iro_and_Ste,Emissions|NH3|Energy|Demand|Industry|Iron and Steel
-Emi_NH3_Ene_Dem_Ind_Mac,Emissions|NH3|Energy|Demand|Industry|Machinery
-Emi_NH3_Ene_Dem_Ind_Min,Emissions|NH3|Energy|Demand|Industry|Mining
-Emi_NH3_Ene_Dem_Ind_Non_Met,Emissions|NH3|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_NH3_Ene_Dem_Ind_Non_Min,Emissions|NH3|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_NH3_Ene_Dem_Ind_Oth,Emissions|NH3|Energy|Demand|Industry|Other
-Emi_NH3_Ene_Dem_Ind_Pul_and_Pap,Emissions|NH3|Energy|Demand|Industry|Pulp and Paper
-Emi_NH3_Ene_Dem_Ind_Tex,Emissions|NH3|Energy|Demand|Industry|Textile
-Emi_NH3_Ene_Dem_Ind_Tra_Equ,Emissions|NH3|Energy|Demand|Industry|Transport Equipment
-Emi_NH3_Ene_Dem_Ind_Woo_Pro,Emissions|NH3|Energy|Demand|Industry|Wood Products
-Emi_NH3_Ene_Dem_Oth_Sec,Emissions|NH3|Energy|Demand|Other Sector
-Emi_NH3_Ene_Dem_Res,Emissions|NH3|Energy|Demand|Residential
-Emi_NH3_Ene_Dem_Agg___Res_and_Com,Emissions|NH3|Energy|Demand|Aggregate - Residential and Commercial
-Emi_NH3_Ene_Dem_Res_and_Com_and_AFO,Emissions|NH3|Energy|Demand|Residential and Commercial and AFOFI
-Emi_NH3_Ene_Dem_Tra,Emissions|NH3|Energy|Demand|Transportation
-Emi_NH3_Ene_Dem_Tra_Avi,Emissions|NH3|Energy|Demand|Transportation|Aviation
-Emi_NH3_Ene_Dem_Tra_Avi_Dom,Emissions|NH3|Energy|Demand|Transportation|Aviation|Domestic
-Emi_NH3_Ene_Dem_Tra_Avi_Int,Emissions|NH3|Energy|Demand|Transportation|Aviation|International
-Emi_NH3_Ene_Dem_Tra_Oth_Sec,Emissions|NH3|Energy|Demand|Transportation|Other Sector
-Emi_NH3_Ene_Dem_Tra_Rai,Emissions|NH3|Energy|Demand|Transportation|Rail
-Emi_NH3_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|NH3|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_NH3_Ene_Dem_Tra_Roa,Emissions|NH3|Energy|Demand|Transportation|Road
-Emi_NH3_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|NH3|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_NH3_Ene_Dem_Tra_Shi,Emissions|NH3|Energy|Demand|Transportation|Shipping
-Emi_NH3_Ene_Dem_Tra_Shi_Dom,Emissions|NH3|Energy|Demand|Transportation|Shipping|Domestic
-Emi_NH3_Ene_Dem_Tra_Shi_Int,Emissions|NH3|Energy|Demand|Transportation|Shipping|International
-Emi_NH3_Ene_Dem_Tra_Shi_Int_Loa,Emissions|NH3|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_NH3_Ene_Agg___Fug,Emissions|NH3|Energy|Aggregate - Fugitive
-Emi_NH3_Ene_Oth,Emissions|NH3|Energy|Other
-Emi_NH3_Ene_Sup,Emissions|NH3|Energy|Supply
-Emi_NH3_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|NH3|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_NH3_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|NH3|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_NH3_Ene_Sup_Agg___Com,Emissions|NH3|Energy|Supply|Aggregate - Combustion
-Emi_NH3_Ene_Sup_Ele,Emissions|NH3|Energy|Supply|Electricity
-Emi_NH3_Ene_Sup_Agg___Ele_and_Heat,Emissions|NH3|Energy|Supply|Aggregate - Electricity and Heat
-Emi_NH3_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|NH3|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_NH3_Ene_Sup_Agg___Fug,Emissions|NH3|Energy|Supply|Aggregate - Fugitive
-Emi_NH3_Ene_Sup_Gas,Emissions|NH3|Energy|Supply|Gases
-Emi_NH3_Ene_Sup_Gas_and_Liq_Fug,Emissions|NH3|Energy|Supply|Gases and Liquids|Fugitive
-Emi_NH3_Ene_Sup_Gas_Com,Emissions|NH3|Energy|Supply|Gases|Combustion
-Emi_NH3_Ene_Sup_Gas_Fug,Emissions|NH3|Energy|Supply|Gases|Fugitive
-Emi_NH3_Ene_Sup_Heat,Emissions|NH3|Energy|Supply|Heat
-Emi_NH3_Ene_Sup_Liq,Emissions|NH3|Energy|Supply|Liquids
-Emi_NH3_Ene_Sup_Liq_Com,Emissions|NH3|Energy|Supply|Liquids|Combustion
-Emi_NH3_Ene_Sup_Liq_Fug,Emissions|NH3|Energy|Supply|Liquids|Fugitive
-Emi_NH3_Ene_Sup_Oth_Com,Emissions|NH3|Energy|Supply|Other|Combustion
-Emi_NH3_Ene_Sup_Oth_Fug,Emissions|NH3|Energy|Supply|Other|Fugitive
-Emi_NH3_Ene_Sup_Solids,Emissions|NH3|Energy|Supply|Solids
-Emi_NH3_Ene_Sup_SolidsCom,Emissions|NH3|Energy|Supply|Solids|Combustion
-Emi_NH3_Ene_Sup_SolidsFug,Emissions|NH3|Energy|Supply|Solids|Fugitive
-Emi_NH3_Fos_Fue_Fir,Emissions|NH3|Fossil Fuel Fires
-Emi_NH3_Agg___FFI,Emissions|NH3|Aggregate - Fossil Fuels and Industry
-Emi_NH3_Ind_Pro,Emissions|NH3|Industrial Processes
-Emi_NH3_Ind_Pro_Che,Emissions|NH3|Industrial Processes|Chemicals
-Emi_NH3_Ind_Pro_Ele,Emissions|NH3|Industrial Processes|Electronics
-Emi_NH3_Ind_Pro_Iro_and_Ste,Emissions|NH3|Industrial Processes|Iron and Steel
-Emi_NH3_Ind_Pro_Met_and_Min,Emissions|NH3|Industrial Processes|Metals and Minerals
-Emi_NH3_Ind_Pro_Non_Met,Emissions|NH3|Industrial Processes|Non-Ferrous Metals
-Emi_NH3_Ind_Pro_Non_Met_Alu,Emissions|NH3|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_NH3_Ind_Pro_Non_Met_Oth,Emissions|NH3|Industrial Processes|Non-Ferrous Metals|Other
-Emi_NH3_Ind_Pro_Non_Min,Emissions|NH3|Industrial Processes|Non-Metallic Minerals
-Emi_NH3_Ind_Pro_Non_Min_Cem,Emissions|NH3|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_NH3_Ind_Pro_Non_Min_Lim,Emissions|NH3|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_NH3_Ind_Pro_Non_Min_Oth,Emissions|NH3|Industrial Processes|Non-Metallic Minerals|Other
-Emi_NH3_Ind_Pro_Oth_Sec,Emissions|NH3|Industrial Processes|Other Sector
-Emi_NH3_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|NH3|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_NH3_Nat_Oth,Emissions|NH3|Natural|Other
-Emi_NH3_Nat_Vol,Emissions|NH3|Natural|Volcanoes
-Emi_NH3_Oth,Emissions|NH3|Other
-Emi_NH3_Pro_Use,Emissions|NH3|Product Use
-Emi_NH3_Pro_Use_NonEneUse,Emissions|NH3|Product Use|Non-Energy Use
-Emi_NH3_Pro_Use_ODS_Sub,Emissions|NH3|Product Use|ODS Substitutes
-Emi_NH3_Pro_Use_Oth,Emissions|NH3|Product Use|Other
-Emi_NH3_Pro_Use_Sol,Emissions|NH3|Product Use|Solvents
-Emi_NH3_Pro_Use_Sol_Che_Pro,Emissions|NH3|Product Use|Solvents|Chemical Products
-Emi_NH3_Pro_Use_Sol_Deg,Emissions|NH3|Product Use|Solvents|Degreasing
-Emi_NH3_Pro_Use_Sol_Pai,Emissions|NH3|Product Use|Solvents|Paint
-Emi_NH3_Was,Emissions|NH3|Waste
-Emi_NH3_Was_Bio_Tre,Emissions|NH3|Waste|Biological Treatment
-Emi_NH3_Was_Inc,Emissions|NH3|Waste|Incineration
-Emi_NH3_Was_Oth,Emissions|NH3|Waste|Other
-Emi_NH3_Was_Sol_Was_Dis,Emissions|NH3|Waste|Solid Waste Disposal
-Emi_NH3_Was_Was_Tre,Emissions|NH3|Waste|Wastewater Treatment
-Emi_NOx,Emissions|NOx
-Emi_NOx_AFO,Emissions|NOx|AFOLU
-Emi_NOx_AFO_Agg___Agr_and_Bio_Bur,Emissions|NOx|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_NOx_AFO_Agr,Emissions|NOx|AFOLU|Agriculture
-Emi_NOx_AFO_Agr_Liv,Emissions|NOx|AFOLU|Agriculture|Livestock
-Emi_NOx_AFO_Agr_Liv_Ent_Fer,Emissions|NOx|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_NOx_AFO_Agr_Liv_Man_Man,Emissions|NOx|AFOLU|Agriculture|Livestock|Manure Management
-Emi_NOx_AFO_Agr_Man_Soi,Emissions|NOx|AFOLU|Agriculture|Managed Soils
-Emi_NOx_AFO_Agr_Oth,Emissions|NOx|AFOLU|Agriculture|Other
-Emi_NOx_AFO_Agr_Ric,Emissions|NOx|AFOLU|Agriculture|Rice
-Emi_NOx_AFO_Bio_Bur,Emissions|NOx|AFOLU|Biomass Burning
-Emi_NOx_AFO_Lan,Emissions|NOx|AFOLU|Land
-Emi_NOx_AFO_Lan_Cro,Emissions|NOx|AFOLU|Land|Cropland
-Emi_NOx_AFO_Lan_Frs,Emissions|NOx|AFOLU|Land|Forest
-Emi_NOx_AFO_Lan_Frs_Bur,Emissions|NOx|AFOLU|Land|Forest Burning
-Emi_NOx_AFO_Lan_Gra_Bur,Emissions|NOx|AFOLU|Land|Grassland Burning
-Emi_NOx_AFO_Lan_Gra_Pst,Emissions|NOx|AFOLU|Land|Grassland Pastures
-Emi_NOx_AFO_Lan_Oth_Lan,Emissions|NOx|AFOLU|Land|Other Land
-Emi_NOx_AFO_Lan_Set,Emissions|NOx|AFOLU|Land|Settlements
-Emi_NOx_AFO_Lan_Wet,Emissions|NOx|AFOLU|Land|Wetlands
-Emi_NOx_Ene,Emissions|NOx|Energy
-Emi_NOx_Ene_Com,Emissions|NOx|Energy|Combustion
-Emi_NOx_Ene_Dem,Emissions|NOx|Energy|Demand
-Emi_NOx_Ene_Dem_AFO,Emissions|NOx|Energy|Demand|AFOFI
-Emi_NOx_Ene_Dem_Com,Emissions|NOx|Energy|Demand|Commercial
-Emi_NOx_Ene_Dem_Ind,Emissions|NOx|Energy|Demand|Industry
-Emi_NOx_Ene_Dem_Ind_Che,Emissions|NOx|Energy|Demand|Industry|Chemicals
-Emi_NOx_Ene_Dem_Ind_Con,Emissions|NOx|Energy|Demand|Industry|Construction
-Emi_NOx_Ene_Dem_Ind_Foo_and_Tob,Emissions|NOx|Energy|Demand|Industry|Food and Tobacco
-Emi_NOx_Ene_Dem_Ind_Iro_and_Ste,Emissions|NOx|Energy|Demand|Industry|Iron and Steel
-Emi_NOx_Ene_Dem_Ind_Mac,Emissions|NOx|Energy|Demand|Industry|Machinery
-Emi_NOx_Ene_Dem_Ind_Min,Emissions|NOx|Energy|Demand|Industry|Mining
-Emi_NOx_Ene_Dem_Ind_Non_Met,Emissions|NOx|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_NOx_Ene_Dem_Ind_Non_Min,Emissions|NOx|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_NOx_Ene_Dem_Ind_Oth,Emissions|NOx|Energy|Demand|Industry|Other
-Emi_NOx_Ene_Dem_Ind_Pul_and_Pap,Emissions|NOx|Energy|Demand|Industry|Pulp and Paper
-Emi_NOx_Ene_Dem_Ind_Tex,Emissions|NOx|Energy|Demand|Industry|Textile
-Emi_NOx_Ene_Dem_Ind_Tra_Equ,Emissions|NOx|Energy|Demand|Industry|Transport Equipment
-Emi_NOx_Ene_Dem_Ind_Woo_Pro,Emissions|NOx|Energy|Demand|Industry|Wood Products
-Emi_NOx_Ene_Dem_Oth_Sec,Emissions|NOx|Energy|Demand|Other Sector
-Emi_NOx_Ene_Dem_Res,Emissions|NOx|Energy|Demand|Residential
-Emi_NOx_Ene_Dem_Agg___Res_and_Com,Emissions|NOx|Energy|Demand|Aggregate - Residential and Commercial
-Emi_NOx_Ene_Dem_Res_and_Com_and_AFO,Emissions|NOx|Energy|Demand|Residential and Commercial and AFOFI
-Emi_NOx_Ene_Dem_Tra,Emissions|NOx|Energy|Demand|Transportation
-Emi_NOx_Ene_Dem_Tra_Avi,Emissions|NOx|Energy|Demand|Transportation|Aviation
-Emi_NOx_Ene_Dem_Tra_Avi_Dom,Emissions|NOx|Energy|Demand|Transportation|Aviation|Domestic
-Emi_NOx_Ene_Dem_Tra_Avi_Int,Emissions|NOx|Energy|Demand|Transportation|Aviation|International
-Emi_NOx_Ene_Dem_Tra_Oth_Sec,Emissions|NOx|Energy|Demand|Transportation|Other Sector
-Emi_NOx_Ene_Dem_Tra_Rai,Emissions|NOx|Energy|Demand|Transportation|Rail
-Emi_NOx_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|NOx|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_NOx_Ene_Dem_Tra_Roa,Emissions|NOx|Energy|Demand|Transportation|Road
-Emi_NOx_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|NOx|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_NOx_Ene_Dem_Tra_Shi,Emissions|NOx|Energy|Demand|Transportation|Shipping
-Emi_NOx_Ene_Dem_Tra_Shi_Dom,Emissions|NOx|Energy|Demand|Transportation|Shipping|Domestic
-Emi_NOx_Ene_Dem_Tra_Shi_Int,Emissions|NOx|Energy|Demand|Transportation|Shipping|International
-Emi_NOx_Ene_Dem_Tra_Shi_Int_Loa,Emissions|NOx|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_NOx_Ene_Agg___Fug,Emissions|NOx|Energy|Aggregate - Fugitive
-Emi_NOx_Ene_Oth,Emissions|NOx|Energy|Other
-Emi_NOx_Ene_Sup,Emissions|NOx|Energy|Supply
-Emi_NOx_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|NOx|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_NOx_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|NOx|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_NOx_Ene_Sup_Agg___Com,Emissions|NOx|Energy|Supply|Aggregate - Combustion
-Emi_NOx_Ene_Sup_Ele,Emissions|NOx|Energy|Supply|Electricity
-Emi_NOx_Ene_Sup_Agg___Ele_and_Heat,Emissions|NOx|Energy|Supply|Aggregate - Electricity and Heat
-Emi_NOx_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|NOx|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_NOx_Ene_Sup_Agg___Fug,Emissions|NOx|Energy|Supply|Aggregate - Fugitive
-Emi_NOx_Ene_Sup_Gas,Emissions|NOx|Energy|Supply|Gases
-Emi_NOx_Ene_Sup_Gas_and_Liq_Fug,Emissions|NOx|Energy|Supply|Gases and Liquids|Fugitive
-Emi_NOx_Ene_Sup_Gas_Com,Emissions|NOx|Energy|Supply|Gases|Combustion
-Emi_NOx_Ene_Sup_Gas_Fug,Emissions|NOx|Energy|Supply|Gases|Fugitive
-Emi_NOx_Ene_Sup_Heat,Emissions|NOx|Energy|Supply|Heat
-Emi_NOx_Ene_Sup_Liq,Emissions|NOx|Energy|Supply|Liquids
-Emi_NOx_Ene_Sup_Liq_Com,Emissions|NOx|Energy|Supply|Liquids|Combustion
-Emi_NOx_Ene_Sup_Liq_Fug,Emissions|NOx|Energy|Supply|Liquids|Fugitive
-Emi_NOx_Ene_Sup_Oth_Com,Emissions|NOx|Energy|Supply|Other|Combustion
-Emi_NOx_Ene_Sup_Oth_Fug,Emissions|NOx|Energy|Supply|Other|Fugitive
-Emi_NOx_Ene_Sup_Solids,Emissions|NOx|Energy|Supply|Solids
-Emi_NOx_Ene_Sup_SolidsCom,Emissions|NOx|Energy|Supply|Solids|Combustion
-Emi_NOx_Ene_Sup_SolidsFug,Emissions|NOx|Energy|Supply|Solids|Fugitive
-Emi_NOx_Fos_Fue_Fir,Emissions|NOx|Fossil Fuel Fires
-Emi_NOx_Agg___FFI,Emissions|NOx|Aggregate - Fossil Fuels and Industry
-Emi_NOx_Ind_Pro,Emissions|NOx|Industrial Processes
-Emi_NOx_Ind_Pro_Che,Emissions|NOx|Industrial Processes|Chemicals
-Emi_NOx_Ind_Pro_Ele,Emissions|NOx|Industrial Processes|Electronics
-Emi_NOx_Ind_Pro_Iro_and_Ste,Emissions|NOx|Industrial Processes|Iron and Steel
-Emi_NOx_Ind_Pro_Met_and_Min,Emissions|NOx|Industrial Processes|Metals and Minerals
-Emi_NOx_Ind_Pro_Non_Met,Emissions|NOx|Industrial Processes|Non-Ferrous Metals
-Emi_NOx_Ind_Pro_Non_Met_Alu,Emissions|NOx|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_NOx_Ind_Pro_Non_Met_Oth,Emissions|NOx|Industrial Processes|Non-Ferrous Metals|Other
-Emi_NOx_Ind_Pro_Non_Min,Emissions|NOx|Industrial Processes|Non-Metallic Minerals
-Emi_NOx_Ind_Pro_Non_Min_Cem,Emissions|NOx|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_NOx_Ind_Pro_Non_Min_Lim,Emissions|NOx|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_NOx_Ind_Pro_Non_Min_Oth,Emissions|NOx|Industrial Processes|Non-Metallic Minerals|Other
-Emi_NOx_Ind_Pro_Oth_Sec,Emissions|NOx|Industrial Processes|Other Sector
-Emi_NOx_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|NOx|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_NOx_Nat_Oth,Emissions|NOx|Natural|Other
-Emi_NOx_Nat_Vol,Emissions|NOx|Natural|Volcanoes
-Emi_NOx_Oth,Emissions|NOx|Other
-Emi_NOx_Pro_Use,Emissions|NOx|Product Use
-Emi_NOx_Pro_Use_NonEneUse,Emissions|NOx|Product Use|Non-Energy Use
-Emi_NOx_Pro_Use_ODS_Sub,Emissions|NOx|Product Use|ODS Substitutes
-Emi_NOx_Pro_Use_Oth,Emissions|NOx|Product Use|Other
-Emi_NOx_Pro_Use_Sol,Emissions|NOx|Product Use|Solvents
-Emi_NOx_Pro_Use_Sol_Che_Pro,Emissions|NOx|Product Use|Solvents|Chemical Products
-Emi_NOx_Pro_Use_Sol_Deg,Emissions|NOx|Product Use|Solvents|Degreasing
-Emi_NOx_Pro_Use_Sol_Pai,Emissions|NOx|Product Use|Solvents|Paint
-Emi_NOx_Was,Emissions|NOx|Waste
-Emi_NOx_Was_Bio_Tre,Emissions|NOx|Waste|Biological Treatment
-Emi_NOx_Was_Inc,Emissions|NOx|Waste|Incineration
-Emi_NOx_Was_Oth,Emissions|NOx|Waste|Other
-Emi_NOx_Was_Sol_Was_Dis,Emissions|NOx|Waste|Solid Waste Disposal
-Emi_NOx_Was_Was_Tre,Emissions|NOx|Waste|Wastewater Treatment
-Emi_OC,Emissions|OC
-Emi_OC_AFO,Emissions|OC|AFOLU
-Emi_OC_AFO_Agg___Agr_and_Bio_Bur,Emissions|OC|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_OC_AFO_Agr,Emissions|OC|AFOLU|Agriculture
-Emi_OC_AFO_Agr_Liv,Emissions|OC|AFOLU|Agriculture|Livestock
-Emi_OC_AFO_Agr_Liv_Ent_Fer,Emissions|OC|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_OC_AFO_Agr_Liv_Man_Man,Emissions|OC|AFOLU|Agriculture|Livestock|Manure Management
-Emi_OC_AFO_Agr_Man_Soi,Emissions|OC|AFOLU|Agriculture|Managed Soils
-Emi_OC_AFO_Agr_Oth,Emissions|OC|AFOLU|Agriculture|Other
-Emi_OC_AFO_Agr_Ric,Emissions|OC|AFOLU|Agriculture|Rice
-Emi_OC_AFO_Bio_Bur,Emissions|OC|AFOLU|Biomass Burning
-Emi_OC_AFO_Lan,Emissions|OC|AFOLU|Land
-Emi_OC_AFO_Lan_Cro,Emissions|OC|AFOLU|Land|Cropland
-Emi_OC_AFO_Lan_Frs,Emissions|OC|AFOLU|Land|Forest
-Emi_OC_AFO_Lan_Frs_Bur,Emissions|OC|AFOLU|Land|Forest Burning
-Emi_OC_AFO_Lan_Gra_Bur,Emissions|OC|AFOLU|Land|Grassland Burning
-Emi_OC_AFO_Lan_Gra_Pst,Emissions|OC|AFOLU|Land|Grassland Pastures
-Emi_OC_AFO_Lan_Oth_Lan,Emissions|OC|AFOLU|Land|Other Land
-Emi_OC_AFO_Lan_Set,Emissions|OC|AFOLU|Land|Settlements
-Emi_OC_AFO_Lan_Wet,Emissions|OC|AFOLU|Land|Wetlands
-Emi_OC_Ene,Emissions|OC|Energy
-Emi_OC_Ene_Com,Emissions|OC|Energy|Combustion
-Emi_OC_Ene_Dem,Emissions|OC|Energy|Demand
-Emi_OC_Ene_Dem_AFO,Emissions|OC|Energy|Demand|AFOFI
-Emi_OC_Ene_Dem_Com,Emissions|OC|Energy|Demand|Commercial
-Emi_OC_Ene_Dem_Ind,Emissions|OC|Energy|Demand|Industry
-Emi_OC_Ene_Dem_Ind_Che,Emissions|OC|Energy|Demand|Industry|Chemicals
-Emi_OC_Ene_Dem_Ind_Con,Emissions|OC|Energy|Demand|Industry|Construction
-Emi_OC_Ene_Dem_Ind_Foo_and_Tob,Emissions|OC|Energy|Demand|Industry|Food and Tobacco
-Emi_OC_Ene_Dem_Ind_Iro_and_Ste,Emissions|OC|Energy|Demand|Industry|Iron and Steel
-Emi_OC_Ene_Dem_Ind_Mac,Emissions|OC|Energy|Demand|Industry|Machinery
-Emi_OC_Ene_Dem_Ind_Min,Emissions|OC|Energy|Demand|Industry|Mining
-Emi_OC_Ene_Dem_Ind_Non_Met,Emissions|OC|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_OC_Ene_Dem_Ind_Non_Min,Emissions|OC|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_OC_Ene_Dem_Ind_Oth,Emissions|OC|Energy|Demand|Industry|Other
-Emi_OC_Ene_Dem_Ind_Pul_and_Pap,Emissions|OC|Energy|Demand|Industry|Pulp and Paper
-Emi_OC_Ene_Dem_Ind_Tex,Emissions|OC|Energy|Demand|Industry|Textile
-Emi_OC_Ene_Dem_Ind_Tra_Equ,Emissions|OC|Energy|Demand|Industry|Transport Equipment
-Emi_OC_Ene_Dem_Ind_Woo_Pro,Emissions|OC|Energy|Demand|Industry|Wood Products
-Emi_OC_Ene_Dem_Oth_Sec,Emissions|OC|Energy|Demand|Other Sector
-Emi_OC_Ene_Dem_Res,Emissions|OC|Energy|Demand|Residential
-Emi_OC_Ene_Dem_Agg___Res_and_Com,Emissions|OC|Energy|Demand|Aggregate - Residential and Commercial
-Emi_OC_Ene_Dem_Res_and_Com_and_AFO,Emissions|OC|Energy|Demand|Residential and Commercial and AFOFI
-Emi_OC_Ene_Dem_Tra,Emissions|OC|Energy|Demand|Transportation
-Emi_OC_Ene_Dem_Tra_Avi,Emissions|OC|Energy|Demand|Transportation|Aviation
-Emi_OC_Ene_Dem_Tra_Avi_Dom,Emissions|OC|Energy|Demand|Transportation|Aviation|Domestic
-Emi_OC_Ene_Dem_Tra_Avi_Int,Emissions|OC|Energy|Demand|Transportation|Aviation|International
-Emi_OC_Ene_Dem_Tra_Oth_Sec,Emissions|OC|Energy|Demand|Transportation|Other Sector
-Emi_OC_Ene_Dem_Tra_Rai,Emissions|OC|Energy|Demand|Transportation|Rail
-Emi_OC_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|OC|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_OC_Ene_Dem_Tra_Roa,Emissions|OC|Energy|Demand|Transportation|Road
-Emi_OC_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|OC|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_OC_Ene_Dem_Tra_Shi,Emissions|OC|Energy|Demand|Transportation|Shipping
-Emi_OC_Ene_Dem_Tra_Shi_Dom,Emissions|OC|Energy|Demand|Transportation|Shipping|Domestic
-Emi_OC_Ene_Dem_Tra_Shi_Int,Emissions|OC|Energy|Demand|Transportation|Shipping|International
-Emi_OC_Ene_Dem_Tra_Shi_Int_Loa,Emissions|OC|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_OC_Ene_Agg___Fug,Emissions|OC|Energy|Aggregate - Fugitive
-Emi_OC_Ene_Oth,Emissions|OC|Energy|Other
-Emi_OC_Ene_Sup,Emissions|OC|Energy|Supply
-Emi_OC_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|OC|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_OC_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|OC|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_OC_Ene_Sup_Agg___Com,Emissions|OC|Energy|Supply|Aggregate - Combustion
-Emi_OC_Ene_Sup_Ele,Emissions|OC|Energy|Supply|Electricity
-Emi_OC_Ene_Sup_Agg___Ele_and_Heat,Emissions|OC|Energy|Supply|Aggregate - Electricity and Heat
-Emi_OC_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|OC|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_OC_Ene_Sup_Agg___Fug,Emissions|OC|Energy|Supply|Aggregate - Fugitive
-Emi_OC_Ene_Sup_Gas,Emissions|OC|Energy|Supply|Gases
-Emi_OC_Ene_Sup_Gas_and_Liq_Fug,Emissions|OC|Energy|Supply|Gases and Liquids|Fugitive
-Emi_OC_Ene_Sup_Gas_Com,Emissions|OC|Energy|Supply|Gases|Combustion
-Emi_OC_Ene_Sup_Gas_Fug,Emissions|OC|Energy|Supply|Gases|Fugitive
-Emi_OC_Ene_Sup_Heat,Emissions|OC|Energy|Supply|Heat
-Emi_OC_Ene_Sup_Liq,Emissions|OC|Energy|Supply|Liquids
-Emi_OC_Ene_Sup_Liq_Com,Emissions|OC|Energy|Supply|Liquids|Combustion
-Emi_OC_Ene_Sup_Liq_Fug,Emissions|OC|Energy|Supply|Liquids|Fugitive
-Emi_OC_Ene_Sup_Oth_Com,Emissions|OC|Energy|Supply|Other|Combustion
-Emi_OC_Ene_Sup_Oth_Fug,Emissions|OC|Energy|Supply|Other|Fugitive
-Emi_OC_Ene_Sup_Solids,Emissions|OC|Energy|Supply|Solids
-Emi_OC_Ene_Sup_SolidsCom,Emissions|OC|Energy|Supply|Solids|Combustion
-Emi_OC_Ene_Sup_SolidsFug,Emissions|OC|Energy|Supply|Solids|Fugitive
-Emi_OC_Fos_Fue_Fir,Emissions|OC|Fossil Fuel Fires
-Emi_OC_Agg___FFI,Emissions|OC|Aggregate - Fossil Fuels and Industry
-Emi_OC_Ind_Pro,Emissions|OC|Industrial Processes
-Emi_OC_Ind_Pro_Che,Emissions|OC|Industrial Processes|Chemicals
-Emi_OC_Ind_Pro_Ele,Emissions|OC|Industrial Processes|Electronics
-Emi_OC_Ind_Pro_Iro_and_Ste,Emissions|OC|Industrial Processes|Iron and Steel
-Emi_OC_Ind_Pro_Met_and_Min,Emissions|OC|Industrial Processes|Metals and Minerals
-Emi_OC_Ind_Pro_Non_Met,Emissions|OC|Industrial Processes|Non-Ferrous Metals
-Emi_OC_Ind_Pro_Non_Met_Alu,Emissions|OC|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_OC_Ind_Pro_Non_Met_Oth,Emissions|OC|Industrial Processes|Non-Ferrous Metals|Other
-Emi_OC_Ind_Pro_Non_Min,Emissions|OC|Industrial Processes|Non-Metallic Minerals
-Emi_OC_Ind_Pro_Non_Min_Cem,Emissions|OC|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_OC_Ind_Pro_Non_Min_Lim,Emissions|OC|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_OC_Ind_Pro_Non_Min_Oth,Emissions|OC|Industrial Processes|Non-Metallic Minerals|Other
-Emi_OC_Ind_Pro_Oth_Sec,Emissions|OC|Industrial Processes|Other Sector
-Emi_OC_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|OC|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_OC_Nat_Oth,Emissions|OC|Natural|Other
-Emi_OC_Nat_Vol,Emissions|OC|Natural|Volcanoes
-Emi_OC_Oth,Emissions|OC|Other
-Emi_OC_Pro_Use,Emissions|OC|Product Use
-Emi_OC_Pro_Use_NonEneUse,Emissions|OC|Product Use|Non-Energy Use
-Emi_OC_Pro_Use_ODS_Sub,Emissions|OC|Product Use|ODS Substitutes
-Emi_OC_Pro_Use_Oth,Emissions|OC|Product Use|Other
-Emi_OC_Pro_Use_Sol,Emissions|OC|Product Use|Solvents
-Emi_OC_Pro_Use_Sol_Che_Pro,Emissions|OC|Product Use|Solvents|Chemical Products
-Emi_OC_Pro_Use_Sol_Deg,Emissions|OC|Product Use|Solvents|Degreasing
-Emi_OC_Pro_Use_Sol_Pai,Emissions|OC|Product Use|Solvents|Paint
-Emi_OC_Was,Emissions|OC|Waste
-Emi_OC_Was_Bio_Tre,Emissions|OC|Waste|Biological Treatment
-Emi_OC_Was_Inc,Emissions|OC|Waste|Incineration
-Emi_OC_Was_Oth,Emissions|OC|Waste|Other
-Emi_OC_Was_Sol_Was_Dis,Emissions|OC|Waste|Solid Waste Disposal
-Emi_OC_Was_Was_Tre,Emissions|OC|Waste|Wastewater Treatment
-Emi_Sul,Emissions|Sulfur
-Emi_Sul_AFO,Emissions|Sulfur|AFOLU
-Emi_Sul_AFO_Agg___Agr_and_Bio_Bur,Emissions|Sulfur|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_Sul_AFO_Agr,Emissions|Sulfur|AFOLU|Agriculture
-Emi_Sul_AFO_Agr_Liv,Emissions|Sulfur|AFOLU|Agriculture|Livestock
-Emi_Sul_AFO_Agr_Liv_Ent_Fer,Emissions|Sulfur|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_Sul_AFO_Agr_Liv_Man_Man,Emissions|Sulfur|AFOLU|Agriculture|Livestock|Manure Management
-Emi_Sul_AFO_Agr_Man_Soi,Emissions|Sulfur|AFOLU|Agriculture|Managed Soils
-Emi_Sul_AFO_Agr_Oth,Emissions|Sulfur|AFOLU|Agriculture|Other
-Emi_Sul_AFO_Agr_Ric,Emissions|Sulfur|AFOLU|Agriculture|Rice
-Emi_Sul_AFO_Bio_Bur,Emissions|Sulfur|AFOLU|Biomass Burning
-Emi_Sul_AFO_Lan,Emissions|Sulfur|AFOLU|Land
-Emi_Sul_AFO_Lan_Cro,Emissions|Sulfur|AFOLU|Land|Cropland
-Emi_Sul_AFO_Lan_Frs,Emissions|Sulfur|AFOLU|Land|Forest
-Emi_Sul_AFO_Lan_Frs_Bur,Emissions|Sulfur|AFOLU|Land|Forest Burning
-Emi_Sul_AFO_Lan_Gra_Bur,Emissions|Sulfur|AFOLU|Land|Grassland Burning
-Emi_Sul_AFO_Lan_Gra_Pst,Emissions|Sulfur|AFOLU|Land|Grassland Pastures
-Emi_Sul_AFO_Lan_Oth_Lan,Emissions|Sulfur|AFOLU|Land|Other Land
-Emi_Sul_AFO_Lan_Set,Emissions|Sulfur|AFOLU|Land|Settlements
-Emi_Sul_AFO_Lan_Wet,Emissions|Sulfur|AFOLU|Land|Wetlands
-Emi_Sul_Ene,Emissions|Sulfur|Energy
-Emi_Sul_Ene_Com,Emissions|Sulfur|Energy|Combustion
-Emi_Sul_Ene_Dem,Emissions|Sulfur|Energy|Demand
-Emi_Sul_Ene_Dem_AFO,Emissions|Sulfur|Energy|Demand|AFOFI
-Emi_Sul_Ene_Dem_Com,Emissions|Sulfur|Energy|Demand|Commercial
-Emi_Sul_Ene_Dem_Ind,Emissions|Sulfur|Energy|Demand|Industry
-Emi_Sul_Ene_Dem_Ind_Che,Emissions|Sulfur|Energy|Demand|Industry|Chemicals
-Emi_Sul_Ene_Dem_Ind_Con,Emissions|Sulfur|Energy|Demand|Industry|Construction
-Emi_Sul_Ene_Dem_Ind_Foo_and_Tob,Emissions|Sulfur|Energy|Demand|Industry|Food and Tobacco
-Emi_Sul_Ene_Dem_Ind_Iro_and_Ste,Emissions|Sulfur|Energy|Demand|Industry|Iron and Steel
-Emi_Sul_Ene_Dem_Ind_Mac,Emissions|Sulfur|Energy|Demand|Industry|Machinery
-Emi_Sul_Ene_Dem_Ind_Min,Emissions|Sulfur|Energy|Demand|Industry|Mining
-Emi_Sul_Ene_Dem_Ind_Non_Met,Emissions|Sulfur|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_Sul_Ene_Dem_Ind_Non_Min,Emissions|Sulfur|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_Sul_Ene_Dem_Ind_Oth,Emissions|Sulfur|Energy|Demand|Industry|Other
-Emi_Sul_Ene_Dem_Ind_Pul_and_Pap,Emissions|Sulfur|Energy|Demand|Industry|Pulp and Paper
-Emi_Sul_Ene_Dem_Ind_Tex,Emissions|Sulfur|Energy|Demand|Industry|Textile
-Emi_Sul_Ene_Dem_Ind_Tra_Equ,Emissions|Sulfur|Energy|Demand|Industry|Transport Equipment
-Emi_Sul_Ene_Dem_Ind_Woo_Pro,Emissions|Sulfur|Energy|Demand|Industry|Wood Products
-Emi_Sul_Ene_Dem_Oth_Sec,Emissions|Sulfur|Energy|Demand|Other Sector
-Emi_Sul_Ene_Dem_Res,Emissions|Sulfur|Energy|Demand|Residential
-Emi_Sul_Ene_Dem_Agg___Res_and_Com,Emissions|Sulfur|Energy|Demand|Aggregate - Residential and Commercial
-Emi_Sul_Ene_Dem_Res_and_Com_and_AFO,Emissions|Sulfur|Energy|Demand|Residential and Commercial and AFOFI
-Emi_Sul_Ene_Dem_Tra,Emissions|Sulfur|Energy|Demand|Transportation
-Emi_Sul_Ene_Dem_Tra_Avi,Emissions|Sulfur|Energy|Demand|Transportation|Aviation
-Emi_Sul_Ene_Dem_Tra_Avi_Dom,Emissions|Sulfur|Energy|Demand|Transportation|Aviation|Domestic
-Emi_Sul_Ene_Dem_Tra_Avi_Int,Emissions|Sulfur|Energy|Demand|Transportation|Aviation|International
-Emi_Sul_Ene_Dem_Tra_Oth_Sec,Emissions|Sulfur|Energy|Demand|Transportation|Other Sector
-Emi_Sul_Ene_Dem_Tra_Rai,Emissions|Sulfur|Energy|Demand|Transportation|Rail
-Emi_Sul_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|Sulfur|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_Sul_Ene_Dem_Tra_Roa,Emissions|Sulfur|Energy|Demand|Transportation|Road
-Emi_Sul_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|Sulfur|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_Sul_Ene_Dem_Tra_Shi,Emissions|Sulfur|Energy|Demand|Transportation|Shipping
-Emi_Sul_Ene_Dem_Tra_Shi_Dom,Emissions|Sulfur|Energy|Demand|Transportation|Shipping|Domestic
-Emi_Sul_Ene_Dem_Tra_Shi_Int,Emissions|Sulfur|Energy|Demand|Transportation|Shipping|International
-Emi_Sul_Ene_Dem_Tra_Shi_Int_Loa,Emissions|Sulfur|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_Sul_Ene_Agg___Fug,Emissions|Sulfur|Energy|Aggregate - Fugitive
-Emi_Sul_Ene_Oth,Emissions|Sulfur|Energy|Other
-Emi_Sul_Ene_Sup,Emissions|Sulfur|Energy|Supply
-Emi_Sul_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|Sulfur|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_Sul_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|Sulfur|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_Sul_Ene_Sup_Agg___Com,Emissions|Sulfur|Energy|Supply|Aggregate - Combustion
-Emi_Sul_Ene_Sup_Ele,Emissions|Sulfur|Energy|Supply|Electricity
-Emi_Sul_Ene_Sup_Agg___Ele_and_Heat,Emissions|Sulfur|Energy|Supply|Aggregate - Electricity and Heat
-Emi_Sul_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|Sulfur|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_Sul_Ene_Sup_Agg___Fug,Emissions|Sulfur|Energy|Supply|Aggregate - Fugitive
-Emi_Sul_Ene_Sup_Gas,Emissions|Sulfur|Energy|Supply|Gases
-Emi_Sul_Ene_Sup_Gas_and_Liq_Fug,Emissions|Sulfur|Energy|Supply|Gases and Liquids|Fugitive
-Emi_Sul_Ene_Sup_Gas_Com,Emissions|Sulfur|Energy|Supply|Gases|Combustion
-Emi_Sul_Ene_Sup_Gas_Fug,Emissions|Sulfur|Energy|Supply|Gases|Fugitive
-Emi_Sul_Ene_Sup_Heat,Emissions|Sulfur|Energy|Supply|Heat
-Emi_Sul_Ene_Sup_Liq,Emissions|Sulfur|Energy|Supply|Liquids
-Emi_Sul_Ene_Sup_Liq_Com,Emissions|Sulfur|Energy|Supply|Liquids|Combustion
-Emi_Sul_Ene_Sup_Liq_Fug,Emissions|Sulfur|Energy|Supply|Liquids|Fugitive
-Emi_Sul_Ene_Sup_Oth_Com,Emissions|Sulfur|Energy|Supply|Other|Combustion
-Emi_Sul_Ene_Sup_Oth_Fug,Emissions|Sulfur|Energy|Supply|Other|Fugitive
-Emi_Sul_Ene_Sup_Solids,Emissions|Sulfur|Energy|Supply|Solids
-Emi_Sul_Ene_Sup_SolidsCom,Emissions|Sulfur|Energy|Supply|Solids|Combustion
-Emi_Sul_Ene_Sup_SolidsFug,Emissions|Sulfur|Energy|Supply|Solids|Fugitive
-Emi_Sul_Fos_Fue_Fir,Emissions|Sulfur|Fossil Fuel Fires
-Emi_Sul_Agg___FFI,Emissions|Sulfur|Aggregate - Fossil Fuels and Industry
-Emi_Sul_Ind_Pro,Emissions|Sulfur|Industrial Processes
-Emi_Sul_Ind_Pro_Che,Emissions|Sulfur|Industrial Processes|Chemicals
-Emi_Sul_Ind_Pro_Ele,Emissions|Sulfur|Industrial Processes|Electronics
-Emi_Sul_Ind_Pro_Iro_and_Ste,Emissions|Sulfur|Industrial Processes|Iron and Steel
-Emi_Sul_Ind_Pro_Met_and_Min,Emissions|Sulfur|Industrial Processes|Metals and Minerals
-Emi_Sul_Ind_Pro_Non_Met,Emissions|Sulfur|Industrial Processes|Non-Ferrous Metals
-Emi_Sul_Ind_Pro_Non_Met_Alu,Emissions|Sulfur|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_Sul_Ind_Pro_Non_Met_Oth,Emissions|Sulfur|Industrial Processes|Non-Ferrous Metals|Other
-Emi_Sul_Ind_Pro_Non_Min,Emissions|Sulfur|Industrial Processes|Non-Metallic Minerals
-Emi_Sul_Ind_Pro_Non_Min_Cem,Emissions|Sulfur|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_Sul_Ind_Pro_Non_Min_Lim,Emissions|Sulfur|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_Sul_Ind_Pro_Non_Min_Oth,Emissions|Sulfur|Industrial Processes|Non-Metallic Minerals|Other
-Emi_Sul_Ind_Pro_Oth_Sec,Emissions|Sulfur|Industrial Processes|Other Sector
-Emi_Sul_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|Sulfur|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_Sul_Nat_Oth,Emissions|Sulfur|Natural|Other
-Emi_Sul_Nat_Vol,Emissions|Sulfur|Natural|Volcanoes
-Emi_Sul_Oth,Emissions|Sulfur|Other
-Emi_Sul_Pro_Use,Emissions|Sulfur|Product Use
-Emi_Sul_Pro_Use_NonEneUse,Emissions|Sulfur|Product Use|Non-Energy Use
-Emi_Sul_Pro_Use_ODS_Sub,Emissions|Sulfur|Product Use|ODS Substitutes
-Emi_Sul_Pro_Use_Oth,Emissions|Sulfur|Product Use|Other
-Emi_Sul_Pro_Use_Sol,Emissions|Sulfur|Product Use|Solvents
-Emi_Sul_Pro_Use_Sol_Che_Pro,Emissions|Sulfur|Product Use|Solvents|Chemical Products
-Emi_Sul_Pro_Use_Sol_Deg,Emissions|Sulfur|Product Use|Solvents|Degreasing
-Emi_Sul_Pro_Use_Sol_Pai,Emissions|Sulfur|Product Use|Solvents|Paint
-Emi_Sul_Was,Emissions|Sulfur|Waste
-Emi_Sul_Was_Bio_Tre,Emissions|Sulfur|Waste|Biological Treatment
-Emi_Sul_Was_Inc,Emissions|Sulfur|Waste|Incineration
-Emi_Sul_Was_Oth,Emissions|Sulfur|Waste|Other
-Emi_Sul_Was_Sol_Was_Dis,Emissions|Sulfur|Waste|Solid Waste Disposal
-Emi_Sul_Was_Was_Tre,Emissions|Sulfur|Waste|Wastewater Treatment
-Emi_VOC,Emissions|VOC
-Emi_VOC_AFO,Emissions|VOC|AFOLU
-Emi_VOC_AFO_Agg___Agr_and_Bio_Bur,Emissions|VOC|AFOLU|Aggregate - Agriculture and Biomass Burning
-Emi_VOC_AFO_Agr,Emissions|VOC|AFOLU|Agriculture
-Emi_VOC_AFO_Agr_Liv,Emissions|VOC|AFOLU|Agriculture|Livestock
-Emi_VOC_AFO_Agr_Liv_Ent_Fer,Emissions|VOC|AFOLU|Agriculture|Livestock|Enteric Fermentation
-Emi_VOC_AFO_Agr_Liv_Man_Man,Emissions|VOC|AFOLU|Agriculture|Livestock|Manure Management
-Emi_VOC_AFO_Agr_Man_Soi,Emissions|VOC|AFOLU|Agriculture|Managed Soils
-Emi_VOC_AFO_Agr_Oth,Emissions|VOC|AFOLU|Agriculture|Other
-Emi_VOC_AFO_Agr_Ric,Emissions|VOC|AFOLU|Agriculture|Rice
-Emi_VOC_AFO_Bio_Bur,Emissions|VOC|AFOLU|Biomass Burning
-Emi_VOC_AFO_Lan,Emissions|VOC|AFOLU|Land
-Emi_VOC_AFO_Lan_Cro,Emissions|VOC|AFOLU|Land|Cropland
-Emi_VOC_AFO_Lan_Frs,Emissions|VOC|AFOLU|Land|Forest
-Emi_VOC_AFO_Lan_Frs_Bur,Emissions|VOC|AFOLU|Land|Forest Burning
-Emi_VOC_AFO_Lan_Gra_Bur,Emissions|VOC|AFOLU|Land|Grassland Burning
-Emi_VOC_AFO_Lan_Gra_Pst,Emissions|VOC|AFOLU|Land|Grassland Pastures
-Emi_VOC_AFO_Lan_Oth_Lan,Emissions|VOC|AFOLU|Land|Other Land
-Emi_VOC_AFO_Lan_Set,Emissions|VOC|AFOLU|Land|Settlements
-Emi_VOC_AFO_Lan_Wet,Emissions|VOC|AFOLU|Land|Wetlands
-Emi_VOC_Ene,Emissions|VOC|Energy
-Emi_VOC_Ene_Com,Emissions|VOC|Energy|Combustion
-Emi_VOC_Ene_Dem,Emissions|VOC|Energy|Demand
-Emi_VOC_Ene_Dem_AFO,Emissions|VOC|Energy|Demand|AFOFI
-Emi_VOC_Ene_Dem_Com,Emissions|VOC|Energy|Demand|Commercial
-Emi_VOC_Ene_Dem_Ind,Emissions|VOC|Energy|Demand|Industry
-Emi_VOC_Ene_Dem_Ind_Che,Emissions|VOC|Energy|Demand|Industry|Chemicals
-Emi_VOC_Ene_Dem_Ind_Con,Emissions|VOC|Energy|Demand|Industry|Construction
-Emi_VOC_Ene_Dem_Ind_Foo_and_Tob,Emissions|VOC|Energy|Demand|Industry|Food and Tobacco
-Emi_VOC_Ene_Dem_Ind_Iro_and_Ste,Emissions|VOC|Energy|Demand|Industry|Iron and Steel
-Emi_VOC_Ene_Dem_Ind_Mac,Emissions|VOC|Energy|Demand|Industry|Machinery
-Emi_VOC_Ene_Dem_Ind_Min,Emissions|VOC|Energy|Demand|Industry|Mining
-Emi_VOC_Ene_Dem_Ind_Non_Met,Emissions|VOC|Energy|Demand|Industry|Non-Ferrous Metals
-Emi_VOC_Ene_Dem_Ind_Non_Min,Emissions|VOC|Energy|Demand|Industry|Non-Metallic Minerals
-Emi_VOC_Ene_Dem_Ind_Oth,Emissions|VOC|Energy|Demand|Industry|Other
-Emi_VOC_Ene_Dem_Ind_Pul_and_Pap,Emissions|VOC|Energy|Demand|Industry|Pulp and Paper
-Emi_VOC_Ene_Dem_Ind_Tex,Emissions|VOC|Energy|Demand|Industry|Textile
-Emi_VOC_Ene_Dem_Ind_Tra_Equ,Emissions|VOC|Energy|Demand|Industry|Transport Equipment
-Emi_VOC_Ene_Dem_Ind_Woo_Pro,Emissions|VOC|Energy|Demand|Industry|Wood Products
-Emi_VOC_Ene_Dem_Oth_Sec,Emissions|VOC|Energy|Demand|Other Sector
-Emi_VOC_Ene_Dem_Res,Emissions|VOC|Energy|Demand|Residential
-Emi_VOC_Ene_Dem_Agg___Res_and_Com,Emissions|VOC|Energy|Demand|Aggregate - Residential and Commercial
-Emi_VOC_Ene_Dem_Res_and_Com_and_AFO,Emissions|VOC|Energy|Demand|Residential and Commercial and AFOFI
-Emi_VOC_Ene_Dem_Tra,Emissions|VOC|Energy|Demand|Transportation
-Emi_VOC_Ene_Dem_Tra_Avi,Emissions|VOC|Energy|Demand|Transportation|Aviation
-Emi_VOC_Ene_Dem_Tra_Avi_Dom,Emissions|VOC|Energy|Demand|Transportation|Aviation|Domestic
-Emi_VOC_Ene_Dem_Tra_Avi_Int,Emissions|VOC|Energy|Demand|Transportation|Aviation|International
-Emi_VOC_Ene_Dem_Tra_Oth_Sec,Emissions|VOC|Energy|Demand|Transportation|Other Sector
-Emi_VOC_Ene_Dem_Tra_Rai,Emissions|VOC|Energy|Demand|Transportation|Rail
-Emi_VOC_Ene_Dem_Tra_Agg___Rai_and_Dom_Shi,Emissions|VOC|Energy|Demand|Transportation|Aggregate - Rail and Domestic Shipping
-Emi_VOC_Ene_Dem_Tra_Roa,Emissions|VOC|Energy|Demand|Transportation|Road
-Emi_VOC_Ene_Dem_Tra_Agg___Roa_Rai_and_Dom_Shi,Emissions|VOC|Energy|Demand|Transportation|Aggregate - Road Rail and Domestic Shipping
-Emi_VOC_Ene_Dem_Tra_Shi,Emissions|VOC|Energy|Demand|Transportation|Shipping
-Emi_VOC_Ene_Dem_Tra_Shi_Dom,Emissions|VOC|Energy|Demand|Transportation|Shipping|Domestic
-Emi_VOC_Ene_Dem_Tra_Shi_Int,Emissions|VOC|Energy|Demand|Transportation|Shipping|International
-Emi_VOC_Ene_Dem_Tra_Shi_Int_Loa,Emissions|VOC|Energy|Demand|Transportation|Shipping|International|Loading
-Emi_VOC_Ene_Agg___Fug,Emissions|VOC|Energy|Aggregate - Fugitive
-Emi_VOC_Ene_Oth,Emissions|VOC|Energy|Other
-Emi_VOC_Ene_Sup,Emissions|VOC|Energy|Supply
-Emi_VOC_Ene_Sup_Agg___Gas_and_Liq_Fug,Emissions|VOC|Energy|Supply|Aggregate - Gases and Liquids Fugitive
-Emi_VOC_Ene_Sup_Agg___Solidsand_Oth_Fug,Emissions|VOC|Energy|Supply|Aggregate - Solids and Other Fugitive
-Emi_VOC_Ene_Sup_Agg___Com,Emissions|VOC|Energy|Supply|Aggregate - Combustion
-Emi_VOC_Ene_Sup_Ele,Emissions|VOC|Energy|Supply|Electricity
-Emi_VOC_Ene_Sup_Agg___Ele_and_Heat,Emissions|VOC|Energy|Supply|Aggregate - Electricity and Heat
-Emi_VOC_Ene_Sup_Agg___Fue_Pro_and_Tra,Emissions|VOC|Energy|Supply|Aggregate - Fuel Production and Transformation
-Emi_VOC_Ene_Sup_Agg___Fug,Emissions|VOC|Energy|Supply|Aggregate - Fugitive
-Emi_VOC_Ene_Sup_Gas,Emissions|VOC|Energy|Supply|Gases
-Emi_VOC_Ene_Sup_Gas_and_Liq_Fug,Emissions|VOC|Energy|Supply|Gases and Liquids|Fugitive
-Emi_VOC_Ene_Sup_Gas_Com,Emissions|VOC|Energy|Supply|Gases|Combustion
-Emi_VOC_Ene_Sup_Gas_Fug,Emissions|VOC|Energy|Supply|Gases|Fugitive
-Emi_VOC_Ene_Sup_Heat,Emissions|VOC|Energy|Supply|Heat
-Emi_VOC_Ene_Sup_Liq,Emissions|VOC|Energy|Supply|Liquids
-Emi_VOC_Ene_Sup_Liq_Com,Emissions|VOC|Energy|Supply|Liquids|Combustion
-Emi_VOC_Ene_Sup_Liq_Fug,Emissions|VOC|Energy|Supply|Liquids|Fugitive
-Emi_VOC_Ene_Sup_Oth_Com,Emissions|VOC|Energy|Supply|Other|Combustion
-Emi_VOC_Ene_Sup_Oth_Fug,Emissions|VOC|Energy|Supply|Other|Fugitive
-Emi_VOC_Ene_Sup_Solids,Emissions|VOC|Energy|Supply|Solids
-Emi_VOC_Ene_Sup_SolidsCom,Emissions|VOC|Energy|Supply|Solids|Combustion
-Emi_VOC_Ene_Sup_SolidsFug,Emissions|VOC|Energy|Supply|Solids|Fugitive
-Emi_VOC_Fos_Fue_Fir,Emissions|VOC|Fossil Fuel Fires
-Emi_VOC_Agg___FFI,Emissions|VOC|Aggregate - Fossil Fuels and Industry
-Emi_VOC_Ind_Pro,Emissions|VOC|Industrial Processes
-Emi_VOC_Ind_Pro_Che,Emissions|VOC|Industrial Processes|Chemicals
-Emi_VOC_Ind_Pro_Ele,Emissions|VOC|Industrial Processes|Electronics
-Emi_VOC_Ind_Pro_Iro_and_Ste,Emissions|VOC|Industrial Processes|Iron and Steel
-Emi_VOC_Ind_Pro_Met_and_Min,Emissions|VOC|Industrial Processes|Metals and Minerals
-Emi_VOC_Ind_Pro_Non_Met,Emissions|VOC|Industrial Processes|Non-Ferrous Metals
-Emi_VOC_Ind_Pro_Non_Met_Alu,Emissions|VOC|Industrial Processes|Non-Ferrous Metals|Aluminun
-Emi_VOC_Ind_Pro_Non_Met_Oth,Emissions|VOC|Industrial Processes|Non-Ferrous Metals|Other
-Emi_VOC_Ind_Pro_Non_Min,Emissions|VOC|Industrial Processes|Non-Metallic Minerals
-Emi_VOC_Ind_Pro_Non_Min_Cem,Emissions|VOC|Industrial Processes|Non-Metallic Minerals|Cement
-Emi_VOC_Ind_Pro_Non_Min_Lim,Emissions|VOC|Industrial Processes|Non-Metallic Minerals|Lime
-Emi_VOC_Ind_Pro_Non_Min_Oth,Emissions|VOC|Industrial Processes|Non-Metallic Minerals|Other
-Emi_VOC_Ind_Pro_Oth_Sec,Emissions|VOC|Industrial Processes|Other Sector
-Emi_VOC_Ind_Pro_Pul_and_Pap_and_Foo_and_Bev_and_Woo,Emissions|VOC|Industrial Processes|Pulp and Paper and Food and Beverage and Wood
-Emi_VOC_Nat_Oth,Emissions|VOC|Natural|Other
-Emi_VOC_Nat_Vol,Emissions|VOC|Natural|Volcanoes
-Emi_VOC_Oth,Emissions|VOC|Other
-Emi_VOC_Pro_Use,Emissions|VOC|Product Use
-Emi_VOC_Pro_Use_NonEneUse,Emissions|VOC|Product Use|Non-Energy Use
-Emi_VOC_Pro_Use_ODS_Sub,Emissions|VOC|Product Use|ODS Substitutes
-Emi_VOC_Pro_Use_Oth,Emissions|VOC|Product Use|Other
-Emi_VOC_Pro_Use_Sol,Emissions|VOC|Product Use|Solvents
-Emi_VOC_Pro_Use_Sol_Che_Pro,Emissions|VOC|Product Use|Solvents|Chemical Products
-Emi_VOC_Pro_Use_Sol_Deg,Emissions|VOC|Product Use|Solvents|Degreasing
-Emi_VOC_Pro_Use_Sol_Pai,Emissions|VOC|Product Use|Solvents|Paint
-Emi_VOC_Was,Emissions|VOC|Waste
-Emi_VOC_Was_Bio_Tre,Emissions|VOC|Waste|Biological Treatment
-Emi_VOC_Was_Inc,Emissions|VOC|Waste|Incineration
-Emi_VOC_Was_Oth,Emissions|VOC|Waste|Other
-Emi_VOC_Was_Sol_Was_Dis,Emissions|VOC|Waste|Solid Waste Disposal
-Emi_VOC_Was_Was_Tre,Emissions|VOC|Waste|Wastewater Treatment
 Agr_Dem_Ene,Agricultural Demand|Energy
 Agr_Dem_Ene_Cro,Agricultural Demand|Energy|Crops
 Agr_Dem_NonEne,Agricultural Demand|Non-Energy
@@ -1912,7 +889,6 @@ Pol_Cos_Wel_Cha,Policy Cost|Welfare Change
 Emi_CO2_Ene_Dem_Tra_Fre,Emissions|CO2|Energy|Demand|Transportation|Freight
 Emi_CO2_Ene_Dem_Tra_Pss,Emissions|CO2|Energy|Demand|Transportation|Passenger
 Emi_CO2_Ene_Sup_Oth_Sec,Emissions|CO2|Energy|Supply|Other Sector
-Emi_PFC,Emissions|PFC
 Emp,Employment
 Une,Unemployment
 Une_Rat,Unemployment|Rate
@@ -2062,12 +1038,6 @@ Ene_Ser_Tra_Pss_Bic_and_Wal,Energy Service|Transportation|Passenger|Bicycling an
 Ene_Ser_Tra_Pss_Roa_2W_and_3W,Energy Service|Transportation|Passenger|Road|2W and 3W
 Ene_Ser_Tra_Pss_Roa_LDV,Energy Service|Transportation|Passenger|Road|LDV
 Ene_Ser_Tra_Pss_Roa_Bus,Energy Service|Transportation|Passenger|Road|Bus
-Prc_Fin_Ene_Res_Ele,Price|Final Energy|Residential|Electricity
-Prc_Fin_Ene_Res_Gas_Nat_Gas,Price|Final Energy|Residential|Gases|Natural Gas
-Prc_Fin_Ene_Res_Liq_Bio,Price|Final Energy|Residential|Liquids|Biomass
-Prc_Fin_Ene_Res_Liq_Oil,Price|Final Energy|Residential|Liquids|Oil
-Prc_Fin_Ene_Res_SolidsBio,Price|Final Energy|Residential|Solids|Biomass
-Prc_Fin_Ene_Res_SolidsCoa,Price|Final Energy|Residential|Solids|Coal
 Foo_Dem,Food Demand
 Foo_Dem_Cro,Food Demand|Crops
 Foo_Dem_Liv,Food Demand|Livestock
@@ -2601,6 +1571,12 @@ Fin_Ene_Liq_Bio,Final Energy|Liquids|Biomass
 Fin_Ene_Ind_Liq_Bio,Final Energy|Industry|Liquids|Biomass
 Fin_Ene_Ind_Liq_Oil,Final Energy|Industry|Liquids|Oil
 Fin_Ene_Liq_Oil,Final Energy|Liquids|Oil
+Fin_Ene_Ind_Gas_BioEne,Final Energy|Industry|Gases|Bioenergy
+Fin_Ene_Ind_Gas_Fos,Final Energy|Industry|Gases|Fossil
+Fin_Ene_Ind_Gas_Hyd_syn,Final Energy|Industry|Gases|Hydrogen synfuel
+Fin_Ene_Ind_Liq_BioEne,Final Energy|Industry|Liquids|Bioenergy
+Fin_Ene_Ind_Liq_Fos,Final Energy|Industry|Liquids|Fossil
+Fin_Ene_Ind_Liq_Hyd_syn,Final Energy|Industry|Liquids|Hydrogen synfuel
 Car_Seq_Fee,Carbon Sequestration|Feedstocks
 Car_Seq_Fee_Bio,Carbon Sequestration|Feedstocks|Biomass
 Car_Seq_Fee_Fos,Carbon Sequestration|Feedstocks|Fossil
@@ -2608,10 +1584,6 @@ Car_Seq_Lan_Use_Oth,Carbon Sequestration|Land Use|Other
 Car_Uti_CCS_Bio_Ind,Carbon Utilization|CCS|Biomass|Industry
 Car_Uti_CCS_Fos_Ind,Carbon Utilization|CCS|Fossil|Industry
 Car_Uti_CCS_Ind,Carbon Utilization|CCS|Industry
-Emi_CO_Ene_Dem_Res_and_Com_Com,Emissions|CO|Energy|Demand|Residential and Commercial|Commercial
-Emi_CO_Ene_Dem_Res_and_Com_Res,Emissions|CO|Energy|Demand|Residential and Commercial|Residential
-Emi_CO_Ene_Dem_Tra_Fre,Emissions|CO|Energy|Demand|Transportation|Freight
-Emi_CO_Ene_Dem_Tra_Pss,Emissions|CO|Energy|Demand|Transportation|Passenger
 Emi_CO2_Ene_Dem_Ind_Cem,Emissions|CO2|Energy|Demand|Industry|Cement
 Emi_CO2_Ene_Dem_Ind_Che_Amm,Emissions|CO2|Energy|Demand|Industry|Chemicals|Ammonia
 Emi_CO2_Ene_Dem_Ind_Che_Hig_val_che,Emissions|CO2|Energy|Demand|Industry|Chemicals|High value chemicals
@@ -2661,62 +1633,6 @@ Emi_CO2_Ind_Pro_Oth,Emissions|CO2|Industrial Processes|Other
 Emi_CO2_Ind_Pro_Pla,Emissions|CO2|Industrial Processes|Plastics
 Emi_CO2_Ind_Pro_Pul_and_Pap,Emissions|CO2|Industrial Processes|Pulp and Paper
 Emi_CO2_Ind_Pro_Ste,Emissions|CO2|Industrial Processes|Steel
-Emi_F-G,Emissions|F-Gases
-Emissions_HFC_AFOLU,Emissions|HFC|AFOLU
-Emissions_HFC_AFOLU_Agriculture,Emissions|HFC|AFOLU|Agriculture
-Emissions_HFC_AFOLU_Land,Emissions|HFC|AFOLU|Land
-Emissions_HFC_Energy,Emissions|HFC|Energy
-Emissions_HFC_HFC43-10,Emissions|HFC|HFC43-10
-Emissions_HFC_Industrial_Processes,Emissions|HFC|Industrial Processes
-Emissions_HFC_Industrial_Processes_Chemicals,Emissions|HFC|Industrial Processes|Chemicals
-Emissions_HFC_Industrial_Processes_Other,Emissions|HFC|Industrial Processes|Other
-Emissions_HFC_Waste,Emissions|HFC|Waste
-Emi_N2O_Ene_Dem_Res_and_Com_Com,Emissions|N2O|Energy|Demand|Residential and Commercial|Commercial
-Emi_N2O_Ene_Dem_Res_and_Com_Res,Emissions|N2O|Energy|Demand|Residential and Commercial|Residential
-Emi_N2O_Ene_Dem_Tra_Fre,Emissions|N2O|Energy|Demand|Transportation|Freight
-Emi_N2O_Ene_Dem_Tra_Pss,Emissions|N2O|Energy|Demand|Transportation|Passenger
-Emi_N2O_Ind_Pro_Non_met,Emissions|N2O|Industrial Processes|Non-ferrous metals
-Emi_N2O_Ind_Pro_Oth,Emissions|N2O|Industrial Processes|Other
-Emi_N2O_Ind_Pro_Pla,Emissions|N2O|Industrial Processes|Plastics
-Emi_N2O_Ind_Pro_Ste,Emissions|N2O|Industrial Processes|Steel
-Emi_NH3_Ene_Dem_Res_and_Com_Com,Emissions|NH3|Energy|Demand|Residential and Commercial|Commercial
-Emi_NH3_Ene_Dem_Res_and_Com_Res,Emissions|NH3|Energy|Demand|Residential and Commercial|Residential
-Emi_NH3_Ene_Dem_Tra_Fre,Emissions|NH3|Energy|Demand|Transportation|Freight
-Emi_NH3_Ene_Dem_Tra_Pss,Emissions|NH3|Energy|Demand|Transportation|Passenger
-Emi_NOx_Ene_Dem_Res_and_Com_Com,Emissions|NOx|Energy|Demand|Residential and Commercial|Commercial
-Emi_NOx_Ene_Dem_Res_and_Com_Res,Emissions|NOx|Energy|Demand|Residential and Commercial|Residential
-Emi_NOx_Ene_Dem_Tra_Fre,Emissions|NOx|Energy|Demand|Transportation|Freight
-Emi_NOx_Ene_Dem_Tra_Pss,Emissions|NOx|Energy|Demand|Transportation|Passenger
-Emi_OC_Ene_Dem_Res_and_Com_Com,Emissions|OC|Energy|Demand|Residential and Commercial|Commercial
-Emi_OC_Ene_Dem_Res_and_Com_Res,Emissions|OC|Energy|Demand|Residential and Commercial|Residential
-Emi_OC_Ene_Dem_Tra_Fre,Emissions|OC|Energy|Demand|Transportation|Freight
-Emi_OC_Ene_Dem_Tra_Pss,Emissions|OC|Energy|Demand|Transportation|Passenger
-Emi_PFC_C2F,Emissions|PFC|C2F6
-Emi_PFC_C6F,Emissions|PFC|C6F14
-Emi_PFC_CF4,Emissions|PFC|CF4
-Emi_PFC_Ind_Pro,Emissions|PFC|Industrial Processes
-Emi_PFC_Ind_Pro_Non_met,Emissions|PFC|Industrial Processes|Non-ferrous metals
-Emi_PFC_Ind_Pro_Oth,Emissions|PFC|Industrial Processes|Other
-Emi_PFC_Ind_Pro_Ste,Emissions|PFC|Industrial Processes|Steel
-Emi_PM2,Emissions|PM2.5
-Emi_SF6_AFO,Emissions|SF6|AFOLU
-Emi_SF6_AFO_Agr,Emissions|SF6|AFOLU|Agriculture
-Emi_SF6_AFO_Lan,Emissions|SF6|AFOLU|Land
-Emi_SF6_Ene,Emissions|SF6|Energy
-Emi_SF6_Ind_Pro,Emissions|SF6|Industrial Processes
-Emi_SF6_Ind_Pro_Che,Emissions|SF6|Industrial Processes|Chemicals
-Emi_SF6_Ind_Pro_Non_met,Emissions|SF6|Industrial Processes|Non-ferrous metals
-Emi_SF6_Ind_Pro_Oth,Emissions|SF6|Industrial Processes|Other
-Emi_SF6_Ind_Pro_Ste,Emissions|SF6|Industrial Processes|Steel
-Emi_SF6_Was,Emissions|SF6|Waste
-Emi_Sul_Ene_Dem_Res_and_Com_Com,Emissions|Sulfur|Energy|Demand|Residential and Commercial|Commercial
-Emi_Sul_Ene_Dem_Res_and_Com_Res,Emissions|Sulfur|Energy|Demand|Residential and Commercial|Residential
-Emi_Sul_Ene_Dem_Tra_Fre,Emissions|Sulfur|Energy|Demand|Transportation|Freight
-Emi_Sul_Ene_Dem_Tra_Pss,Emissions|Sulfur|Energy|Demand|Transportation|Passenger
-Emi_VOC_Ene_Dem_Res_and_Com_Com,Emissions|VOC|Energy|Demand|Residential and Commercial|Commercial
-Emi_VOC_Ene_Dem_Res_and_Com_Res,Emissions|VOC|Energy|Demand|Residential and Commercial|Residential
-Emi_VOC_Ene_Dem_Tra_Fre,Emissions|VOC|Energy|Demand|Transportation|Freight
-Emi_VOC_Ene_Dem_Tra_Pss,Emissions|VOC|Energy|Demand|Transportation|Passenger
 Emp_Ind,Employment|Industry
 Emp_Ind_Ene,Employment|Industry|Energy 
 Emp_Ind_Ene_Int,Employment|Industry|Energy Intensive
@@ -2960,34 +1876,6 @@ Pop_sub_acc,Population|substandard accommodation
 Pop_Ter_edu,Population|Tertiary education
 Pop_Urb_Sha,Population|Urban|Share
 Pre_Dea_PM2,Premature Deaths|PM2.5
-Prc_Agr_Liv_Ind,Price|Agriculture|Livestock|Index
-Prc_Agr_Ric_Ind,Price|Agriculture|Rice|Index
-Prc_Fin_Ene_Res_and_Com_Res_Ele,Price|Final Energy|Residential and Commercial|Residential|Electricity
-Prc_Fin_Ene_Res_and_Com_Res_Gas_Nat_Gas,Price|Final Energy|Residential and Commercial|Residential|Gases|Natural Gas
-Prc_Fin_Ene_Res_and_Com_Res_Liq_Bio,Price|Final Energy|Residential and Commercial|Residential|Liquids|Biomass
-Prc_Fin_Ene_Res_and_Com_Res_Liq_Oil,Price|Final Energy|Residential and Commercial|Residential|Liquids|Oil
-Prc_Fin_Ene_Res_and_Com_Res_SolidsBio,Price|Final Energy|Residential and Commercial|Residential|Solids|Biomass
-Prc_Fin_Ene_Res_and_Com_Res_SolidsCoa,Price|Final Energy|Residential and Commercial|Residential|Solids|Coal
-Prc_Fin_Ene_Tra_Ele,Price|Final Energy|Transportation|Electricity
-Prc_Fin_Ene_Tra_Gas,Price|Final Energy|Transportation|Gases
-Prc_Fin_Ene_Tra_Gas_BioEne,Price|Final Energy|Transportation|Gases|Bioenergy
-Prc_Fin_Ene_Tra_Gas_Fos,Price|Final Energy|Transportation|Gases|Fossil
-Prc_Fin_Ene_Tra_Hyd,Price|Final Energy|Transportation|Hydrogen
-Prc_Fin_Ene_Tra_Liq,Price|Final Energy|Transportation|Liquids
-Prc_Fin_Ene_Tra_Liq_BioEne,Price|Final Energy|Transportation|Liquids|Bioenergy
-Prc_Fin_Ene_Tra_Liq_Fos,Price|Final Energy|Transportation|Liquids|Fossil
-Prc_Fin_Ene_Tra_Liq_Hyd_syn,Price|Final Energy|Transportation|Liquids|Hydrogen synfuel
-Prc_Ind_Cem,Price|Industry|Cement
-Prc_Ind_Che,Price|Industry|Chemicals
-Prc_Ind_Che_Amm,Price|Industry|Chemicals|Ammonia
-Prc_Ind_Che_Hig_val_che,Price|Industry|Chemicals|High value chemicals
-Prc_Ind_Che_Met,Price|Industry|Chemicals|Methanol
-Prc_Ind_Che_Oth,Price|Industry|Chemicals|Other
-Prc_Ind_Non_met,Price|Industry|Non-ferrous metals
-Prc_Ind_Oth,Price|Industry|Other
-Prc_Ind_Pla,Price|Industry|Plastics
-Prc_Ind_Pul_and_Pap,Price|Industry|Pulp and Paper
-Prc_Ind_Ste,Price|Industry|Steel
 Prm_Ene_Coa_Hyd,Primary Energy|Coal|Hydrogen
 Prm_Ene_Coa_Solids,Primary Energy|Coal|Solids
 Prm_Ene_Gas_Gas,Primary Energy|Gas|Gases
@@ -3010,26 +1898,6 @@ Res_Ext_Min,Resource|Extraction|Mineral
 Res_Ext_Oil,Resource|Extraction|Oil
 Res_Use_Min,Resource|Use|Mineral
 Res_Use_Min_Ele,Resource|Use|Mineral|Electricity
-Prc_Fin_Ene_Res_Hyd,Price|Final Energy|Residential|Hydrogen
-Prc_Fin_Ene_Com_Ele,Price|Final Energy|Commercial|Electricity
-Prc_Fin_Ene_Com_Hyd,Price|Final Energy|Commercial|Hydrogen
-Prc_Fin_Ene_Com_Gas_Nat_Gas,Price|Final Energy|Commercial|Gases|Natural Gas
-Prc_Fin_Ene_Com_Liq_Bio,Price|Final Energy|Commercial|Liquids|Biomass
-Prc_Fin_Ene_Com_Liq_Oil,Price|Final Energy|Commercial|Liquids|Oil
-Prc_Fin_Ene_Com_SolidsBio,Price|Final Energy|Commercial|Solids|Biomass
-Prc_Fin_Ene_Com_SolidsCoa,Price|Final Energy|Commercial|Solids|Coal
-Prc_Fin_Ene_Ind_Ele,Price|Final Energy|Industry|Electricity
-Prc_Fin_Ene_Ind_Hyd,Price|Final Energy|Industry|Hydrogen
-Prc_Fin_Ene_Ind_Gas_Nat_Gas,Price|Final Energy|Industry|Gases|Natural Gas
-Prc_Fin_Ene_Ind_Liq_Bio,Price|Final Energy|Industry|Liquids|Biomass
-Prc_Fin_Ene_Ind_Liq_Oil,Price|Final Energy|Industry|Liquids|Oil
-Prc_Fin_Ene_Ind_SolidsBio,Price|Final Energy|Industry|Solids|Biomass
-Prc_Fin_Ene_Ind_SolidsCoa,Price|Final Energy|Industry|Solids|Coal
-Prc_Sec_Ene_Heat,Price|Secondary Energy|Heat
-Prc_Fin_Ene_Ind_Heat,Price|Final Energy|Industry|Heat
-Prc_Fin_Ene_Com_Heat,Price|Final Energy|Commercial|Heat
-Prc_Fin_Ene_Res_Heat,Price|Final Energy|Residential|Heat
-Prc_Fin_Ene_Res_and_Com_Heat,Price|Final Energy|Residential and Commercial|Heat
 Cap_Hyd,Capacity|Hydrogen
 Sec_Ene_Inp_Hyd_Ele,Secondary Energy Input|Hydrogen|Electricity
 Sec_Ene_Inp_Hyd_Amm_Ele,Secondary Energy Input|Hydrogen|Ammonia|Electricity
@@ -3200,11 +2068,6 @@ Car_Seq_Geo_Sto_Dir_Air_Cap,Carbon Sequestration|Geological Storage|Direct Air C
 Car_Seq_Geo_Sto_Bio,Carbon Sequestration|Geological Storage|Biomass
 Car_Seq_Geo_Sto_Fos,Carbon Sequestration|Geological Storage|Fossil
 Car_Seq_Geo_Sto_Oth,Carbon Sequestration|Geological Storage|Other
-Sec_Ene_Ele_Cur_Solar,Secondary Energy|Electricity|Curtailment|Solar
-Sec_Ene_Ele_Cur_SolarPV,Secondary Energy|Electricity|Curtailment|Solar|PV
-Sec_Ene_Ele_Cur_Win,Secondary Energy|Electricity|Curtailment|Wind
-Sec_Ene_Ele_Cur_Win_Ons,Secondary Energy|Electricity|Curtailment|Wind|Onshore
-Sec_Ene_Ele_Cur_Win_Off,Secondary Energy|Electricity|Curtailment|Wind|Offshore
 Fin_Ene_Liq_Fos,Final Energy|Liquids|Fossil
 Car_Seq_CDR,Carbon Sequestration|CDR
 Sec_Ene_Liq_Hyd_syn,Secondary Energy|Liquids|Hydrogen synfuel
@@ -3280,20 +2143,11 @@ Tec_sto_Sha_Tra_Fre_Roa_ICE,Tech stock|Share|Transportation|Freight|Road|ICE
 Tec_sto_Sha_Tra_Fre_Roa_HEV,Tech stock|Share|Transportation|Freight|Road|HEV
 Tec_sto_Sha_Tra_Fre_Roa_BEV,Tech stock|Share|Transportation|Freight|Road|BEV
 Tec_sto_Sha_Tra_Fre_Roa_FCV,Tech stock|Share|Transportation|Freight|Road|FCV
-Tec_flo_Sha_Tra_Fre_Roa_ICE,Tech flow|Share|Transportation|Freight|Road|ICE
-Tec_flo_Sha_Tra_Fre_Roa_HEV,Tech flow|Share|Transportation|Freight|Road|HEV
-Tec_flo_Sha_Tra_Fre_Roa_BEV,Tech flow|Share|Transportation|Freight|Road|BEV
-Tec_flo_Sha_Tra_Fre_Roa_FCV,Tech flow|Share|Transportation|Freight|Road|FCV
 Tec_sto_Sha_Tra_Pss_Roa_ICE,Tech stock|Share|Transportation|Passenger|Road|ICE
 Tec_sto_Sha_Tra_Pss_Roa_HEV,Tech stock|Share|Transportation|Passenger|Road|HEV
 Tec_sto_Sha_Tra_Pss_Roa_PHV,Tech stock|Share|Transportation|Passenger|Road|PHV
 Tec_sto_Sha_Tra_Pss_Roa_BEV,Tech stock|Share|Transportation|Passenger|Road|BEV
 Tec_sto_Sha_Tra_Pss_Roa_FCV,Tech stock|Share|Transportation|Passenger|Road|FCV
-Tec_flo_Sha_Tra_Pss_Roa_ICE,Tech flow|Share|Transportation|Passenger|Road|ICE
-Tec_flo_Sha_Tra_Pss_Roa_HEV,Tech flow|Share|Transportation|Passenger|Road|HEV
-Tec_flo_Sha_Tra_Pss_Roa_PHV,Tech flow|Share|Transportation|Passenger|Road|PHV
-Tec_flo_Sha_Tra_Pss_Roa_BEV,Tech flow|Share|Transportation|Passenger|Road|BEV
-Tec_flo_Sha_Tra_Pss_Roa_FCV,Tech flow|Share|Transportation|Passenger|Road|FCV
 Tec_sto_Sha_Com_HeatingSpa_EHP,Tech stock|Share|Commercial|Heating|Space|EHP
 Tec_sto_Sha_Com_HeatingSpa_Ele,Tech stock|Share|Commercial|Heating|Space|Electricity
 Tec_sto_Sha_Com_HeatingSpa_Fos,Tech stock|Share|Commercial|Heating|Space|Fossil
@@ -3307,19 +2161,6 @@ Tec_sto_Sha_Com_HeatingWat_Fue_cel,Tech stock|Share|Commercial|Heating|Water|Fue
 Tec_sto_Sha_Com_HeatingCok_Ele,Tech stock|Share|Commercial|Heating|Cooking|Electricity
 Tec_sto_Sha_Com_HeatingCok_Fos,Tech stock|Share|Commercial|Heating|Cooking|Fossil
 Tec_sto_Sha_Com_HeatingCok_Bio,Tech stock|Share|Commercial|Heating|Cooking|Biomass
-Tec_flo_Sha_Com_HeatingSpa_EHP,Tech flow|Share|Commercial|Heating|Space|EHP
-Tec_flo_Sha_Com_HeatingSpa_Ele,Tech flow|Share|Commercial|Heating|Space|Electricity
-Tec_flo_Sha_Com_HeatingSpa_Fos,Tech flow|Share|Commercial|Heating|Space|Fossil
-Tec_flo_Sha_Com_HeatingSpa_Oth,Tech flow|Share|Commercial|Heating|Space|Other
-Tec_flo_Sha_Com_HeatingSpa_Bio,Tech flow|Share|Commercial|Heating|Space|Biomass
-Tec_flo_Sha_Com_HeatingWat_EHP,Tech flow|Share|Commercial|Heating|Water|EHP
-Tec_flo_Sha_Com_HeatingWat_Ele,Tech flow|Share|Commercial|Heating|Water|Electricity
-Tec_flo_Sha_Com_HeatingWat_Fos,Tech flow|Share|Commercial|Heating|Water|Fossil
-Tec_flo_Sha_Com_HeatingWat_Oth,Tech flow|Share|Commercial|Heating|Water|Other
-Tec_flo_Sha_Com_HeatingWat_Fue_cel,Tech flow|Share|Commercial|Heating|Water|Fuel cell
-Tec_flo_Sha_Com_HeatingCok_Ele,Tech flow|Share|Commercial|Heating|Cooking|Electricity
-Tec_flo_Sha_Com_HeatingCok_Fos,Tech flow|Share|Commercial|Heating|Cooking|Fossil
-Tec_flo_Sha_Com_HeatingCok_Bio,Tech flow|Share|Commercial|Heating|Cooking|Biomass
 Tec_sto_Sha_Res_HeatingSpa_EHP,Tech stock|Share|Residential|Heating|Space|EHP
 Tec_sto_Sha_Res_HeatingSpa_Ele,Tech stock|Share|Residential|Heating|Space|Electricity
 Tec_sto_Sha_Res_HeatingSpa_Fos,Tech stock|Share|Residential|Heating|Space|Fossil
@@ -3333,27 +2174,14 @@ Tec_sto_Sha_Res_HeatingWat_Fue_cel,Tech stock|Share|Residential|Heating|Water|Fu
 Tec_sto_Sha_Res_HeatingCok_Ele,Tech stock|Share|Residential|Heating|Cooking|Electricity
 Tec_sto_Sha_Res_HeatingCok_Fos,Tech stock|Share|Residential|Heating|Cooking|Fossil
 Tec_sto_Sha_Res_HeatingCok_Bio,Tech stock|Share|Residential|Heating|Cooking|Biomass
-Tec_flo_Sha_Res_HeatingSpa_EHP,Tech flow|Share|Residential|Heating|Space|EHP
-Tec_flo_Sha_Res_HeatingSpa_Ele,Tech flow|Share|Residential|Heating|Space|Electricity
-Tec_flo_Sha_Res_HeatingSpa_Fos,Tech flow|Share|Residential|Heating|Space|Fossil
-Tec_flo_Sha_Res_HeatingSpa_Oth,Tech flow|Share|Residential|Heating|Space|Other
-Tec_flo_Sha_Res_HeatingSpa_Bio,Tech flow|Share|Residential|Heating|Space|Biomass
-Tec_flo_Sha_Res_HeatingWat_EHP,Tech flow|Share|Residential|Heating|Water|EHP
-Tec_flo_Sha_Res_HeatingWat_Ele,Tech flow|Share|Residential|Heating|Water|Electricity
-Tec_flo_Sha_Res_HeatingWat_Fos,Tech flow|Share|Residential|Heating|Water|Fossil
-Tec_flo_Sha_Res_HeatingWat_Oth,Tech flow|Share|Residential|Heating|Water|Other
-Tec_flo_Sha_Res_HeatingWat_Fue_cel,Tech flow|Share|Residential|Heating|Water|Fuel cell
-Tec_flo_Sha_Res_HeatingCok_Ele,Tech flow|Share|Residential|Heating|Cooking|Electricity
-Tec_flo_Sha_Res_HeatingCok_Fos,Tech flow|Share|Residential|Heating|Cooking|Fossil
-Tec_flo_Sha_Res_HeatingCok_Bio,Tech flow|Share|Residential|Heating|Cooking|Biomass
-Tec_flo_Sha_Ind_HeatingBoi_Ele,Tech flow|Share|Industry|Heating|Boiler|Electricity
-Tec_flo_Sha_Ind_HeatingBoi_Fos,Tech flow|Share|Industry|Heating|Boiler|Fossil
-Tec_flo_Sha_Ind_HeatingBoi_Bio,Tech flow|Share|Industry|Heating|Boiler|Biomass
-Tec_flo_Sha_Ind_HeatingBoi_Hyd,Tech flow|Share|Industry|Heating|Boiler|Hydrogen
-Tec_flo_Sha_Ind_HeatingFur_Ele,Tech flow|Share|Industry|Heating|Furnace|Electricity
-Tec_flo_Sha_Ind_HeatingFur_Fos,Tech flow|Share|Industry|Heating|Furnace|Fossil
-Tec_flo_Sha_Ind_HeatingFur_Bio,Tech flow|Share|Industry|Heating|Furnace|Biomass
-Tec_flo_Sha_Ind_HeatingFur_Hyd,Tech flow|Share|Industry|Heating|Furnace|Hydrogen
+Tec_sto_Sha_Ind_HeatingBoi_Ele,Tech stock|Share|Industry|Heating|Boiler|Electricity
+Tec_sto_Sha_Ind_HeatingBoi_Fos,Tech stock|Share|Industry|Heating|Boiler|Fossil
+Tec_sto_Sha_Ind_HeatingBoi_Bio,Tech stock|Share|Industry|Heating|Boiler|Biomass
+Tec_sto_Sha_Ind_HeatingBoi_Hyd,Tech stock|Share|Industry|Heating|Boiler|Hydrogen
+Tec_sto_Sha_Ind_HeatingFur_Ele,Tech stock|Share|Industry|Heating|Furnace|Electricity
+Tec_sto_Sha_Ind_HeatingFur_Fos,Tech stock|Share|Industry|Heating|Furnace|Fossil
+Tec_sto_Sha_Ind_HeatingFur_Bio,Tech stock|Share|Industry|Heating|Furnace|Biomass
+Tec_sto_Sha_Ind_HeatingFur_Hyd,Tech stock|Share|Industry|Heating|Furnace|Hydrogen
 Sec_Ene_Ele_Own_Use_DAC,Secondary Energy|Electricity|Own Use|DAC
 Sec_Ene_Ele_Own_Use_Ene_Sup,Secondary Energy|Electricity|Own Use|Energy Supply
 Sec_Ene_Ele_Own_Use_Ene_Sup_Hyd,Secondary Energy|Electricity|Own Use|Energy Supply|Hydrogen
@@ -3365,3 +2193,4 @@ OM_Cos_Fix_Gas_Hyd_syn,OM Cost|Fixed|Gases|Hydrogen synfuel
 Cap_Cos_Dir_Air_Cap,Capital Cost|Direct Air Capture
 Inv_Add_Ene_Dem,Investment Additions|Energy Demand
 Inv_Add_CCS,Investment Additions|CCS
+Emi_CO2_Ene_Dem_Res_and_Com,Emissions|CO2|Energy|Demand|Residential and Commercial
