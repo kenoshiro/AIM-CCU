@@ -71,9 +71,9 @@ df$R5map <- tribble(~Region,~R5lab,
                     'R5REF','Reforming\nEconomies')
 
 p$l_rangeleg <- tribble(~y,~label,
-                        -.1,'min',
-                        1.1,'max',
-                        .5,'median',
+                        -.1,'Min',
+                        1.1,'Max',
+                        .5,'Median',
                         .2,'10th percentile',
                         .8,'90th percentile') %>% 
     mutate(x=0) %>% 
