@@ -1546,6 +1546,7 @@ p$tmp <- df$all %>% filter(Region=='R5OECD90+EU',Year>=2020) %>%
     mutate(Device=factor(Device,levels=df$var$Device)) %>% 
     filter(Scenario%in%lst$scen_500all) %>% 
     filter(scen_sens_base=='1.5C-CCU') %>% 
+    mutate(Value=ifelse(Variable=='Cap_Cos_Dir_Air_Cap'&Year<2030,NA,Value)) %>% 
     ggplot()+
     geom_line(aes(x=Year,y=Value,linetype=scen_sens_var),show.legend=T)+
     geom_point(aes(x=Year,y=Value,shape=scen_sens_var),fill='white',show.legend=T)+
