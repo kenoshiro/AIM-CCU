@@ -80,7 +80,7 @@ fcalc_cumulate <- function(df_in=df$all,var,name_new=str_c('Cum_',var),intrate=0
             Variable=var,
             Year=seq(2010,2100,1)
         ) %>% 
-            left_join(tmp,key=c('Model','Scenario','Region','Variable')) %>% 
+            left_join(tmp,by=c('Model','Scenario','Region','Variable','Year')) %>% 
             mutate(Year=as.integer(Year)) %>% 
             group_by(Model,Scenario,Region,Variable) %>% 
             mutate(Value=approx(x=Year,y=Value,xout=Year)$y) %>% 

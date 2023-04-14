@@ -21,6 +21,7 @@ df$scen_lab <- tribble(~Scenario,~scen_lab,~scen_wrap,
                        '500C-CDR-Conv','1.5C-CDR-ConvTech','1.5C-CDR\n-ConvTech',
                        '500C-CCU-LimElecP','1.5C-CCU-LimElec+','1.5C-CCU\n-LimElec+',
                        '500C-CCU-LimElecM','1.5C-CCU-LimElec-','1.5C-CCU\n-LimElec-',
+                       '500C-CCU-LimElecS','1.5C-CCU-LimElec--','1.5C-CCU\n-LimElec--',
                        '1000C-CCU','WB2C-CCU','WB2C-CCU',
                        '1000C-DEC','WB2C-DEC','WB2C-DEC',
                        '1000C-CDR','WB2C-CDR','WB2C-CDR')
@@ -38,20 +39,20 @@ df$scen_sens_cat <- tribble(~Scenario,~scen_sens_base,~scen_sens_var,
                             '500C-DEC-Conv','1.5C-DEC','ConvTech',
                             '500C-CDR-Conv','1.5C-CDR','ConvTech',
                             '500C-CCU-LimElecP','1.5C-CCU','LimElec+',
-                            '500C-CCU-LimElecM','1.5C-CCU','LimElec-')
-
+                            '500C-CCU-LimElecM','1.5C-CCU','LimElec-',
+                            '500C-CCU-LimElecS','1.5C-CCU','LimElec--')
 lst$scen_rep <- c('500C-CCU','500C-DEC','500C-CDR')
 lst$scen_500all <- c('500C-CCU','500C-DEC','500C-CDR',
-                  '500C-CCU-Adv','500C-DEC-Adv','500C-CDR-Adv',
-                  '500C-CCU-Conv','500C-DEC-Conv','500C-CDR-Conv',
-                  '500C-CCU-LimElecP','500C-CCU-LimElecM')
+                     '500C-CCU-Adv','500C-DEC-Adv','500C-CDR-Adv',
+                     '500C-CCU-Conv','500C-DEC-Conv','500C-CDR-Conv',
+                     '500C-CCU-LimElecP','500C-CCU-LimElecM','500C-CCU-LimElecS')
 lst$scen_cat <- c('1.5C-CCU','1.5C-DEC','1.5C-CDR','WB2C-CCU','WB2C-DEC','WB2C-CDR')
 lst$scen_sens <- c('Default','AdvTech','ConvTech')
-lst$scen_sens_all <- c('Default','AdvTech','ConvTech','LimElec+','LimElec-')
+lst$scen_sens_all <- c('Default','AdvTech','ConvTech','LimElec+','LimElec-','LimElec--')
 lst$scen_col <- c('1.5C-CCU'='#E64B35FF','1.5C-DEC'='4DBBD5FF','1.5C-CDR'='#00A087FF')
 lst$scen_col_all <- c('1.5C-CCU'='#E64B35FF','1.5C-DEC'='4DBBD5FF','1.5C-CDR'='#00A087FF',
                       'WB2C-CCU'='#3C5488FF','WB2C-DEC'='#F39B7FFF','WB2C-CDR'='#8491B4FF')
-lst$lin_scen <- c('Default'='solid','AdvTech'='blank','ConvTech'='blank','LimElec+'='blank','LimElec-'='blank')
+lst$lin_scen <- c('Default'='solid','AdvTech'='blank','ConvTech'='blank','LimElec+'='blank','LimElec-'='blank','LimElec--'='blank')
 lst$IMP_all <- c('GS','Neg','Ren','LD','SP','Neg-2.0','Ren-2.0','ModAct','CurPol')
 lst$IMP_main <- c('GS','Neg','Ren','LD','SP','Neg-2.0','Ren-2.0')
 lst$IMP_main_shp <- c('GS'=8,'Neg'=9,'Ren'=3,'LD'=11,'SP'=4,'Neg-2.0'=10,'Ren-2.0'=12)
@@ -62,7 +63,8 @@ df$scen_sens_shape <- tribble(~scen_sens_var,~Shape,
                               'AdvTech',23,
                               'ConvTech',25,
                               'LimElec+',22,
-                              'LimElec-',24)
+                              'LimElec-',24,
+                              'LimElec--',7)
 df$R5map <- tribble(~Region,~R5lab,
                     'R5ASIA','Asia',
                     'R5LAM','Latin\nAmerica',
@@ -70,16 +72,17 @@ df$R5map <- tribble(~Region,~R5lab,
                     'R5OECD90+EU','OECD & EU',
                     'R5REF','Reforming\nEconomies')
 
-p$l_rangeleg <- tribble(~y,~label,
-                        -.1,'Min',
-                        1.1,'Max',
-                        .5,'Median',
-                        .2,'10th percentile',
-                        .8,'90th percentile') %>% 
+p$l_rangeleg <- tribble(~y,~y2,~label,
+                        -.1,0,'Min',
+                        1.1,1,'Max',
+                        .5,.5,'Median',
+                        .2,.2,'10th percentile',
+                        .8,.8,'90th percentile') %>% 
     mutate(x=0) %>% 
     ggplot()+
     geom_crossbar(aes(x=x),ymin=.2,ymax=.8,y=.5,width=.25,color='white',fill='grey')+
     geom_crossbar(aes(x=x),ymin=0,ymax=1,y=0,width=.25,color='grey',fill='transparent',fatten=0)+
+    geom_point(aes(y=y2),x=.18,shape=95,color='grey',size=1.5)+
     geom_text(aes(y=y,label=label),x=.22,hjust=0,size=3)+
     labs(title='  AR6 range')+
     xlim(-.2,1.6)+ylim(-.2,1.3)+
@@ -135,8 +138,8 @@ p$fec2 <- df$tmp %>% filter(Region=='World') %>%
     scale_color_manual(values=lst$col2,labels=lst$leg2,name=NULL)+
     scale_shape_manual(values=lst$shp2,labels=lst$leg2,name=NULL)+
     guides(fill=guide_legend(title='Demand (left-axis)',ncol=1,override.aes=list(linetype=NULL,shape=NULL,color='transparent')),
-           color=guide_legend(title='Share (right-axis)',override.aes=list(fill='transparent')),
-           shape=guide_legend(title='Share (right-axis)',override.aes=list(fill='transparent')))
+           color=guide_legend(title='Share (right-axis)'),
+           shape=guide_legend(title='Share (right-axis)',override.aes=list(fill='white')))
 
 df$tmp <- df$load_AR6_global %>% 
     filter(Variable=='Fin_Ene_Share_Hyd_Car',Year=='2050',Category%in%c('C1','C2','C3'),IMP_marker%in%lst$IMP_main) %>% 
@@ -152,8 +155,7 @@ p$fec_hydcar_AR6 <- df$load_AR6_global %>%
     geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,color='orange')+
     scale_y_continuous(limits=c(0,1),sec.axis=sec_axis(~.,labels=scales::percent_format(accuracy=1),name='Final energy share (%)'))+
     labs(x=NULL,y=NULL)+
-    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5),
-                       axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank())+
+    mytheme$set1+theme(axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank())+
     scale_shape_manual(values=lst$IMP_main_shp)+
     guides(shape=guide_legend(title='AR6 IMPs'))
 
@@ -324,7 +326,7 @@ p$fec_sec_hydcar_ind_AR6 <- df$load_AR6_global %>%
     geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,color='orange',show.legend=F)+
     scale_y_continuous(limits=c(0,1),sec.axis=sec_axis(~.,labels=scales::percent_format(accuracy=1),name='Final energy share (%)'))+
     labs(x=NULL,y=NULL)+
-    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5),
+    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=-.2,vjust=.5),
                        axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
                        strip.background=element_blank())+
     scale_shape_manual(values=lst$IMP_main_shp)
@@ -342,7 +344,7 @@ p$fec_sec_hydcar_bui_AR6 <- df$load_AR6_global %>%
     geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,color='orange',show.legend=F)+
     scale_y_continuous(limits=c(0,1),sec.axis=sec_axis(~.,labels=scales::percent_format(accuracy=1),name='Final energy share (%)'))+
     labs(x=NULL,y=NULL)+
-    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5),
+    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=-.2,vjust=.5),
                        axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
                        strip.background=element_blank())+
     scale_shape_manual(values=lst$IMP_main_shp)
@@ -360,7 +362,7 @@ p$fec_sec_hydcar_tra_AR6 <- df$load_AR6_global %>%
     geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,color='orange',show.legend=F)+
     scale_y_continuous(limits=c(0,1),sec.axis=sec_axis(~.,labels=scales::percent_format(accuracy=1),name='Final energy share (%)'))+
     labs(x=NULL,y=NULL)+
-    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5),
+    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=-.2,vjust=.5),
                        axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
                        strip.background=element_blank())+
     scale_shape_manual(values=lst$IMP_main_shp)
@@ -418,12 +420,13 @@ p$tmp1 <- plot_grid(p$fec_sec2_ind+theme(legend.position='none',axis.title.y.rig
                     p$fec_sec_hydcar_bui_AR6+theme(plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'),axis.title.y.right=element_blank(),axis.text.y.right=element_blank()),
                     p$fec_sec2_tra+theme(legend.position='none',axis.title.y=element_blank(),axis.text.y=element_blank(),axis.line.y.right=element_blank(),axis.ticks.y.right=element_blank(),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt')),
                     p$fec_sec_hydcar_tra_AR6+theme(plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt')),
-                    nrow=1,axis='tb',align='h',rel_widths=c(1.4,.4,1,.4,1,.88))
-p$tmp2 <- plot_grid(p$tmp0,p$tmp1,ncol=1,labels=c('a','b'),rel_heights=c(1,1.1))
+                    nrow=1,axis='tb',align='h',rel_widths=c(1.5,.55,1,.55,1,1.1))
+p$tmp2 <- plot_grid(p$tmp0,p$tmp1,ncol=1,labels=c('A','B'),label_size=12,rel_heights=c(1,1.1))
 p$tmp3 <- plot_grid(p$tmp2,p$l_tmp,nrow=1,rel_widths=c(1,.3))
-p$tmp <- plot_grid(p$tmp3,p$techshare,ncol=1,rel_heights=c(1,.4),labels=c('','c'))
+p$tmp <- plot_grid(p$tmp3,p$techshare,ncol=1,rel_heights=c(1,.4),labels=c('','C'),label_size=12)
 
-ggsave(filename='output/fig1.png',plot=p$tmp,width=180,height=170,units='mm',dpi=300)
+ggsave(filename='output/fig1.png',plot=p$tmp,width=174,height=170,units='mm',dpi=300)
+ggsave(filename='output/fig1.pdf',plot=p$tmp,width=174,height=170,units='mm',dpi=300,device=cairo_pdf)
 
 
 # Fig.2 -------------------------------------------------------------------
@@ -442,8 +445,7 @@ df$var <- tribble(~Variable,~Source,~Hydrogen,~Synfuel,~Final,
                   'Los_Hyd','Electricity','Hydrogen','Loss2','Loss',
                   'Fin_Ene_Liq_Hyd_syn','Electricity','Hydrogen','Synfuel','Synfuel',
                   'Fin_Ene_Gas_Hyd_syn','Electricity','Hydrogen','Synfuel','Synfuel',
-                  'Fin_Ene_Hyd','Electricity','Hydrogen','Hydrogen','Hydrogen'
-)
+                  'Fin_Ene_Hyd','Electricity','Hydrogen','Hydrogen','Hydrogen')
 lst$carlev <- c('Synfuel','Hydrogen','Electricity','Fossil','Biomass',
                 'DAC','Loss2','Loss')
 lst$col <- c('Synfuel'='orchid','Hydrogen'='thistle2','Electricity'='lightsteelblue','Fossil'='sandybrown','Biomass'='darkolivegreen2',
@@ -513,7 +515,7 @@ p$tmp2 <- df$load_AR6_global %>%
     scale_shape_manual(values=lst$IMP_main_shp)+
     mytheme$set1
 p$Prm_Ene_NonBioRen <- plot_grid(p$tmp1+theme(plot.margin=unit(c(5.5,5.5,5.5,5.5),unit='pt')),
-                                 p$tmp2+theme(plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'),axis.text.x=element_text(angle=90,hjust=1,vjust=.5),axis.text.y=element_blank(),axis.line.y=element_blank(),axis.ticks.y=element_blank(),plot.background=element_blank()),
+                                 p$tmp2+theme(plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'),axis.text.y=element_blank(),axis.line.y=element_blank(),axis.ticks.y=element_blank(),plot.background=element_blank()),
                                  nrow=1,axis='tb',align='h',rel_widths=c(1,.3))
 
 lst$Sec_Ene_Hyd_max <- df$all %>% 
@@ -531,7 +533,7 @@ p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>%
     ylim(0,lst$Sec_Ene_Hyd)+
     scale_color_manual(values=lst$scen_col)+
     labs(title='Hydrogen generation',x=NULL,y=expression(paste('Hydrogen supply (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position=c(.47,.9),strip.background=element_blank(),legend.key.height=unit(3,'mm'),legend.text=element_text(size=7.5),legend.background=element_blank())+
+    mytheme$set1+theme(legend.position='none',strip.background=element_blank(),legend.key.height=unit(3,'mm'),legend.text=element_text(size=7.5),legend.background=element_blank())+
     guides(color=guide_legend(title=NULL))
 df$tmp <- df$load_AR6_global %>% 
     filter(Variable=='Sec_Ene_Hyd',Year=='2050',Category%in%c('C1','C2','C3'),!(is.na(IMP_marker)))
@@ -548,8 +550,94 @@ p$tmp2 <- df$load_AR6_global %>%
     labs(x=NULL,y=NULL)+
     mytheme$set1
 p$Sec_Ene_Hyd <- plot_grid(p$tmp1+theme(plot.margin=unit(c(5.5,5.5,5.5,5.5),unit='pt')),
-                           p$tmp2+theme(plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'),axis.text.x=element_text(angle=90,hjust=1,vjust=.5),axis.text.y=element_blank(),axis.line.y=element_blank(),axis.ticks.y=element_blank(),plot.background=element_blank()),
+                           p$tmp2+theme(plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'),axis.text.y=element_blank(),axis.line.y=element_blank(),axis.ticks.y=element_blank(),plot.background=element_blank()),
                            nrow=1,axis='tb',align='h',rel_widths=c(1,.3))
+
+lst$Prm_Ene_Fos_max <- df$all %>% 
+    filter(Scenario%in%lst$scen_rep,Region=='World',Year>=2020) %>% 
+    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas')) %>% 
+    group_by(Model,Scenario,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
+    mutate(Value=ceiling(Value)) %>% .$Value %>% max()
+lst$Prm_Ene_Fos_AR6_max <- df$load_AR6_global %>% 
+    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas'),Year==2050,Category%in%c('C1','C2','C3')) %>% 
+    group_by(Model,Scenario,Region,Year,Category) %>% summarise(Value=sum(Value),.groups='drop') %>% 
+    mutate(Value=ceiling(Value)) %>% .$Value %>% max(lst$Prm_Ene_Fos_max)
+p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
+    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas')) %>%
+    group_by(Model,Scenario,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
+    inner_join(df$scen_lab,by='Scenario') %>% 
+    mutate(scen_lab=factor(scen_lab,levels=df$scen_lab$scen_lab)) %>% 
+    filter(Scenario%in%lst$scen_rep) %>% 
+    ggplot()+
+    geom_path(aes(x=Year,y=Value,color=scen_lab),show.legend=F)+
+    geom_point(aes(x=Year,y=Value,color=scen_lab),fill='white',shape=21,show.legend=F)+
+    ylim(0,lst$Prm_Ene_Fos_AR6_max*1.25)+
+    scale_color_manual(values=lst$scen_col)+
+    labs(title='Fossil primary supply',x=NULL,y=expression(paste('Primary energy (EJ ',yr^{-1},')')))+
+    mytheme$set1+theme(legend.position=c(.35,.8),strip.background=element_blank(),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt'))
+df$tmp <- df$load_AR6_global %>% 
+    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas'),Year=='2050',Category%in%c('C1','C2','C3'),IMP_marker%in%lst$IMP_main) %>% 
+    group_by(Model,Scenario,Region,Year,Category,IMP_marker) %>% summarise(Value=sum(Value),.groups='drop') %>% 
+    mutate(IMP_marker=factor(IMP_marker,levels=lst$IMP_main))
+p$tmp2 <- df$load_AR6_global %>% 
+    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas'),Year==2050,Category%in%c('C1','C2','C3')) %>% 
+    group_by(Model,Scenario,Region,Year,Category) %>% summarise(Value=sum(Value),.groups='drop') %>% 
+    mutate(Variable='Prm_Ene_Fos') %>% 
+    fcalc_range_category() %>% 
+    ggplot()+
+    geom_crossbar(aes(x=Category,ymin=p10,ymax=p90,y=p50),width=.75,color='white',fill='grey')+
+    geom_crossbar(aes(x=Category,ymin=p0,ymax=p100,y=p0),width=.75,color='grey',fill='transparent',fatten=0)+
+    geom_text(aes(x=Category,label=str_c('n=',n),y=p100),size=2,angle=90,hjust=-.2,vjust=.5)+
+    geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,show.legend=F)+
+    scale_y_continuous(limits=c(0,lst$Prm_Ene_Fos_AR6_max*1.25))+
+    labs(x=NULL,y=NULL)+
+    scale_shape_manual(values=lst$IMP_main_shp)+
+    mytheme$set1+theme(axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
+                       plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'))
+p$prm_ene_fos <- plot_grid(p$tmp1+theme(plot.margin=unit(c(5.5,5.5,5.5,5.5),unit='pt')),
+                           p$tmp2,nrow=1,axis='tb',align='h',rel_widths=c(1,.3))
+
+lst$Prm_Ene_Bio_max <- df$all %>% 
+    filter(Scenario%in%lst$scen_rep,Region=='World',Year>=2020) %>% 
+    filter(Variable=='Prm_Ene_Bio') %>% 
+    mutate(Value=ceiling(Value)) %>% .$Value %>% max()
+lst$Prm_Ene_Bio_AR6_max <- df$load_AR6_global %>% 
+    filter(Variable=='Prm_Ene_Bio',Year==2050,Category%in%c('C1','C2','C3')) %>% 
+    mutate(Value=ceiling(Value)) %>% .$Value %>% max(lst$Prm_Ene_Bio_max)
+p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
+    filter(Variable=='Prm_Ene_Bio') %>%
+    inner_join(df$scen_lab,by='Scenario') %>% 
+    mutate(scen_lab=factor(scen_lab,levels=df$scen_lab$scen_lab)) %>% 
+    filter(Scenario%in%lst$scen_rep) %>% 
+    ggplot()+
+    geom_path(aes(x=Year,y=Value,color=scen_lab),show.legend=T)+
+    geom_point(aes(x=Year,y=Value,color=scen_lab),fill='white',shape=21,show.legend=T)+
+    ylim(0,lst$Prm_Ene_Bio_AR6_max*1.25)+
+    scale_color_manual(values=lst$scen_col)+
+    labs(title='Biomass primary supply',x=NULL,y=expression(paste('Primary energy (EJ ',yr^{-1},')')))+
+    mytheme$set1+theme(legend.position=c(.4,.8),strip.background=element_blank(),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt'))+
+    guides(color=guide_legend(title=NULL))
+df$tmp <- df$load_AR6_global %>% 
+    filter(Variable=='Prm_Ene_Bio',Year=='2050',Category%in%c('C1','C2','C3'),IMP_marker%in%lst$IMP_main) %>% 
+    mutate(IMP_marker=factor(IMP_marker,levels=lst$IMP_main))
+p$tmp2 <- df$load_AR6_global %>% 
+    filter(Variable=='Prm_Ene_Bio',Year==2050,Category%in%c('C1','C2','C3')) %>% 
+    fcalc_range_category() %>% 
+    ggplot()+
+    geom_crossbar(aes(x=Category,ymin=p10,ymax=p90,y=p50),width=.75,color='white',fill='grey')+
+    geom_crossbar(aes(x=Category,ymin=p0,ymax=p100,y=p0),width=.75,color='grey',fill='transparent',fatten=0)+
+    geom_text(aes(x=Category,label=str_c('n=',n),y=p100),size=2,angle=90,hjust=-.2,vjust=.5)+
+    geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,show.legend=T)+
+    scale_y_continuous(limits=c(0,lst$Prm_Ene_Bio_AR6_max*1.25))+
+    labs(x=NULL,y=NULL)+
+    scale_shape_manual(values=lst$IMP_main_shp)+
+    mytheme$set1+theme(axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
+                       plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'))
+p$l_IMP <- get_legend(p$tmp2+theme(legend.key.size=unit(5,'mm'))+guides(shape=guide_legend(title='AR6 IMPs')))
+p$l_scen <- get_legend(p$tmp1)
+p$prm_ene_bio <- plot_grid(p$tmp1+theme(legend.position='none',plot.margin=unit(c(5.5,5.5,5.5,5.5),unit='pt')),
+                           p$tmp2+theme(legend.position='none'),nrow=1,axis='tb',align='h',rel_widths=c(1,.3))
+
 
 df$var <- tribble(~Variable,~Legend,~Color,
                   'Sec_Ene_Ele_Fos','Fossil','grey50',
@@ -577,14 +665,30 @@ p$sec_ene_ele_CCU <- df$all %>% filter(Region=='World',Year>=2020) %>%
     labs(x=NULL,y=expression(paste('Electricity supply (EJ ',yr^{-1},')')))+
     ylim(0,lst$sec_ene_ele_max)+
     mytheme$set1+
-    theme(legend.position=c(.35,.85),strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1),legend.background=element_blank(),legend.key.size=unit(4,'mm'))+
+    theme(legend.position='none',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1),legend.background=element_blank(),legend.key.size=unit(4,'mm'))+
     scale_fill_manual(values=lst$col,labels=lst$leg,name=NULL)+
-    scale_color_manual(values=lst$scen_col)+
-    guides(color=guide_legend(title=NULL,override.aes=list(fill='transparent')),fill='none')
+    scale_color_manual(values=lst$scen_col)
 
 p$l_sec_ene_ele_CCU <- p$sec_ene_ele_CCU+
     guides(fill=guide_legend(title=NULL,nrow=1),color='none')+
     theme(legend.position='bottom',legend.margin=margin(0,0,0,0))
+
+p$l_tmp1 <- plot_grid(p$l_scen,p$l_IMP,ggplotGrob(p$l_rangeleg),ncol=1,rel_heights=c(.5,1,.6))
+p$l_tmp2 <- get_legend(p$l_sec_ene_ele_CCU+theme(legend.key.size=unit(3.5,'mm'),legend.spacing=unit(0,'mm')))
+p$tmp1 <- plot_grid(p$Sec_Ene_Hyd+theme(plot.margin=unit(c(0,0,0,2.5),unit='mm')),p$Prm_Ene_NonBioRen+theme(plot.margin=unit(c(0,0,0,2.5),unit='mm')),
+                    p$prm_ene_fos+theme(plot.margin=unit(c(0,0,0,2.5),unit='mm')),p$prm_ene_bio+theme(plot.margin=unit(c(0,0,0,2.5),unit='mm')),
+                    nrow=2,labels=c('B','C','D','E'),label_size=12,rel_widths=c(1,1),rel_heights=c(1,1))
+p$tmp2 <- plot_grid(p$tmp1,p$l_tmp1,
+                    nrow=1,rel_widths=c(1,.25))
+p$tmp3 <- plot_grid(p$sec_ene_ele_CCU+theme(plot.margin=unit(c(5.5,0,0,5.5),unit='pt')),
+                    p$seceneflo2+theme(axis.title.y=element_blank(),axis.text.y=element_blank(),axis.line.y=element_blank(),plot.margin=unit(c(5.5,5.5,0,0),unit='pt')),
+                    nrow=1,axis='tb',align='h',rel_widths=c(1,2.8))
+p$tmp <- plot_grid(p$tmp3,p$l_tmp2,p$tmp2,ncol=1,labels=c('A','',''),label_size=12,rel_heights=c(1,.13,1.3))
+ggsave(filename='output/fig2.png',plot=p$tmp,width=174,height=174,units='mm',dpi=300)
+ggsave(filename='output/fig2.pdf',plot=p$tmp,width=174,height=174,units='mm',dpi=300,device=cairo_pdf)
+
+
+# Fig.3 -------------------------------------------------------------------
 
 df$var <- tribble(~Variable,~Energy,
                   'Prm_Ene_Coa','Primary',
@@ -605,7 +709,7 @@ df$tmp2 <- df$load_AR6_global %>% filter(Region=='World',Year==2050,!(is.na(IMP_
     group_by(IMP_marker,Region,Energy,Category) %>% summarise(Value=sum(Value),.groups='drop') %>% 
     pivot_wider(names_from='Energy',values_from='Value') %>% 
     filter(!is.na(Primary),!is.na(Final))
-p$tmp <- df$all %>% filter(Region=='World',Year==2050) %>% 
+p$tmp1 <- df$all %>% filter(Region=='World',Year==2050) %>% 
     inner_join(df$var,by='Variable') %>% 
     group_by(Model,Scenario,Region,Energy) %>% summarise(Value=sum(Value),.groups='drop') %>% 
     pivot_wider(names_from='Energy',values_from='Value',values_fill=0) %>% 
@@ -618,7 +722,7 @@ p$tmp <- df$all %>% filter(Region=='World',Year==2050) %>%
     ggplot()+
     geom_point(data=df$tmp,aes(x=Primary,y=Final,shape=Category),color='grey',size=1)+
     geom_point(data=df$tmp2,aes(x=Primary,y=Final,shape=IMP_marker),color='black',size=1,show.legend=F)+
-    geom_text(data=df$tmp2,aes(x=Primary,y=Final,label=IMP_marker),color='black',size=2.5,vjust=1.2,show.legend=F)+
+    geom_text(data=df$tmp2,aes(x=Primary,y=Final,label=IMP_marker),color='black',size=2.5,vjust=1.5,show.legend=F)+
     geom_point(aes(x=Primary,y=Final,color=scen_sens_base,size=scen_sens_var))+
     geom_text(data=. %>% filter(Scenario%in%lst$scen_rep),hjust=.8,vjust=-1,
               aes(x=Primary,y=Final,color=scen_sens_base,label=scen_sens_base),size=2.5,show.legend=F)+
@@ -633,30 +737,21 @@ p$tmp <- df$all %>% filter(Region=='World',Year==2050) %>%
     labs(x=expression(paste('Fossil and biomass primary supply (EJ ',yr^{-1},')')),
          y=expression(paste('Hydrocarbon energy in end-use (EJ ',yr^{-1},')')))+
     mytheme$set1+theme(legend.position='right',legend.box='vertical',legend.margin=margin(0,0,0,0),legend.key.height=unit(3,'mm'))+
-    guides(color='none',shape=guide_legend(title='AR6 category'),size=guide_legend(title="This study's\nscenarios"))
-p$tmp2 <- p$tmp+
+    guides(shape=guide_legend(title='AR6 category'),color=guide_legend(title="This study's\nscenarios"),size=guide_legend(title=NULL))
+p$tmp2 <- p$tmp1+
     scale_shape_manual(breaks=lst$IMP_main,values=lst$IMP_cat_shp)+
     theme(legend.key.size=unit(3,'mm'))+
-    guides(shape=guide_legend(title='AR6 IMPs',override.aes=list(color='black')),size='none')
-p$l1 <- get_legend(p$tmp)
+    guides(shape=guide_legend(title='AR6 IMPs',override.aes=list(color='black')),size='none',color='none')
+p$l1 <- get_legend(p$tmp1)
 p$l2 <- get_legend(p$tmp2)
-p$l_hydcar <- plot_grid(p$l1,p$l2,ncol=1)
-p$hydrocar <- p$tmp+theme(legend.position='none')
+p$l_hydcar <- plot_grid(p$l1,p$l2,ncol=1,rel_heights=c(1,.6))
+p$hydrocar <- p$tmp1+theme(legend.position='none')
+p$tmp <- plot_grid(p$hydrocar,p$l_hydcar,nrow=1,rel_widths=c(1,.25))
 
-p$l_tmp1 <- plot_grid(p$l_hydcar,ggplotGrob(p$l_rangeleg),ncol=1,rel_heights=c(1,.35))
-p$l_tmp2 <- get_legend(p$l_sec_ene_ele_CCU+theme(legend.key.size=unit(3.5,'mm'),legend.spacing=unit(0,'mm')))
-p$tmp1 <- plot_grid(p$Sec_Ene_Hyd+theme(plot.margin=unit(c(0,0,0,2),unit='mm')),p$Prm_Ene_NonBioRen+theme(plot.margin=unit(c(0,0,0,2),unit='mm')),
-                    ncol=1,labels=c('b','c'),rel_heights=c(1,1.1))
-p$tmp2 <- plot_grid(p$tmp1,p$hydrocar+theme(legend.position='none'),p$l_tmp1,
-                    nrow=1,labels=c('','d',''),rel_widths=c(1,1.7,.55))
-p$tmp3 <- plot_grid(p$sec_ene_ele_CCU+theme(plot.margin=unit(c(5.5,0,0,5.5),unit='pt')),
-                    p$seceneflo2+theme(axis.title.y=element_blank(),axis.text.y=element_blank(),axis.line.y=element_blank(),plot.margin=unit(c(5.5,5.5,0,0),unit='pt')),
-                    nrow=1,axis='tb',align='h',rel_widths=c(1,2.8))
-p$tmp <- plot_grid(p$tmp3,p$l_tmp2,p$tmp2,ncol=1,labels=c('a','',''),rel_heights=c(1,.15,1.25))
-ggsave(filename='output/fig2.png',plot=p$tmp,width=180,height=170,units='mm',dpi=300)
+ggsave(filename='output/fig3.png',plot=p$tmp,width=114,height=90,units='mm',dpi=300)
+ggsave(filename='output/fig3.pdf',plot=p$tmp,width=114,height=90,units='mm',dpi=300,device=cairo_pdf)
 
-
-# Fig.3 ------------------------------------------------------------------
+# Fig.4 ------------------------------------------------------------------
 
 lst$CDR_max_AR6 <- df$load_AR6_global %>% 
     filter(Variable%in%c('Car_Seq_Dir_Air_Cap','Car_Seq_CCS_Bio'),Region=='World',Year=='2050',Category%in%c('C1','C2','C3')) %>% 
@@ -759,7 +854,7 @@ lst$CCS_max <- df$all %>%
     filter(Variable=='Car_Seq_CCS') %>% 
     mutate(Value=Value/1000) %>% 
     group_by(Model,Scenario,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
-    mutate(Value=ceiling(Value)) %>% .$Value %>% max(lst$CCS_max_AR6)+2
+    mutate(Value=ceiling(Value)) %>% .$Value %>% max(lst$CCS_max_AR6)+4
 p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
     filter(Variable=='Car_Seq_CCS') %>% 
     group_by(Model,Scenario,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
@@ -795,7 +890,7 @@ p$tmp2 <- df$load_AR6_global %>%
     mytheme$set1
 p$l_IMP <- get_legend(p$tmp2+theme(legend.key.size=unit(5,'mm'))+guides(shape=guide_legend(title='AR6 IMPs')))
 p$l_CCS_AR6 <- get_legend(p$tmp2+theme(legend.key.height=unit(4,'mm'))+guides(shape=guide_legend(title='AR6 IMPs')))
-p$CCS <- plot_grid(p$tmp1+theme(legend.position=c(.48,.8),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt'),legend.background=element_blank()),
+p$CCS <- plot_grid(p$tmp1+theme(legend.position=c(.52,.8),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt'),legend.background=element_blank()),
                    p$tmp2+theme(legend.position='none',axis.text.x=element_text(angle=90,hjust=1,vjust=.5),axis.text.y=element_blank(),axis.line.y=element_blank(),axis.ticks.y=element_blank(),plot.background=element_blank(),plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt')),
                    nrow=1,axis='tb',align='h',rel_widths=c(1,.3))
 
@@ -838,12 +933,13 @@ p$co2eneflo <- df$all %>% filter(Region=='World',Year==2050) %>%
     guides(fill=guide_legend(title=NULL))
 
 p$l_tmp <- plot_grid(p$l_CCS_AR6,ggplotGrob(p$l_rangeleg),ncol=1,rel_heights=c(1,.7))
-p$tmp1 <- plot_grid(p$DAC,p$CDR,p$CCS,p$l_tmp,nrow=1,labels=c('a','b','c',''),rel_widths=c(1,1,1,.6))
-p$tmp <- plot_grid(p$tmp1,p$co2eneflo,ncol=1,labels=c('','d'),rel_heights=c(1,1.5))
-ggsave(filename='output/fig3.png',plot=p$tmp,width=180,height=170,units='mm',dpi=300)
+p$tmp1 <- plot_grid(p$DAC,p$CDR,p$CCS,p$l_tmp,nrow=1,labels=c('A','B','C',''),label_size=12,rel_widths=c(1,1,1,.63))
+p$tmp <- plot_grid(p$tmp1,p$co2eneflo,ncol=1,labels=c('','D'),label_size=12,rel_heights=c(1,1.4))
+ggsave(filename='output/fig4.png',plot=p$tmp,width=174,height=150,units='mm',dpi=300)
+ggsave(filename='output/fig4.pdf',plot=p$tmp,width=174,height=150,units='mm',dpi=300,device=cairo_pdf)
 
 
-# Fig.4 -------------------------------------------------------------------
+# Fig.5 -------------------------------------------------------------------
 
 lst$shp <- as.integer(df$scen_sens_shape$Shape); names(lst$shp) <- as.character(df$scen_sens_shape$scen_sens_var)
 p$polcosdisc <- df$all %>% filter(Region=='World',Year==2050) %>% 
@@ -1001,6 +1097,7 @@ p$inv <- df$all %>% filter(Region=='World',Year>2020) %>%
     mutate(Year=ceiling(Year/10)*10) %>% 
     group_by(Model,Scenario,Region,Variable,Year) %>% summarise(Value=sum(Value)/n(),.groups='drop') %>% 
     mutate(Year=str_c(Year-9,'-',Year-2000)) %>% 
+    mutate(Value=Value/1000) %>% 
     inner_join(df$var,by='Variable') %>% 
     inner_join(df$scen_lab,by='Scenario') %>% 
     inner_join(df$scen_sens_cat,by='Scenario') %>% 
@@ -1010,23 +1107,24 @@ p$inv <- df$all %>% filter(Region=='World',Year>2020) %>%
     ggplot()+
     geom_bar(aes(x=Year,y=Value,fill=Variable),stat='identity',position='stack',show.legend=T)+
     facet_grid(.~scen_lab)+
-    labs(x=NULL,y=expression(paste('Additional investment (billion US$ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    labs(x=NULL,y=expression(paste('Additional investment (trillion US$ ',yr^{-1},')')))+
+    mytheme$set1+theme(legend.position='right',legend.margin=margin(0,0,0,0),strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)
 
 p$l_tmp <- plot_grid(p$l_IMP,ggplotGrob(p$l_rangeleg),ncol=1,rel_heights=c(1,.6))
 p$tmp1 <- plot_grid(p$polcosdisc+theme(legend.position='right',axis.text.x=element_text(angle=45,hjust=1)),
                     p$carpol_all+theme(legend.position='right',axis.text.x=element_text(angle=45,hjust=1)),
-                    p$l_tmp,nrow=1,rel_widths=c(1,.85,.5),labels=c('a','b'))
+                    p$l_tmp,nrow=1,rel_widths=c(1,.85,.5),labels=c('A','B'),label_size=12)
 p$l_tmp1 <- get_legend(p$eneprc+theme(legend.position='right'))
 p$l_tmp2 <- get_legend(p$synf_cost+theme(legend.position='right'))
 p$l_tmp <- plot_grid(p$l_tmp1,p$l_tmp2,ncol=1)
 p$tmp2 <- plot_grid(p$eneprc+theme(legend.position='none',plot.margin=unit(c(5.5,0,5.5,13),unit='pt')),
                     p$synf_cost+theme(legend.position='none',axis.line.y=element_blank(),axis.text.y=element_blank(),axis.title.y=element_blank(),axis.ticks.y=element_blank(),plot.background=element_blank(),plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt')),
-                    p$l_tmp,nrow=1,rel_widths=c(1,.6,.6),axis='tb',align='h')
-p$tmp3 <- plot_grid(p$tmp2,p$inv+theme(legend.position='right',plot.margin=unit(c(5.5,5.5,5.5,13),unit='pt')),nrow=1,rel_widths=c(1,1.3),labels=c('c','d'))
+                    p$l_tmp,nrow=1,rel_widths=c(1,.7,.6),axis='tb',align='h')
+p$tmp3 <- plot_grid(p$tmp2,p$inv+theme(plot.margin=unit(c(5.5,0,5.5,13),unit='pt')),nrow=1,rel_widths=c(1,1.15),labels=c('C','D'),label_size=12)
 p$tmp <- plot_grid(p$tmp1,p$tmp3,ncol=1,rel_heights=c(1,1))
-ggsave(filename='output/fig4.png',plot=p$tmp,width=180,height=130,units='mm',dpi=300)
+ggsave(filename='output/fig5.png',plot=p$tmp,width=174,height=130,units='mm',dpi=300)
+ggsave(filename='output/fig5.pdf',plot=p$tmp,width=174,height=130,units='mm',dpi=300,device=cairo_pdf)
 
 
 # Supplementary Fig.1 ------------------------------------------------------------------
@@ -1044,7 +1142,7 @@ df$var <- tribble(~Variable,~Legend,~Color,
                   'Fin_Ene_Oth_inc_Solarand_Geo','Other','grey90')
 lst$leg <- as.character(df$var$Legend); names(lst$leg) <- as.character(df$var$Variable)
 lst$col <- as.character(df$var$Color); names(lst$col) <- as.character(df$var$Variable)
-p$tmp <- df$all %>% filter(Region=='World') %>% 
+p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
     filter(Variable%in%df$var$Variable) %>%
     inner_join(df$var,by='Variable') %>% 
     inner_join(df$scen_lab,by='Scenario') %>% 
@@ -1053,11 +1151,38 @@ p$tmp <- df$all %>% filter(Region=='World') %>%
            scen_sens_base=factor(scen_sens_base,levels=lst$scen_cat),scen_sens_var=factor(scen_sens_var,lst$scen_sens_all)) %>%
     ggplot()+
     geom_area(aes(x=Year,y=Value,fill=Variable),position='stack',show.legend=T)+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     labs(title=NULL,x=NULL,y=expression(paste('Final energy demand (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)
-ggsave(filename='output/figS1.png',plot=p$tmp,width=180,height=120,units='mm',dpi=300)
+
+df$var <- tribble(~Variable,~Legend,~Color,~Shape,
+                   'Fin_Ene_Share_Fos','Fossil fuel share','tan3',21,
+                   'Fin_Ene_Share_Syn_Hyd','Synfuels share','purple',23,
+                   'Fin_Ene_Share_Bio','Biomass share','darkolivegreen3',24)
+lst$leg <- as.character(df$var$Legend); names(lst$leg) <- as.character(df$var$Variable)
+lst$col <- as.character(df$var$Color); names(lst$col) <- as.character(df$var$Variable)
+lst$shp <- as.numeric(df$var$Shape); names(lst$col) <- as.character(df$var$Variable)
+p$tmp2 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
+    filter(Variable%in%df$var$Variable) %>% 
+    inner_join(df$var,by='Variable') %>% 
+    inner_join(df$scen_lab,by='Scenario') %>% 
+    inner_join(df$scen_sens_cat,by='Scenario') %>% 
+    mutate(Variable=factor(Variable,levels=rev(df$var$Variable)),scen_wrap=factor(scen_wrap,levels=df$scen_lab$scen_wrap),
+           scen_sens_base=factor(scen_sens_base,levels=lst$scen_cat),scen_sens_var=factor(scen_sens_var,lst$scen_sens_all)) %>% 
+    ggplot()+
+    geom_path(aes(x=Year,y=Value,color=Variable),show.legend=T)+
+    geom_point(aes(x=Year,y=Value,color=Variable,shape=Variable),fill='white',show.legend=T)+
+    scale_y_continuous(limits=c(0,NA),labels=scales::percent)+
+    facet_wrap(~scen_wrap,nrow=3)+
+    labs(title=NULL,x=NULL,y='Final energy share (%)')+
+    mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    scale_color_manual(values=lst$col,labels=lst$leg,name=NULL)+
+    scale_shape_manual(values=lst$shp,labels=lst$leg,name=NULL)
+
+p$tmp <- plot_grid(p$tmp1,p$tmp2,ncol=1,rel_heights=c(1.2,1),labels=c('A','B'),label_size=12)
+ggsave(filename='output/figS1.png',plot=p$tmp,width=174,height=200,units='mm',dpi=300)
+ggsave(filename='output/figS1B.png',plot=p$tmp2,width=174,height=90,units='mm',dpi=300)
 
 
 # Supplementary Fig.2 -----------------------------------------------------
@@ -1083,6 +1208,7 @@ df$lab_tech <- tribble(~Device,~Tech_Label,
                        'Furnace','Industry\nfurnace',
                        'Residential','Residential\nspace heating',
                        'Commercial','Commercial\nspace heating')
+lst$shp <- as.integer(df$scen_sens_shape$Shape); names(lst$shp) <- as.character(df$scen_sens_shape$scen_sens_var)
 p$tmp <- df$all %>% filter(Region=='World',Year>=2020) %>% 
     inner_join(df$var,by='Variable') %>% 
     group_by(Model,Scenario,Device,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
@@ -1102,10 +1228,10 @@ p$tmp <- df$all %>% filter(Region=='World',Year>=2020) %>%
     scale_color_manual(values=lst$scen_col)+
     scale_shape_manual(values=lst$shp,name=NULL)+
     scale_linetype_manual(values=lst$lin_scen,name=NULL)+
-    mytheme$set1+theme(legend.position='bottom',legend.box='vertical',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     labs(x=NULL,y='Technology diffusion rate')+
     guides(color=guide_legend(title=NULL))
-ggsave(filename='output/figS2.png',plot=p$tmp,width=180,height=95,units='mm',dpi=300)
+ggsave(filename='output/figS2.png',plot=p$tmp,width=174,height=90,units='mm',dpi=300)
 
 
 # Supplementary Fig.3 -----------------------------------------------------
@@ -1123,11 +1249,11 @@ p$tmp <- df$all %>% filter(Region=='World',Year%in%c(2030,2040,2050)) %>%
     mutate(Variable=factor(Variable,levels=rev(df$var$Variable)),scen_wrap=factor(scen_wrap,levels=df$scen_lab$scen_wrap)) %>%
     ggplot()+
     geom_bar(aes(x=Year,y=Value,fill=Variable),stat='identity',position='stack',show.legend=T)+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     labs(x=NULL,y=expression(paste('Electricity losses (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)
-ggsave(filename='output/figS3.png',plot=p$tmp,width=180,height=100,units='mm',dpi=300)
+ggsave(filename='output/figS3.png',plot=p$tmp,width=174,height=100,units='mm',dpi=300)
 
 
 # Supplementary Fig.4 -----------------------------------------------------
@@ -1149,11 +1275,11 @@ p$tmp <- df$all %>% filter(Region=='World',Year%in%c(2030,2040,2050)) %>%
            scen_sens_base=factor(scen_sens_base,levels=lst$scen_cat),scen_sens_var=factor(scen_sens_var,lst$scen_sens_all)) %>%
     ggplot()+
     geom_bar(aes(x=Year,y=Value,fill=Variable),position='stack',stat='identity',show.legend=T)+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     labs(title=NULL,x=NULL,y=expression(paste('Hydrogen generation (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=lst$col,labels=lst$leg,name=NULL)
-ggsave(filename='output/figS4.png',plot=p$tmp,width=180,height=100,units='mm',dpi=300)
+ggsave(filename='output/figS4.png',plot=p$tmp,width=174,height=100,units='mm',dpi=300)
 
 
 # Supplementary Fig.5 -----------------------------------------------------
@@ -1185,9 +1311,9 @@ p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>%
            scen_sens_base=factor(scen_sens_base,levels=lst$scen_cat),scen_sens_var=factor(scen_sens_var,lst$scen_sens_all)) %>%
     ggplot()+
     geom_area(aes(x=Year,y=Value,fill=Variable),position='stack',show.legend=T)+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     labs(title=NULL,x=NULL,y=expression(paste('Primary energy (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)
 
 df$var <- tribble(~Variable,~Legend,~Color,
@@ -1219,105 +1345,15 @@ p$tmp2 <- df$all %>% filter(Region=='World',Year>=2020) %>%
            scen_sens_base=factor(scen_sens_base,levels=lst$scen_cat),scen_sens_var=factor(scen_sens_var,lst$scen_sens_all)) %>%
     ggplot()+
     geom_area(aes(x=Year,y=Value,fill=Variable),position='stack',show.legend=T)+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     labs(x=NULL,y=expression(paste('Power generation (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
+    mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)
-p$tmp <- plot_grid(p$tmp2,p$tmp1,ncol=1,rel_heights=c(1,1),labels=c('a','b'))
-ggsave(filename='output/figS5.png',plot=p$tmp,width=180,height=240,units='mm',dpi=300)
+p$tmp <- plot_grid(p$tmp2,p$tmp1,ncol=1,rel_heights=c(1,1),labels=c('A','B'),label_size=12)
+ggsave(filename='output/figS5.png',plot=p$tmp,width=174,height=240,units='mm',dpi=300)
+
 
 # Supplementary Fig.6 -----------------------------------------------------
-
-lst$Prm_Ene_Fos_max <- df$all %>% 
-    filter(Scenario%in%lst$scen_rep,Region=='World',Year>=2020) %>% 
-    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas')) %>% 
-    group_by(Model,Scenario,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
-    mutate(Value=ceiling(Value)) %>% .$Value %>% max()
-lst$Prm_Ene_Fos_AR6_max <- df$load_AR6_global %>% 
-    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas'),Year==2050,Category%in%c('C1','C2','C3')) %>% 
-    group_by(Model,Scenario,Region,Year,Category) %>% summarise(Value=sum(Value),.groups='drop') %>% 
-    mutate(Value=ceiling(Value)) %>% .$Value %>% max(lst$Prm_Ene_Fos_max)
-p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
-    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas')) %>%
-    group_by(Model,Scenario,Region,Year) %>% summarise(Value=sum(Value),.groups='drop') %>% 
-    inner_join(df$scen_lab,by='Scenario') %>% 
-    mutate(scen_lab=factor(scen_lab,levels=df$scen_lab$scen_lab)) %>% 
-    filter(Scenario%in%lst$scen_rep) %>% 
-    ggplot()+
-    geom_path(aes(x=Year,y=Value,color=scen_lab),show.legend=F)+
-    geom_point(aes(x=Year,y=Value,color=scen_lab),fill='white',shape=21,show.legend=F)+
-    ylim(0,lst$Prm_Ene_Fos_AR6_max)+
-    scale_color_manual(values=lst$scen_col)+
-    labs(title='Fossil primary supply',x=NULL,y=expression(paste('Primary energy (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position=c(.35,.8),strip.background=element_blank(),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt'),axis.text.x=element_text(angle=45,hjust=1))
-df$tmp <- df$load_AR6_global %>% 
-    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas'),Year=='2050',Category%in%c('C1','C2','C3'),IMP_marker%in%lst$IMP_main) %>% 
-    group_by(Model,Scenario,Region,Year,Category,IMP_marker) %>% summarise(Value=sum(Value),.groups='drop') %>% 
-    mutate(IMP_marker=factor(IMP_marker,levels=lst$IMP_main))
-p$tmp2 <- df$load_AR6_global %>% 
-    filter(Variable%in%c('Prm_Ene_Coa','Prm_Ene_Oil','Prm_Ene_Gas'),Year==2050,Category%in%c('C1','C2','C3')) %>% 
-    group_by(Model,Scenario,Region,Year,Category) %>% summarise(Value=sum(Value),.groups='drop') %>% 
-    mutate(Variable='Prm_Ene_Fos') %>% 
-    fcalc_range_category() %>% 
-    ggplot()+
-    geom_crossbar(aes(x=Category,ymin=p10,ymax=p90,y=p50),width=.75,color='white',fill='grey')+
-    geom_crossbar(aes(x=Category,ymin=p0,ymax=p100,y=p0),width=.75,color='grey',fill='transparent',fatten=0)+
-    geom_text(aes(x=Category,label=str_c('n=',n),y=p0),size=2,angle=90,hjust=1.3,vjust=.5)+
-    geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,show.legend=F)+
-    scale_y_continuous(limits=c(0,lst$Prm_Ene_Fos_AR6_max))+
-    labs(x=NULL,y=NULL)+
-    scale_shape_manual(values=lst$IMP_main_shp)+
-    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5),
-                       axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
-                       plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'))
-p$prm_ene_fos <- plot_grid(p$tmp1,p$tmp2,nrow=1,axis='tb',align='h',rel_widths=c(1,.35))
-
-lst$Prm_Ene_Bio_max <- df$all %>% 
-    filter(Scenario%in%lst$scen_rep,Region=='World',Year>=2020) %>% 
-    filter(Variable=='Prm_Ene_Bio') %>% 
-    mutate(Value=ceiling(Value)) %>% .$Value %>% max()
-lst$Prm_Ene_Bio_AR6_max <- df$load_AR6_global %>% 
-    filter(Variable=='Prm_Ene_Bio',Year==2050,Category%in%c('C1','C2','C3')) %>% 
-    mutate(Value=ceiling(Value)) %>% .$Value %>% max(lst$Prm_Ene_Bio_max)
-p$tmp1 <- df$all %>% filter(Region=='World',Year>=2020) %>% 
-    filter(Variable=='Prm_Ene_Bio') %>%
-    inner_join(df$scen_lab,by='Scenario') %>% 
-    mutate(scen_lab=factor(scen_lab,levels=df$scen_lab$scen_lab)) %>% 
-    filter(Scenario%in%lst$scen_rep) %>% 
-    ggplot()+
-    geom_path(aes(x=Year,y=Value,color=scen_lab),show.legend=T)+
-    geom_point(aes(x=Year,y=Value,color=scen_lab),fill='white',shape=21,show.legend=T)+
-    ylim(0,lst$Prm_Ene_Bio_AR6_max)+
-    scale_color_manual(values=lst$scen_col)+
-    labs(title='Biomass primary supply',x=NULL,y=expression(paste('Primary energy (EJ ',yr^{-1},')')))+
-    mytheme$set1+theme(legend.position=c(.4,.8),strip.background=element_blank(),plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt'),axis.text.x=element_text(angle=45,hjust=1))+
-    guides(color=guide_legend(title=NULL))
-df$tmp <- df$load_AR6_global %>% 
-    filter(Variable=='Prm_Ene_Bio',Year=='2050',Category%in%c('C1','C2','C3'),IMP_marker%in%lst$IMP_main) %>% 
-    mutate(IMP_marker=factor(IMP_marker,levels=lst$IMP_main))
-p$tmp2 <- df$load_AR6_global %>% 
-    filter(Variable=='Prm_Ene_Bio',Year==2050,Category%in%c('C1','C2','C3')) %>% 
-    fcalc_range_category() %>% 
-    ggplot()+
-    geom_crossbar(aes(x=Category,ymin=p10,ymax=p90,y=p50),width=.75,color='white',fill='grey')+
-    geom_crossbar(aes(x=Category,ymin=p0,ymax=p100,y=p0),width=.75,color='grey',fill='transparent',fatten=0)+
-    geom_text(aes(x=Category,label=str_c('n=',n),y=p0),size=2,angle=90,hjust=1.3,vjust=.5)+
-    geom_point(data=df$tmp,aes(x=Category,y=Value,shape=IMP_marker),size=1.5,show.legend=T)+
-    scale_y_continuous(limits=c(0,lst$Prm_Ene_Bio_AR6_max))+
-    labs(x=NULL,y=NULL)+
-    scale_shape_manual(values=lst$IMP_main_shp)+
-    mytheme$set1+theme(axis.text.x=element_text(angle=90,hjust=1,vjust=.5),
-                       axis.text.y.left=element_blank(),axis.line.y.left=element_blank(),axis.ticks.y.left=element_blank(),
-                       plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt'))
-p$l_IMP <- get_legend(p$tmp2+theme(legend.key.size=unit(5,'mm'))+guides(shape=guide_legend(title='AR6 IMPs')))
-p$prm_ene_bio <- plot_grid(p$tmp1,p$tmp2+theme(legend.position='none'),nrow=1,axis='tb',align='h',rel_widths=c(1,.35))
-
-p$l_tmp <- plot_grid(p$l_IMP,ggplotGrob(p$l_rangeleg),ncol=1,rel_heights=c(1,.6))
-p$tmp <- plot_grid(p$prm_ene_fos,p$prm_ene_bio,p$l_tmp,nrow=1,rel_widths=c(1,1,.4),labels=c('a','b',''),axis='tb',align='h')
-ggsave(filename='output/figS6.png',plot=p$tmp,width=180,height=75,units='mm',dpi=300)
-
-
-# Supplementary Fig.7 -----------------------------------------------------
 
 df$var <- tribble(~Variable,~Legend,~Color,~Axis,
                   'Car_Seq_Geo_Sto','Underground\nstorage','darkgoldenrod2','Storage',
@@ -1341,14 +1377,14 @@ p$tmp <- df$all %>% filter(Region=='World',Year%in%seq(2030,2050,10)) %>%
     ggplot()+
     geom_hline(yintercept=0,color='black',size=.25)+
     geom_bar(aes(x=Year,y=Value,fill=Variable),position='stack',stat='identity',show.legend=T)+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     labs(title=NULL,x=NULL,y=expression(paste('Carbon capture and sequestration (Gt-',CO[2],' ',yr^{-1},')')))+
     mytheme$set1+theme(legend.position='right',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)
-ggsave(filename='output/figS7.png',plot=p$tmp,width=180,height=100,units='mm',dpi=300)
+ggsave(filename='output/figS6.png',plot=p$tmp,width=174,height=100,units='mm',dpi=300)
 
 
-# Supplementary Fig.8 -----------------------------------------------------
+# Supplementary Fig.7 -----------------------------------------------------
 
 df$var <- tribble(~Variable,~Source,~'Capture & Use',~Sequestration,~Destination,
                   'Emi_CO2_Ene_Com_exc_CCUS','Fossil','Fossil','Emission','Atmosphere',
@@ -1387,10 +1423,10 @@ p$tmp <- df$all %>% filter(Region=='World',Year%in%c(2020,2030,2050)) %>%
     mytheme$set1+
     theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     guides(fill=guide_legend(title=NULL))
-ggsave(filename='output/figS8.png',plot=p$tmp,width=180,height=100,units='mm',dpi=300)
+ggsave(filename='output/figS7.png',plot=p$tmp,width=174,height=80,units='mm',dpi=300)
 
 
-# Supplementary Fig.9 -----------------------------------------------------
+# Supplementary Fig.8 -----------------------------------------------------
 
 lst$Prc_Car_AR6_max <- df$load_AR6_global %>% 
     filter(Variable=='Prc_Car',Year==2050,Category%in%c('C1','C2','C3')) %>% 
@@ -1458,7 +1494,7 @@ p$tmp3 <- df$all %>% filter(Region=='World',Year==2050) %>%
 p$polcos_all <- plot_grid(p$tmp1+theme(legend.position='none',plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt')),
                           p$tmp2+theme(legend.position='none',plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt')),
                           p$tmp3+theme(legend.position='none'),
-                          nrow=1,axis='tb',align='h',rel_widths=c(1,.4,1),labels=c('a','','b'))
+                          nrow=1,axis='tb',align='h',rel_widths=c(1,.4,1),labels=c('A','','B'),label_size=12)
 
 df$var <- tribble(~Variable,~Legend,~Color,
                   'Inv_Add_Ene_Dem','Energy demand','darkolivegreen2',
@@ -1490,12 +1526,12 @@ p$inv_R5 <- df$all %>% filter(Region%in%df$R5map$Region,Year>2020) %>%
     scale_fill_manual(values=lst$col,labels=lst$leg,name=NULL)
 
 p$l_tmp <- plot_grid(p$l_IMP,ggplotGrob(p$l_rangeleg),ncol=1,rel_heights=c(1,.6))
-p$tmp1 <- plot_grid(p$polcos_all,p$l_carpri,p$l_tmp,nrow=1,rel_widths=c(1,.25,.25))
-p$tmp <- plot_grid(p$tmp1,p$inv_R5,ncol=1,rel_widths=c(1,1),labels=c('','c'))
-ggsave(filename='output/figS9.png',plot=p$tmp,width=180,height=170,units='mm',dpi=300)
+p$tmp1 <- plot_grid(p$polcos_all,p$l_carpri,p$l_tmp,nrow=1,rel_widths=c(1,.23,.27))
+p$tmp <- plot_grid(p$tmp1,p$inv_R5,ncol=1,rel_heights=c(1.1,1),labels=c('','C'),label_size=12)
+ggsave(filename='output/figS8.png',plot=p$tmp,width=174,height=175,units='mm',dpi=300)
 
 
-# Supplementary Fig.10 ----------------------------------------------------
+# Supplementary Fig.9 ----------------------------------------------------
 
 df$var <- tribble(~Variable,~Legend,~Color,
                   'Fin_Ene_SolidsCoa','Coal','grey70',
@@ -1526,10 +1562,10 @@ p$tmp <- df$all %>% filter(Region%in%df$R5map$Region,Year>=2020) %>%
     scale_fill_manual(values=rev(lst$col),labels=lst$leg,name=NULL)+
     guides(fill=guide_legend(byrow=T))
 print(p$tmp)
-ggsave(filename='output/figS10.png',plot=p$tmp,width=180,height=130,units='mm',dpi=300)
+ggsave(filename='output/figS9.png',plot=p$tmp,width=174,height=130,units='mm',dpi=300)
 
 
-# Supplementary Fig.11 ----------------------------------------------------
+# Supplementary Fig.10 ----------------------------------------------------
 
 df$var <- tribble(~Variable,~Device,
                   'Cap_Cos_Ele_SolarPV','Solar PV',
@@ -1558,10 +1594,10 @@ p$tmp <- df$all %>% filter(Region=='R5OECD90+EU',Year>=2020) %>%
     labs(x=NULL,y='Capital cost')+
     guides(linetype=guide_legend(title=NULL),
            shape=guide_legend(title=NULL))
-ggsave(filename='output/figS11.png',plot=p$tmp,width=180,height=75,units='mm',dpi=300)
+ggsave(filename='output/figS10.png',plot=p$tmp,width=174,height=85,units='mm',dpi=300)
 
 
-# Supplementary Fig.12 ----------------------------------------------------
+# Supplementary Fig.11 ----------------------------------------------------
 
 df$var <- tribble(~Variable,~Legend,~Color,
                   'Emi_CO2_Ene_Sup','Energy Supply','moccasin',
@@ -1608,7 +1644,7 @@ p$emi_co2ene_all <- df$all %>% filter(Region=='World',Variable%in%c(df$var$Varia
     geom_point(data=. %>% filter(Variable=='Emi_CO2_Ene_inc_Dir_Air_Cap'),
                aes(x=Year,y=Value),shape=21,fill='white',show.legend=F)+
     labs(x=NULL,y=expression(paste(CO[2],' emissions (Gt-',CO[2],' yr'^{-1},')')))+
-    facet_wrap(~scen_wrap,nrow=2)+
+    facet_wrap(~scen_wrap,nrow=3)+
     mytheme$set1+theme(legend.position='bottom',strip.background=element_blank(),axis.text.x=element_text(angle=45,hjust=1))+
     scale_y_continuous(limits=c(-10,lst$emi_co2ene_max))+
     scale_fill_manual(values=lst$col,labels=lst$leg,name=NULL)+
@@ -1636,7 +1672,6 @@ p$l_co2 <- get_legend(p$emi_co2ene+theme(legend.position='right'))
 p$tmp1 <- plot_grid(p$emi_co2ene+theme(legend.position='none',plot.margin=unit(c(5.5,0,5.5,5.5),unit='pt')),
                     p$Emi_CO2ene_AR6+theme(axis.text.y=element_blank(),axis.line.y=element_blank(),axis.ticks.y=element_blank(),plot.margin=unit(c(5.5,5.5,5.5,0),unit='pt')),
                     p$l_co2,nrow=1,rel_widths=c(1,.5,.3),axis='tb',align='h')
-p$tmp <- plot_grid(p$tmp1,p$emi_co2ene_all+theme(legend.position='none'),ncol=1,labels=c('a','b'),rel_heights=c(1,1))
-print(p$tmp)
-ggsave(filename='output/figS12.png',plot=p$tmp,width=180,height=130,units='mm',dpi=300)
+p$tmp <- plot_grid(p$tmp1,p$emi_co2ene_all+theme(legend.position='none'),ncol=1,labels=c('A','B'),label_size=12,rel_heights=c(1,1.5))
+ggsave(filename='output/figS11.png',plot=p$tmp,width=174,height=150,units='mm',dpi=300)
 

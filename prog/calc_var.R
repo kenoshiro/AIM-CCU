@@ -31,6 +31,7 @@ df$all %<>%
     bind_rows(fcalc_share(vars=c('Fin_Ene','Fin_Ene_SolidsBio'),name_new='Fin_Ene_Share_Bio')) %>% 
     bind_rows(fcalc_share(vars=c('Fin_Ene','Fin_Ene_Heat'),name_new='Fin_Ene_Share_Heat')) %>% 
     bind_rows(fcalc_share(vars=c('Fin_Ene','Fin_Ene_Liq_Hyd_syn','Fin_Ene_Gas_Hyd_syn'),name_new='Fin_Ene_Share_Syn_Hyd')) %>% 
+    bind_rows(fcalc_share(vars=c('Fin_Ene','Fin_Ene_SolidsCoa','Fin_Ene_Liq_Oil','Fin_Ene_Gas_Fos'),name_new='Fin_Ene_Share_Fos')) %>% 
     bind_rows(fcalc_share(vars=c('Fin_Ene_Ind','Fin_Ene_Ind_Hyd_Car'),name_new='Fin_Ene_Ind_Share_Hyd_Car')) %>% 
     bind_rows(fcalc_share(vars=c('Fin_Ene_Res_and_Com','Fin_Ene_Res_and_Com_Hyd_Car'),name_new='Fin_Ene_Res_and_Com_Share_Hyd_Car')) %>% 
     bind_rows(fcalc_share(vars=c('Fin_Ene_Tra','Fin_Ene_Tra_Hyd_Car'),name_new='Fin_Ene_Tra_Share_Hyd_Car')) %>% 
