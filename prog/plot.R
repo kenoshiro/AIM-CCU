@@ -49,9 +49,9 @@ lst$scen_500all <- c('500C-CCU','500C-DEC','500C-CDR',
 lst$scen_cat <- c('1.5C-CCU','1.5C-DEC','1.5C-CDR','WB2C-CCU','WB2C-DEC','WB2C-CDR')
 lst$scen_sens <- c('Default','AdvTech','ConvTech')
 lst$scen_sens_all <- c('Default','AdvTech','ConvTech','LimElec+','LimElec-','LimElec--')
-lst$scen_col <- c('1.5C-CCU'='#E64B35FF','1.5C-DEC'='4DBBD5FF','1.5C-CDR'='#00A087FF')
-lst$scen_col_all <- c('1.5C-CCU'='#E64B35FF','1.5C-DEC'='4DBBD5FF','1.5C-CDR'='#00A087FF',
-                      'WB2C-CCU'='#3C5488FF','WB2C-DEC'='#F39B7FFF','WB2C-CDR'='#8491B4FF')
+lst$scen_col <- c('1.5C-CCU'='#D55E00','1.5C-DEC'='#56B4E9','1.5C-CDR'='#E69F00')
+lst$scen_col_all <- c('1.5C-CCU'='#D55E00','1.5C-DEC'='#56B4E9','1.5C-CDR'='#E69F00',
+                      'WB2C-CCU'='#CC79a7','WB2C-DEC'='#0072B2','WB2C-CDR'='#009E73')
 lst$lin_scen <- c('Default'='solid','AdvTech'='blank','ConvTech'='blank','LimElec+'='blank','LimElec-'='blank','LimElec--'='blank')
 lst$IMP_all <- c('GS','Neg','Ren','LD','SP','Neg-2.0','Ren-2.0','ModAct','CurPol')
 lst$IMP_main <- c('GS','Neg','Ren','LD','SP','Neg-2.0','Ren-2.0')
@@ -698,6 +698,10 @@ df$var <- tribble(~Variable,~Energy,
                   'Fin_Ene_Solids','Final',
                   'Fin_Ene_Gas','Final',
                   'Fin_Ene_Liq','Final')
+df$position <- tribble(~Scenario,~hjust,~vjust,
+                       '500C-CCU',.5,-1,
+                       '500C-DEC',.8,-2.3,
+                       '500C-CDR',-.5,7)
 lst$scen_sens_size <- c('Default'=3,'Sensitivity'=1)
 df$tmp <- df$load_AR6_global %>% filter(Region=='World',Year==2050,Category%in%c('C1','C2','C3')) %>% 
     inner_join(df$var,by='Variable') %>% 
@@ -722,14 +726,15 @@ p$tmp1 <- df$all %>% filter(Region=='World',Year==2050) %>%
     ggplot()+
     geom_point(data=df$tmp,aes(x=Primary,y=Final,shape=Category),color='grey',size=1)+
     geom_point(data=df$tmp2,aes(x=Primary,y=Final,shape=IMP_marker),color='black',size=1,show.legend=F)+
-    geom_text(data=df$tmp2,aes(x=Primary,y=Final,label=IMP_marker),color='black',size=2.5,vjust=1.5,show.legend=F)+
+    geom_text(data=df$tmp2,aes(x=Primary,y=Final,label=IMP_marker),color='black',size=3,vjust=1.5,show.legend=F)+
     geom_point(aes(x=Primary,y=Final,color=scen_sens_base,size=scen_sens_var))+
-    geom_text(data=. %>% filter(Scenario%in%lst$scen_rep),hjust=.8,vjust=-1,
-              aes(x=Primary,y=Final,color=scen_sens_base,label=scen_sens_base),size=2.5,show.legend=F)+
+    geom_text(data=. %>% filter(Scenario%in%lst$scen_rep) %>% inner_join(df$position,by='Scenario'),
+              aes(x=Primary,y=Final,color=scen_sens_base,label=scen_sens_base,hjust=hjust,vjust=vjust),size=3,show.legend=F)+
     geom_segment(x=600,xend=200,y=30,yend=30,arrow=arrow(length=unit(2.5,'mm')))+
-    geom_text(x=400,y=10,label='Low dependency on fossil and biomass',size=3)+
+    geom_text(x=375,y=10,label='Low dependency on fossil and biomass',size=3)+
     geom_segment(x=30,xend=30,y=100,yend=300,arrow=arrow(length=unit(2.5,'mm')))+
     geom_text(x=0,y=200,label='Hydrocarbon availability in end-use',size=3,angle=90)+
+    geom_segment(x=360,xend=420,y=200,yend=130,size=.3,color='#E69F00')+
     xlim(0,NA)+ylim(0,NA)+
     scale_color_manual(values=lst$scen_col)+
     scale_size_manual(values=lst$scen_sens_size)+
@@ -750,6 +755,12 @@ p$tmp <- plot_grid(p$hydrocar,p$l_hydcar,nrow=1,rel_widths=c(1,.25))
 
 ggsave(filename='output/fig3.png',plot=p$tmp,width=114,height=90,units='mm',dpi=300)
 ggsave(filename='output/fig3.pdf',plot=p$tmp,width=114,height=90,units='mm',dpi=300,device=cairo_pdf)
+
+p$tmp <- p$tmp1+
+    theme(legend.position=c(.92,.3),legend.box.margin=margin(0,0,0,0),
+          legend.background=element_blank(),legend.box.background=element_blank(),
+          plot.margin=unit(c(10,15,0,0),unit='pt'))
+ggsave(filename='output/abstract.pdf',plot=p$tmp,width=4,height=4,units='in',dpi=300,device=cairo_pdf)
 
 # Fig.4 ------------------------------------------------------------------
 
